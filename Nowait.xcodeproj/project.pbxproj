@@ -14,6 +14,15 @@
 		ED03587024725959005A6745 /* Nowait.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED03586E24725959005A6745 /* Nowait.xcdatamodeld */; };
 		ED03587224725961005A6745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED03587124725961005A6745 /* Assets.xcassets */; };
 		ED03587524725961005A6745 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED03587324725961005A6745 /* LaunchScreen.storyboard */; };
+		ED03588124725D35005A6745 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED03588024725D35005A6745 /* Registration.storyboard */; };
+		ED03588624725E8D005A6745 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED03588324725E8D005A6745 /* SFProDisplay-Regular.ttf */; };
+		ED03588724725E8D005A6745 /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED03588424725E8D005A6745 /* SFProDisplay-Medium.ttf */; };
+		ED03588824725E8D005A6745 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED03588524725E8D005A6745 /* SFProDisplay-Semibold.ttf */; };
+		ED84C481247261A6009D6742 /* DesignableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C480247261A6009D6742 /* DesignableUIView.swift */; };
+		ED84C483247266F5009D6742 /* DesignableUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C482247266F5009D6742 /* DesignableUIButton.swift */; };
+		ED84C485247267C5009D6742 /* Circle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED84C484247267C5009D6742 /* Circle-Regular.ttf */; };
+		ED84C488247269C8009D6742 /* SFProText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED84C486247269C8009D6742 /* SFProText-Medium.ttf */; };
+		ED84C489247269C8009D6742 /* SFProText-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED84C487247269C8009D6742 /* SFProText-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,15 @@
 		ED03587124725961005A6745 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED03587424725961005A6745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED03587624725961005A6745 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED03588024725D35005A6745 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		ED03588324725E8D005A6745 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		ED03588424725E8D005A6745 /* SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		ED03588524725E8D005A6745 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		ED84C480247261A6009D6742 /* DesignableUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUIView.swift; sourceTree = "<group>"; };
+		ED84C482247266F5009D6742 /* DesignableUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUIButton.swift; sourceTree = "<group>"; };
+		ED84C484247267C5009D6742 /* Circle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circle-Regular.ttf"; sourceTree = "<group>"; };
+		ED84C486247269C8009D6742 /* SFProText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.ttf"; sourceTree = "<group>"; };
+		ED84C487247269C8009D6742 /* SFProText-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +80,7 @@
 				ED03587F24725AC3005A6745 /* ViewControllers */,
 				ED03587E24725AAE005A6745 /* Storyboards */,
 				ED03587C24725A7E005A6745 /* Resourse */,
+				ED84C47E24726165009D6742 /* Helpers */,
 			);
 			path = Nowait;
 			sourceTree = "<group>";
@@ -69,6 +88,7 @@
 		ED03587C24725A7E005A6745 /* Resourse */ = {
 			isa = PBXGroup;
 			children = (
+				ED03588224725E4C005A6745 /* Fonts */,
 				ED03586E24725959005A6745 /* Nowait.xcdatamodeld */,
 				ED03587124725961005A6745 /* Assets.xcassets */,
 				ED03587624725961005A6745 /* Info.plist */,
@@ -88,8 +108,10 @@
 		ED03587E24725AAE005A6745 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				ED84C47F24726175009D6742 /* Designable */,
 				ED03586B24725959005A6745 /* Main.storyboard */,
 				ED03587324725961005A6745 /* LaunchScreen.storyboard */,
+				ED03588024725D35005A6745 /* Registration.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -100,6 +122,35 @@
 				ED03586924725959005A6745 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		ED03588224725E4C005A6745 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ED84C484247267C5009D6742 /* Circle-Regular.ttf */,
+				ED03588424725E8D005A6745 /* SFProDisplay-Medium.ttf */,
+				ED03588324725E8D005A6745 /* SFProDisplay-Regular.ttf */,
+				ED03588524725E8D005A6745 /* SFProDisplay-Semibold.ttf */,
+				ED84C487247269C8009D6742 /* SFProText-Light.ttf */,
+				ED84C486247269C8009D6742 /* SFProText-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		ED84C47E24726165009D6742 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		ED84C47F24726175009D6742 /* Designable */ = {
+			isa = PBXGroup;
+			children = (
+				ED84C480247261A6009D6742 /* DesignableUIView.swift */,
+				ED84C482247266F5009D6742 /* DesignableUIButton.swift */,
+			);
+			path = Designable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +211,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED84C488247269C8009D6742 /* SFProText-Medium.ttf in Resources */,
 				ED03587524725961005A6745 /* LaunchScreen.storyboard in Resources */,
+				ED03588124725D35005A6745 /* Registration.storyboard in Resources */,
+				ED03588824725E8D005A6745 /* SFProDisplay-Semibold.ttf in Resources */,
 				ED03587224725961005A6745 /* Assets.xcassets in Resources */,
+				ED84C489247269C8009D6742 /* SFProText-Light.ttf in Resources */,
+				ED03588624725E8D005A6745 /* SFProDisplay-Regular.ttf in Resources */,
 				ED03586D24725959005A6745 /* Main.storyboard in Resources */,
+				ED03588724725E8D005A6745 /* SFProDisplay-Medium.ttf in Resources */,
+				ED84C485247267C5009D6742 /* Circle-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED84C481247261A6009D6742 /* DesignableUIView.swift in Sources */,
+				ED84C483247266F5009D6742 /* DesignableUIButton.swift in Sources */,
 				ED03586A24725959005A6745 /* ViewController.swift in Sources */,
 				ED03587024725959005A6745 /* Nowait.xcdatamodeld in Sources */,
 				ED03586624725959005A6745 /* AppDelegate.swift in Sources */,
@@ -322,7 +382,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72MHAGL49V;
-				INFOPLIST_FILE = Nowait/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Nowait/Resourse/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,7 +401,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72MHAGL49V;
-				INFOPLIST_FILE = Nowait/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Nowait/Resourse/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

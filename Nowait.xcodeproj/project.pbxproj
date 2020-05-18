@@ -23,6 +23,10 @@
 		ED84C485247267C5009D6742 /* Circle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED84C484247267C5009D6742 /* Circle-Regular.ttf */; };
 		ED84C488247269C8009D6742 /* SFProText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED84C486247269C8009D6742 /* SFProText-Medium.ttf */; };
 		ED84C489247269C8009D6742 /* SFProText-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED84C487247269C8009D6742 /* SFProText-Light.ttf */; };
+		ED84C48B247271E0009D6742 /* SFProText-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED84C48A247271E0009D6742 /* SFProText-Semibold.ttf */; };
+		ED84C48D247274A5009D6742 /* SFProText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED84C48C247274A5009D6742 /* SFProText-Regular.ttf */; };
+		ED84C4912472792E009D6742 /* CodeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C4902472792E009D6742 /* CodeTextFieldDelegate.swift */; };
+		ED84C49324727959009D6742 /* CodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C49224727959009D6742 /* CodeTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		ED84C484247267C5009D6742 /* Circle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circle-Regular.ttf"; sourceTree = "<group>"; };
 		ED84C486247269C8009D6742 /* SFProText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.ttf"; sourceTree = "<group>"; };
 		ED84C487247269C8009D6742 /* SFProText-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Light.ttf"; sourceTree = "<group>"; };
+		ED84C48A247271E0009D6742 /* SFProText-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Semibold.ttf"; sourceTree = "<group>"; };
+		ED84C48C247274A5009D6742 /* SFProText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Regular.ttf"; sourceTree = "<group>"; };
+		ED84C4902472792E009D6742 /* CodeTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextFieldDelegate.swift; sourceTree = "<group>"; };
+		ED84C49224727959009D6742 /* CodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +141,8 @@
 				ED03588524725E8D005A6745 /* SFProDisplay-Semibold.ttf */,
 				ED84C487247269C8009D6742 /* SFProText-Light.ttf */,
 				ED84C486247269C8009D6742 /* SFProText-Medium.ttf */,
+				ED84C48A247271E0009D6742 /* SFProText-Semibold.ttf */,
+				ED84C48C247274A5009D6742 /* SFProText-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -140,6 +150,8 @@
 		ED84C47E24726165009D6742 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				ED84C48F2472791C009D6742 /* Protocols */,
+				ED84C48E2472790C009D6742 /* Classes */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -151,6 +163,22 @@
 				ED84C482247266F5009D6742 /* DesignableUIButton.swift */,
 			);
 			path = Designable;
+			sourceTree = "<group>";
+		};
+		ED84C48E2472790C009D6742 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ED84C49224727959009D6742 /* CodeTextField.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		ED84C48F2472791C009D6742 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				ED84C4902472792E009D6742 /* CodeTextFieldDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,8 +246,10 @@
 				ED03587224725961005A6745 /* Assets.xcassets in Resources */,
 				ED84C489247269C8009D6742 /* SFProText-Light.ttf in Resources */,
 				ED03588624725E8D005A6745 /* SFProDisplay-Regular.ttf in Resources */,
+				ED84C48D247274A5009D6742 /* SFProText-Regular.ttf in Resources */,
 				ED03586D24725959005A6745 /* Main.storyboard in Resources */,
 				ED03588724725E8D005A6745 /* SFProDisplay-Medium.ttf in Resources */,
+				ED84C48B247271E0009D6742 /* SFProText-Semibold.ttf in Resources */,
 				ED84C485247267C5009D6742 /* Circle-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,7 +263,9 @@
 			files = (
 				ED84C481247261A6009D6742 /* DesignableUIView.swift in Sources */,
 				ED84C483247266F5009D6742 /* DesignableUIButton.swift in Sources */,
+				ED84C49324727959009D6742 /* CodeTextField.swift in Sources */,
 				ED03586A24725959005A6745 /* ViewController.swift in Sources */,
+				ED84C4912472792E009D6742 /* CodeTextFieldDelegate.swift in Sources */,
 				ED03587024725959005A6745 /* Nowait.xcdatamodeld in Sources */,
 				ED03586624725959005A6745 /* AppDelegate.swift in Sources */,
 				ED03586824725959005A6745 /* SceneDelegate.swift in Sources */,

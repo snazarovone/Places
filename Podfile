@@ -11,5 +11,5 @@ target 'Nowait' do
   pod 'RxCocoa', '~> 5.0'
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'Moya-ObjectMapper/RxSwift', '~> 2.9'
-
+  pod 'GoogleSignIn'
 end

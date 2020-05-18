@@ -40,7 +40,7 @@ extension AppleAuthService: ASAuthorizationControllerDelegate{
               let token = String(data: tokenData, encoding: .utf8)
           else { return }
         
-        print(credential.email)
+
         if let firstName = credential.fullName?.givenName{
             if let lastName = credential.fullName?.familyName{
                  authResultSubject.onNext(.apple(code: token, name: firstName + lastName))

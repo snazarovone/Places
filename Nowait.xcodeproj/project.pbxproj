@@ -47,6 +47,10 @@
 		EDDCB3102472ECFC00863066 /* AuthProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB30F2472ECFC00863066 /* AuthProviderProtocol.swift */; };
 		EDDCB3122472ED7800863066 /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3112472ED7800863066 /* AuthToken.swift */; };
 		EDDCB3152472EDC300863066 /* AppleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3142472EDC300863066 /* AppleAuthService.swift */; };
+		EDDCB318247315A400863066 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDDCB317247315A400863066 /* credentials.plist */; };
+		EDDCB31E2473218A00863066 /* GoogleAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB31D2473218A00863066 /* GoogleAuthToken.swift */; };
+		EDDCB3202473229D00863066 /* GoogleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB31F2473229D00863066 /* GoogleAuthService.swift */; };
+		EDDCB322247322E400863066 /* GoogleAuthProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB321247322E400863066 /* GoogleAuthProviderProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +99,10 @@
 		EDDCB3112472ED7800863066 /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
 		EDDCB3142472EDC300863066 /* AppleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthService.swift; sourceTree = "<group>"; };
 		EDDCB3162472F67300863066 /* Nowait.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nowait.entitlements; sourceTree = "<group>"; };
+		EDDCB317247315A400863066 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		EDDCB31D2473218A00863066 /* GoogleAuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthToken.swift; sourceTree = "<group>"; };
+		EDDCB31F2473229D00863066 /* GoogleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthService.swift; sourceTree = "<group>"; };
+		EDDCB321247322E400863066 /* GoogleAuthProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthProviderProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,7 @@
 				ED03586E24725959005A6745 /* Nowait.xcdatamodeld */,
 				ED03587124725961005A6745 /* Assets.xcassets */,
 				ED03587624725961005A6745 /* Info.plist */,
+				EDDCB317247315A400863066 /* credentials.plist */,
 			);
 			path = Resourse;
 			sourceTree = "<group>";
@@ -358,6 +367,7 @@
 		ED84C49B2472832E009D6742 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				EDDCB31A2473213400863066 /* GoogleSignIn */,
 				EDDCB30E2472ECED00863066 /* AppleID */,
 				ED84C49E24728354009D6742 /* SignUpViewModelType.swift */,
 			);
@@ -375,6 +385,7 @@
 		ED84C4A3247284E4009D6742 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EDDCB3192473211F00863066 /* GoogleSignIn */,
 				EDDCB3132472EDAD00863066 /* AppleID */,
 				ED84C4A4247284FE009D6742 /* Country.swift */,
 			);
@@ -432,6 +443,23 @@
 			path = AppleID;
 			sourceTree = "<group>";
 		};
+		EDDCB3192473211F00863066 /* GoogleSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB31D2473218A00863066 /* GoogleAuthToken.swift */,
+				EDDCB31F2473229D00863066 /* GoogleAuthService.swift */,
+			);
+			path = GoogleSignIn;
+			sourceTree = "<group>";
+		};
+		EDDCB31A2473213400863066 /* GoogleSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB321247322E400863066 /* GoogleAuthProviderProtocol.swift */,
+			);
+			path = GoogleSignIn;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -444,6 +472,7 @@
 				ED03585F24725959005A6745 /* Frameworks */,
 				ED03586024725959005A6745 /* Resources */,
 				7912784781074E095C391C9B /* [CP] Embed Pods Frameworks */,
+				0CE72CD9B109A8FED20287C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -504,12 +533,30 @@
 				ED03588724725E8D005A6745 /* SFProDisplay-Medium.ttf in Resources */,
 				ED84C48B247271E0009D6742 /* SFProText-Semibold.ttf in Resources */,
 				ED84C485247267C5009D6742 /* Circle-Regular.ttf in Resources */,
+				EDDCB318247315A400863066 /* credentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0CE72CD9B109A8FED20287C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nowait/Pods-Nowait-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nowait/Pods-Nowait-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nowait/Pods-Nowait-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7912784781074E095C391C9B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -557,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED5F714C247299AB004DA1D3 /* SelectCountryViewModelType.swift in Sources */,
+				EDDCB31E2473218A00863066 /* GoogleAuthToken.swift in Sources */,
 				EDDCB30124729CB800863066 /* CountryCellViewModel.swift in Sources */,
 				ED84C481247261A6009D6742 /* DesignableUIView.swift in Sources */,
 				ED84C483247266F5009D6742 /* DesignableUIButton.swift in Sources */,
@@ -574,6 +622,8 @@
 				ED5F714A2472999D004DA1D3 /* SelectCountryViewModel.swift in Sources */,
 				EDDCB3102472ECFC00863066 /* AuthProviderProtocol.swift in Sources */,
 				EDDCB30A2472C19400863066 /* CodeViewModel.swift in Sources */,
+				EDDCB3202473229D00863066 /* GoogleAuthService.swift in Sources */,
+				EDDCB322247322E400863066 /* GoogleAuthProviderProtocol.swift in Sources */,
 				ED84C4912472792E009D6742 /* CodeTextFieldDelegate.swift in Sources */,
 				ED84C4A224728392009D6742 /* ExtensionString.swift in Sources */,
 				ED03587024725959005A6745 /* Nowait.xcdatamodeld in Sources */,

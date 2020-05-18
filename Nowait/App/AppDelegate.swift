@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        var nsDictionary: NSDictionary?
+        if let path = Bundle.main.path(forResource: "credentials", ofType: "plist") {
+            nsDictionary = NSDictionary(contentsOfFile: path)
+        }
+        // Initialize sign-in
+        GIDSignIn.sharedInstance().clientID = nsDictionary?["CLIENT_ID"] as? String
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url)
     }
 
     // MARK: UISceneSession Lifecycle
@@ -80,4 +90,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

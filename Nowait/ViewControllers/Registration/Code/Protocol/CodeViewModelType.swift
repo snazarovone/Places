@@ -9,4 +9,6 @@
 import Foundation
 
 protocol CodeViewModelType {
+    var phoneNumber: String {get}
+    var succsessCode: String {get}
 }

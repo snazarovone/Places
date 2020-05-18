@@ -37,24 +37,31 @@ class SignUpViewController: UIViewController {
     
     //MARK:- Actions
     @IBAction func close(_ sender: Any) {
+        dismissKeyboard()
     }
     
     @IBAction func selectCountry(_ sender: Any) {
+        dismissKeyboard()
     }
     
     @IBAction func next(_ sender: UIButton) {
+        dismissKeyboard()
     }
     
     @IBAction func appleID(_ sender: Any) {
+        dismissKeyboard()
     }
     
     @IBAction func facebook(_ sender: Any) {
+        dismissKeyboard()
     }
     
     @IBAction func google(_ sender: Any) {
+        dismissKeyboard()
     }
     
     @IBAction func login(_ sender: UIButton) {
+        dismissKeyboard()
     }
     
     //MARK:- deinit

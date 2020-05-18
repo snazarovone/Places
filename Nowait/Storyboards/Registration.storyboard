@@ -56,7 +56,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6d-Rs-772">
-                                                <rect key="frame" x="51" y="114" width="273" height="27"/>
+                                                <rect key="frame" x="52" y="114" width="271.5" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="27" id="Ffs-Ys-FSr"/>
                                                 </constraints>
@@ -100,16 +100,16 @@
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ur8-0j-wSf">
-                                                        <rect key="frame" x="16" y="6.5" width="284" height="34"/>
+                                                        <rect key="frame" x="16" y="6" width="284" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страна/регион" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6w-ZH-ybl">
-                                                                <rect key="frame" x="0.0" y="0.0" width="77" height="13"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="13.5"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="11"/>
                                                                 <color key="textColor" name="828282"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Украина (+380)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8p-mf-hT5">
-                                                                <rect key="frame" x="0.0" y="13" width="126" height="21"/>
+                                                                <rect key="frame" x="0.0" y="13.5" width="125.5" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
                                                                 <color key="textColor" name="333333"/>
                                                                 <nil key="highlightedColor"/>
@@ -120,6 +120,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="47"/>
                                                         <connections>
                                                             <action selector="selectCountry:" destination="758-q8-p3N" eventType="touchUpInside" id="grD-U3-dxu"/>
+                                                            <segue destination="9km-Mu-Oew" kind="presentation" identifier="SelectCountryViewController" id="ws2-xr-lUn"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -155,16 +156,16 @@
                                                 <rect key="frame" x="16" y="226" width="343" height="47"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="12a-ED-BWd">
-                                                        <rect key="frame" x="16" y="13" width="311" height="21.5"/>
+                                                        <rect key="frame" x="16" y="12.5" width="311" height="22"/>
                                                         <subviews>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-1C-gcA">
-                                                                <rect key="frame" x="0.0" y="0.0" width="88" height="0.0"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="0.0"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="11"/>
                                                                 <color key="textColor" name="828282"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KS0-7v-JG0">
-                                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="21.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="311" height="22"/>
                                                                 <color key="textColor" name="333333"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
@@ -173,6 +174,10 @@
                                                                 </connections>
                                                             </textField>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="KS0-7v-JG0" firstAttribute="leading" secondItem="12a-ED-BWd" secondAttribute="leading" id="ii1-1y-7K2"/>
+                                                            <constraint firstAttribute="trailing" secondItem="KS0-7v-JG0" secondAttribute="trailing" id="xxf-GG-fOX"/>
+                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -216,7 +221,7 @@
                                                 </connections>
                                             </button>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продолжить через" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t27-K5-KAq">
-                                                <rect key="frame" x="138.5" y="356" width="98.5" height="16"/>
+                                                <rect key="frame" x="141.5" y="356" width="92.5" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="WCw-Zz-qag"/>
                                                 </constraints>
@@ -324,7 +329,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTI-RU-Fkg">
-                                                <rect key="frame" x="49.5" y="589.5" width="276.5" height="52.5"/>
+                                                <rect key="frame" x="44" y="589.5" width="287.5" height="52.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52.5" id="qMx-v4-Uxf"/>
                                                 </constraints>
@@ -416,12 +421,12 @@
             </objects>
             <point key="canvasLocation" x="-509" y="-146"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Country View Controller-->
         <scene sceneID="PiA-3F-PGm">
             <objects>
-                <viewController id="9km-Mu-Oew" sceneMemberID="viewController">
+                <viewController id="9km-Mu-Oew" customClass="SelectCountryViewController" customModule="Nowait" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s99-5Z-oEQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwQ-os-GvG">
@@ -433,7 +438,7 @@
                                 <state key="normal" image="Close_icon"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбор страны" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSl-Fu-xGI">
-                                <rect key="frame" x="129.5" y="25" width="116" height="22"/>
+                                <rect key="frame" x="125" y="25" width="125" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Jfv-sT-cOC"/>
                                 </constraints>
@@ -493,10 +498,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mHF-0y-sXP">
-                                <rect key="frame" x="16" y="128.5" width="343" height="538.5"/>
+                                <rect key="frame" x="16" y="128.5" width="343" height="518.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="t9i-Sc-fdu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CountryTableViewCell" rowHeight="60" id="t9i-Sc-fdu" customClass="CountryTableViewCell" customModule="Nowait" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t9i-Sc-fdu" id="LBc-VZ-IHf">
@@ -504,7 +509,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Украина (+380)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKp-7K-qEf">
-                                                    <rect key="frame" x="1" y="21" width="105" height="18"/>
+                                                    <rect key="frame" x="1" y="21" width="115.5" height="18"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -526,6 +531,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="E6a-8z-4rB" secondAttribute="trailing" id="wUz-84-5yk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleCountry" destination="YKp-7K-qEf" id="LHW-QK-yTt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -547,6 +555,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C1P-pZ-umO"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8C0-6b-4PT"/>
+                    <connections>
+                        <outlet property="tableView" destination="mHF-0y-sXP" id="CaI-vy-qaD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VfM-2A-5Ts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -569,7 +581,7 @@
                                 <state key="normal" image="Close_icon"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подтвердите номер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ze-Zt-KA9">
-                                <rect key="frame" x="16" y="59" width="188" height="27"/>
+                                <rect key="frame" x="16" y="59" width="179" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="kbJ-e0-zAs"/>
                                 </constraints>
@@ -735,13 +747,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введен неверный код" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF2-uG-gWw">
-                                <rect key="frame" x="16" y="227" width="154.5" height="17.5"/>
+                                <rect key="frame" x="16" y="227" width="161" height="18"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                 <color key="textColor" name="EB5757"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ce4-2W-T2e">
-                                <rect key="frame" x="0.0" y="609.5" width="211" height="57.5"/>
+                                <rect key="frame" x="0.0" y="609" width="219" height="58"/>
                                 <inset key="contentEdgeInsets" minX="16" minY="20" maxX="20" maxY="20"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">

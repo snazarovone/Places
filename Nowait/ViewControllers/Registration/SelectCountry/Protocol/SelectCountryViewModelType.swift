@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 protocol SelectCountryViewModelType {
     func numberOfRow() -> Int
     func cellForRow(at indexPath: IndexPath) -> CountryCellViewModelType
     func didSelect(at indexPath: IndexPath)
+    
+    func searchField(at text: String)
+    var searchCountry: BehaviorRelay<[Country]> {get}
 }

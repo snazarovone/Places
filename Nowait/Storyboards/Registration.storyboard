@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -31,17 +31,17 @@
             <objects>
                 <viewController storyboardIdentifier="SignUpViewController" id="758-q8-p3N" customClass="SignUpViewController" customModule="Nowait" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cPe-Aw-ZaJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zs-BD-zJZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixp-FI-aJN">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIl-PL-LpS">
-                                                <rect key="frame" x="317.5" y="0.0" width="57.5" height="58.5"/>
+                                                <rect key="frame" x="317.66666666666669" y="0.0" width="57.333333333333314" height="58.333333333333336"/>
                                                 <inset key="contentEdgeInsets" minX="15" minY="11" maxX="15" maxY="20"/>
                                                 <state key="normal" image="Close_icon"/>
                                                 <connections>
@@ -49,14 +49,14 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="7Kp-fN-MBG">
-                                                <rect key="frame" x="157.5" y="38" width="60" height="60"/>
+                                                <rect key="frame" x="157.66666666666666" y="38" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="IQt-hq-ciQ"/>
                                                     <constraint firstAttribute="height" constant="60" id="b4l-RQ-Ngz"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6d-Rs-772">
-                                                <rect key="frame" x="52" y="114" width="271.5" height="27"/>
+                                                <rect key="frame" x="51" y="114" width="273" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="27" id="Ffs-Ys-FSr"/>
                                                 </constraints>
@@ -100,16 +100,16 @@
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ur8-0j-wSf">
-                                                        <rect key="frame" x="16" y="6" width="284" height="35"/>
+                                                        <rect key="frame" x="16" y="6.6666666666666572" width="284" height="34"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страна/регион" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6w-ZH-ybl">
-                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="13.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="77" height="13"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="11"/>
                                                                 <color key="textColor" name="828282"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Украина (+380)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8p-mf-hT5">
-                                                                <rect key="frame" x="0.0" y="13.5" width="125.5" height="21.5"/>
+                                                                <rect key="frame" x="0.0" y="13" width="126" height="21"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
                                                                 <color key="textColor" name="333333"/>
                                                                 <nil key="highlightedColor"/>
@@ -156,16 +156,16 @@
                                                 <rect key="frame" x="16" y="226" width="343" height="47"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="12a-ED-BWd">
-                                                        <rect key="frame" x="16" y="12.5" width="311" height="22"/>
+                                                        <rect key="frame" x="16" y="12.666666666666687" width="311" height="21.666666666666671"/>
                                                         <subviews>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-1C-gcA">
-                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="0.0"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="0.0"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="11"/>
                                                                 <color key="textColor" name="828282"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KS0-7v-JG0">
-                                                                <rect key="frame" x="0.0" y="0.0" width="311" height="22"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="311" height="21.666666666666668"/>
                                                                 <color key="textColor" name="333333"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
@@ -221,7 +221,7 @@
                                                 </connections>
                                             </button>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продолжить через" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t27-K5-KAq">
-                                                <rect key="frame" x="141.5" y="356" width="92.5" height="16"/>
+                                                <rect key="frame" x="138.33333333333334" y="356" width="98.333333333333343" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="WCw-Zz-qag"/>
                                                 </constraints>
@@ -238,6 +238,7 @@
                                                             <constraint firstAttribute="height" constant="45" id="Jgq-ch-Uea"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
+                                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="11" maxY="0.0"/>
                                                         <state key="normal" title="Apple ID" image="apple 1">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -266,6 +267,7 @@
                                                             <constraint firstAttribute="height" constant="45" id="iK9-4T-MxN"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
+                                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="11" maxY="0.0"/>
                                                         <state key="normal" title="Facebook" image="facebook 1">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -294,6 +296,7 @@
                                                             <constraint firstAttribute="height" constant="45" id="KBu-jw-2N9"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
+                                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="11" maxY="0.0"/>
                                                         <state key="normal" title="Google" image="google 1">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -322,14 +325,14 @@
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qt5-Yb-5vw">
-                                                <rect key="frame" x="0.0" y="587" width="375" height="0.5"/>
+                                                <rect key="frame" x="0.0" y="654.33333333333337" width="375" height="0.33333333333337123"/>
                                                 <color key="backgroundColor" name="E2E2E2"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="0.29999999999999999" id="cq6-mK-8vC"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTI-RU-Fkg">
-                                                <rect key="frame" x="44" y="589.5" width="287.5" height="52.5"/>
+                                                <rect key="frame" x="49.333333333333343" y="656.66666666666663" width="276.33333333333326" height="52.333333333333371"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52.5" id="qMx-v4-Uxf"/>
                                                 </constraints>
@@ -415,6 +418,7 @@
                         <outlet property="phoneView" destination="EVz-vU-RIR" id="yiC-a2-xBQ"/>
                         <outlet property="placeholderPhone" destination="W8d-1C-gcA" id="hBT-I2-Rx2"/>
                         <outlet property="scrollView" destination="3Zs-BD-zJZ" id="WUY-7r-bvG"/>
+                        <segue destination="AEo-Hz-H8A" kind="presentation" identifier="CodeViewController" id="lys-5x-SBk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9G-Bb-AKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -426,11 +430,11 @@
             <objects>
                 <viewController id="9km-Mu-Oew" customClass="SelectCountryViewController" customModule="Nowait" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s99-5Z-oEQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwQ-os-GvG">
-                                <rect key="frame" x="317.5" y="0.0" width="57.5" height="60.5"/>
+                                <rect key="frame" x="317.66666666666669" y="0.0" width="57.333333333333314" height="60.666666666666664"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57.5" id="thc-Uh-Tzc"/>
                                 </constraints>
@@ -441,7 +445,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбор страны" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSl-Fu-xGI">
-                                <rect key="frame" x="129.5" y="25" width="116" height="22"/>
+                                <rect key="frame" x="129.66666666666666" y="25" width="116" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Jfv-sT-cOC"/>
                                 </constraints>
@@ -450,10 +454,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKm-QO-nac" customClass="DesignableUIView" customModule="Nowait" customModuleProvider="target">
-                                <rect key="frame" x="16" y="82.5" width="343" height="36"/>
+                                <rect key="frame" x="16" y="82.666666666666671" width="343" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search icon" translatesAutoresizingMaskIntoConstraints="NO" id="zda-3i-Hto">
-                                        <rect key="frame" x="10" y="10.5" width="15" height="15"/>
+                                        <rect key="frame" x="10" y="10.333333333333329" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="15" id="GPo-u9-MW4"/>
                                             <constraint firstAttribute="height" constant="15" id="lol-Nr-CaQ"/>
@@ -504,7 +508,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mHF-0y-sXP">
-                                <rect key="frame" x="16" y="128.5" width="343" height="518.5"/>
+                                <rect key="frame" x="16" y="128.66666666666669" width="343" height="595.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CountryTableViewCell" rowHeight="60" id="t9i-Sc-fdu" customClass="CountryTableViewCell" customModule="Nowait" customModuleProvider="target">
@@ -524,7 +528,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6a-8z-4rB">
-                                                    <rect key="frame" x="0.0" y="59.5" width="343" height="0.5"/>
+                                                    <rect key="frame" x="0.0" y="59.666666666666664" width="343" height="0.3333333333333357"/>
                                                     <color key="backgroundColor" name="E2E2E2"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="0.29999999999999999" id="ym2-aX-CyO"/>
@@ -580,24 +584,27 @@
             </objects>
             <point key="canvasLocation" x="242" y="-146"/>
         </scene>
-        <!--View Controller-->
+        <!--Code View Controller-->
         <scene sceneID="0ad-Uj-jvQ">
             <objects>
-                <viewController id="AEo-Hz-H8A" sceneMemberID="viewController">
+                <viewController id="AEo-Hz-H8A" customClass="CodeViewController" customModule="Nowait" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hst-SM-dmO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oY6-h4-fkn">
-                                <rect key="frame" x="317.5" y="0.0" width="57.5" height="60.5"/>
+                                <rect key="frame" x="317.66666666666669" y="0.0" width="57.333333333333314" height="60.333333333333336"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57.5" id="NmN-wB-jNp"/>
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="15" minY="22" maxX="15" maxY="11"/>
                                 <state key="normal" image="Close_icon"/>
+                                <connections>
+                                    <action selector="close:" destination="AEo-Hz-H8A" eventType="touchUpInside" id="LJ1-3n-6wa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подтвердите номер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ze-Zt-KA9">
-                                <rect key="frame" x="16" y="59" width="179" height="27"/>
+                                <rect key="frame" x="16" y="59" width="188" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="kbJ-e0-zAs"/>
                                 </constraints>
@@ -605,7 +612,7 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gCg-gZ-QFk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCg-gZ-QFk">
                                 <rect key="frame" x="16" y="103" width="343" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="xDR-gA-PEC"/>
@@ -613,9 +620,15 @@
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Введите 4-значный код,
-отправленный на номер </string>
+</string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="SFProText-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="отправленный на номер ">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="SFProText-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="067 123 45 67">
@@ -623,6 +636,7 @@
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="SFProText-Light"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <real key="NSStrokeWidth" value="0.0"/>
                                         </attributes>
@@ -642,6 +656,9 @@
                                                 <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                                 <fontDescription key="fontDescription" name="UniNeueRegular" family="Uni Neue" pointSize="28"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="AEo-Hz-H8A" id="WmH-qJ-fl3"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -673,6 +690,9 @@
                                                 <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                                 <fontDescription key="fontDescription" name="UniNeueRegular" family="Uni Neue" pointSize="28"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="AEo-Hz-H8A" id="ggd-MA-8uA"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -704,6 +724,9 @@
                                                 <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                                 <fontDescription key="fontDescription" name="UniNeueRegular" family="Uni Neue" pointSize="28"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="AEo-Hz-H8A" id="igw-jm-lNx"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -735,6 +758,9 @@
                                                 <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                                 <fontDescription key="fontDescription" name="UniNeueRegular" family="Uni Neue" pointSize="28"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="AEo-Hz-H8A" id="cdP-OO-OJ0"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -763,13 +789,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введен неверный код" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF2-uG-gWw">
-                                <rect key="frame" x="16" y="227" width="161" height="18"/>
+                                <rect key="frame" x="16" y="227" width="154.66666666666666" height="17.666666666666657"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                 <color key="textColor" name="EB5757"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ce4-2W-T2e">
-                                <rect key="frame" x="0.0" y="609" width="219" height="58"/>
+                                <rect key="frame" x="0.0" y="666.66666666666663" width="211" height="57.333333333333371"/>
                                 <inset key="contentEdgeInsets" minX="16" minY="20" maxX="20" maxY="20"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -789,6 +815,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="repeatSendCode:" destination="AEo-Hz-H8A" eventType="touchUpInside" id="hjw-ih-xSS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -810,19 +839,32 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E93-rj-1du"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomSendCodeConstraint" destination="DG4-5L-Lu6" id="kQe-kn-Udi"/>
+                        <outlet property="invalidCodeMessage" destination="PF2-uG-gWw" id="rB7-tf-hHV"/>
+                        <outlet property="phoneTtitle" destination="gCg-gZ-QFk" id="04E-Kz-xBz"/>
+                        <outletCollection property="OTPTxtFields" destination="Qdc-zX-c7I" collectionClass="NSMutableArray" id="R0G-IN-zLm"/>
+                        <outletCollection property="OTPTxtFields" destination="aX9-p5-HHr" collectionClass="NSMutableArray" id="Tky-VF-OHX"/>
+                        <outletCollection property="OTPTxtFields" destination="RDK-Z2-je5" collectionClass="NSMutableArray" id="Wb3-8N-1zX"/>
+                        <outletCollection property="OTPTxtFields" destination="Lun-rC-ISK" collectionClass="NSMutableArray" id="dF5-jP-pOV"/>
+                        <outletCollection property="OTPViews" destination="rg6-XZ-OoI" collectionClass="NSMutableArray" id="fxb-ob-qoq"/>
+                        <outletCollection property="OTPViews" destination="6wL-o2-BTs" collectionClass="NSMutableArray" id="pmd-uc-XBH"/>
+                        <outletCollection property="OTPViews" destination="SZh-FO-NP7" collectionClass="NSMutableArray" id="Uj4-5Q-NHh"/>
+                        <outletCollection property="OTPViews" destination="Lcb-IZ-hnl" collectionClass="NSMutableArray" id="Kuj-Cs-Y9P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q0x-zg-Vgk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="-146"/>
+            <point key="canvasLocation" x="-510" y="611"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow 1" width="20.5" height="12"/>
-        <image name="Close_icon" width="27.5" height="27.5"/>
-        <image name="Logo" width="87" height="87"/>
-        <image name="Search icon" width="15.5" height="15"/>
+        <image name="Arrow 1" width="20.333333969116211" height="11.333333015441895"/>
+        <image name="Close_icon" width="27.333333969116211" height="27.333333969116211"/>
+        <image name="Logo" width="86.666664123535156" height="86.666664123535156"/>
+        <image name="Search icon" width="15.333333015441895" height="15"/>
         <image name="apple 1" width="22" height="22"/>
-        <image name="back icon" width="11" height="6.5"/>
+        <image name="back icon" width="10.666666984558105" height="6.3333334922790527"/>
         <image name="facebook 1" width="22" height="22"/>
         <image name="google 1" width="21" height="21"/>
         <namedColor name="333333">

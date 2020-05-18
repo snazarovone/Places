@@ -41,6 +41,12 @@
 		EDDCB2FF24729B9B00863066 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */; };
 		EDDCB30124729CB800863066 /* CountryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB30024729CB800863066 /* CountryCellViewModel.swift */; };
 		EDDCB30324729CC300863066 /* CountryCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB30224729CC300863066 /* CountryCellViewModelType.swift */; };
+		EDDCB3062472BDD800863066 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3052472BDD800863066 /* CodeViewController.swift */; };
+		EDDCB30A2472C19400863066 /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3092472C19400863066 /* CodeViewModel.swift */; };
+		EDDCB30D2472C1AF00863066 /* CodeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB30C2472C1AF00863066 /* CodeViewModelType.swift */; };
+		EDDCB3102472ECFC00863066 /* AuthProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB30F2472ECFC00863066 /* AuthProviderProtocol.swift */; };
+		EDDCB3122472ED7800863066 /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3112472ED7800863066 /* AuthToken.swift */; };
+		EDDCB3152472EDC300863066 /* AppleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3142472EDC300863066 /* AppleAuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +88,13 @@
 		EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../../../../../../../../../../../Downloads/SignUpViewController.swift; sourceTree = "<group>"; };
 		EDDCB30024729CB800863066 /* CountryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellViewModel.swift; sourceTree = "<group>"; };
 		EDDCB30224729CC300863066 /* CountryCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellViewModelType.swift; sourceTree = "<group>"; };
+		EDDCB3052472BDD800863066 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CodeViewController.swift; path = ../CodeViewController.swift; sourceTree = "<group>"; };
+		EDDCB3092472C19400863066 /* CodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
+		EDDCB30C2472C1AF00863066 /* CodeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewModelType.swift; sourceTree = "<group>"; };
+		EDDCB30F2472ECFC00863066 /* AuthProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProviderProtocol.swift; sourceTree = "<group>"; };
+		EDDCB3112472ED7800863066 /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
+		EDDCB3142472EDC300863066 /* AppleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthService.swift; sourceTree = "<group>"; };
+		EDDCB3162472F67300863066 /* Nowait.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nowait.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +147,7 @@
 		ED03586424725959005A6745 /* Nowait */ = {
 			isa = PBXGroup;
 			children = (
+				EDDCB3162472F67300863066 /* Nowait.entitlements */,
 				ED03587D24725A91005A6745 /* App */,
 				ED03587F24725AC3005A6745 /* ViewControllers */,
 				ED03587E24725AAE005A6745 /* Storyboards */,
@@ -178,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				ED84C494247280E4009D6742 /* Registration */,
-				ED5F7139247288EA004DA1D3 /* New Group */,
+				ED5F7139247288EA004DA1D3 /* Main */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,14 +212,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		ED5F7139247288EA004DA1D3 /* New Group */ = {
+		ED5F7139247288EA004DA1D3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				ED5F713E24728917004DA1D3 /* Protocols */,
 				ED5F713B247288F9004DA1D3 /* ViewModel */,
 				ED5F713A247288F1004DA1D3 /* View */,
 			);
-			path = "New Group";
+			path = Main;
 			sourceTree = "<group>";
 		};
 		ED5F713A247288F1004DA1D3 /* View */ = {
@@ -318,6 +332,7 @@
 		ED84C494247280E4009D6742 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				EDDCB3042472BDB900863066 /* Code */,
 				ED5F7142247298BA004DA1D3 /* SelectCountry */,
 				ED5F7141247298AE004DA1D3 /* SignUp */,
 			);
@@ -343,6 +358,7 @@
 		ED84C49B2472832E009D6742 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				EDDCB30E2472ECED00863066 /* AppleID */,
 				ED84C49E24728354009D6742 /* SignUpViewModelType.swift */,
 			);
 			path = Protocol;
@@ -359,9 +375,61 @@
 		ED84C4A3247284E4009D6742 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EDDCB3132472EDAD00863066 /* AppleID */,
 				ED84C4A4247284FE009D6742 /* Country.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EDDCB3042472BDB900863066 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB30B2472C1A200863066 /* Protocol */,
+				EDDCB3082472C17F00863066 /* ViewModel */,
+				EDDCB3072472C17700863066 /* View */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		EDDCB3072472C17700863066 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB3052472BDD800863066 /* CodeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDDCB3082472C17F00863066 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB3092472C19400863066 /* CodeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EDDCB30B2472C1A200863066 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB30C2472C1AF00863066 /* CodeViewModelType.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EDDCB30E2472ECED00863066 /* AppleID */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB30F2472ECFC00863066 /* AuthProviderProtocol.swift */,
+			);
+			path = AppleID;
+			sourceTree = "<group>";
+		};
+		EDDCB3132472EDAD00863066 /* AppleID */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB3112472ED7800863066 /* AuthToken.swift */,
+				EDDCB3142472EDC300863066 /* AppleAuthService.swift */,
+			);
+			path = AppleID;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,15 +568,21 @@
 				EDDCB2FF24729B9B00863066 /* SignUpViewController.swift in Sources */,
 				ED84C49324727959009D6742 /* CodeTextField.swift in Sources */,
 				ED5F714E247299C7004DA1D3 /* CountryTableViewCell.swift in Sources */,
+				EDDCB3152472EDC300863066 /* AppleAuthService.swift in Sources */,
 				ED5F713D2472890E004DA1D3 /* MainViewModel.swift in Sources */,
 				ED03586A24725959005A6745 /* MainViewController.swift in Sources */,
 				ED5F714A2472999D004DA1D3 /* SelectCountryViewModel.swift in Sources */,
+				EDDCB3102472ECFC00863066 /* AuthProviderProtocol.swift in Sources */,
+				EDDCB30A2472C19400863066 /* CodeViewModel.swift in Sources */,
 				ED84C4912472792E009D6742 /* CodeTextFieldDelegate.swift in Sources */,
 				ED84C4A224728392009D6742 /* ExtensionString.swift in Sources */,
 				ED03587024725959005A6745 /* Nowait.xcdatamodeld in Sources */,
+				EDDCB30D2472C1AF00863066 /* CodeViewModelType.swift in Sources */,
 				ED5F71482472990C004DA1D3 /* SelectCountryViewController.swift in Sources */,
 				ED03586624725959005A6745 /* AppDelegate.swift in Sources */,
+				EDDCB3122472ED7800863066 /* AuthToken.swift in Sources */,
 				ED03586824725959005A6745 /* SceneDelegate.swift in Sources */,
+				EDDCB3062472BDD800863066 /* CodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +727,7 @@
 			baseConfigurationReference = 3C675F1E6F98531AC9D1348C /* Pods-Nowait.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Nowait/Nowait.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72MHAGL49V;
 				INFOPLIST_FILE = "$(SRCROOT)/Nowait/Resourse/Info.plist";
@@ -673,6 +748,7 @@
 			baseConfigurationReference = A81D279F2DB5F3AE9299B5F0 /* Pods-Nowait.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Nowait/Nowait.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72MHAGL49V;
 				INFOPLIST_FILE = "$(SRCROOT)/Nowait/Resourse/Info.plist";

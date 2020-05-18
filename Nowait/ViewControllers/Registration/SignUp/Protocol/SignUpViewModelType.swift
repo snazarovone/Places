@@ -7,7 +7,17 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 protocol SignUpViewModelType {
     func formattedNumber(number: String) -> String?
+   
+    var currentTextPhoneTF: String {get}
+    var country: BehaviorRelay<[Country]> {get}
+    var selectCountry: BehaviorRelay<Country?> {get}
+    
+    var isValidPhoneNumber: Bool {get}
+    
+    
 }

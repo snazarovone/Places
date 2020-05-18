@@ -20,7 +20,7 @@ class MainViewModel: MainViewModelType{
     
     private func initCountry(){
         let counryInit: [Country] = [Country(name: "Украина (+380)", mask: "XXX XXX XX XX", code: "+380"),
-                                     Country(name: "Россия (+7)", mask: "XXX-XX-XX", code: "+7")
+                                     Country(name: "Россия (+7)", mask: "XXX XXX XX XX", code: "+7")
         ]
         
         country.accept(counryInit)

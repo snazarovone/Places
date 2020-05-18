@@ -12,7 +12,7 @@ import RxCocoa
 
 class SignUpViewModel: SignUpViewModelType{
     
-    private var country: BehaviorRelay<[Country]> = BehaviorRelay(value: [])
+    var country: BehaviorRelay<[Country]> = BehaviorRelay(value: [])
     var selectCountry: BehaviorRelay<Country?> = BehaviorRelay(value: nil)
   
     var currentTextPhoneTF: String = ""

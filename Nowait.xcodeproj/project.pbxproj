@@ -39,6 +39,8 @@
 		ED84C4A224728392009D6742 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C4A124728392009D6742 /* ExtensionString.swift */; };
 		ED84C4A5247284FE009D6742 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C4A4247284FE009D6742 /* Country.swift */; };
 		EDDCB2FF24729B9B00863066 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */; };
+		EDDCB30124729CB800863066 /* CountryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB30024729CB800863066 /* CountryCellViewModel.swift */; };
+		EDDCB30324729CC300863066 /* CountryCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB30224729CC300863066 /* CountryCellViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		ED84C4A124728392009D6742 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		ED84C4A4247284FE009D6742 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../../../../../../../../../../../Downloads/SignUpViewController.swift; sourceTree = "<group>"; };
+		EDDCB30024729CB800863066 /* CountryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellViewModel.swift; sourceTree = "<group>"; };
+		EDDCB30224729CC300863066 /* CountryCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellViewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				ED5F71492472999D004DA1D3 /* SelectCountryViewModel.swift */,
+				EDDCB30024729CB800863066 /* CountryCellViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				ED5F714B247299AB004DA1D3 /* SelectCountryViewModelType.swift */,
+				EDDCB30224729CC300863066 /* CountryCellViewModelType.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -483,12 +489,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED5F714C247299AB004DA1D3 /* SelectCountryViewModelType.swift in Sources */,
+				EDDCB30124729CB800863066 /* CountryCellViewModel.swift in Sources */,
 				ED84C481247261A6009D6742 /* DesignableUIView.swift in Sources */,
 				ED84C483247266F5009D6742 /* DesignableUIButton.swift in Sources */,
 				ED5F714024728922004DA1D3 /* MainViewModelType.swift in Sources */,
 				ED84C49D24728345009D6742 /* SignUpViewModel.swift in Sources */,
 				ED84C49F24728354009D6742 /* SignUpViewModelType.swift in Sources */,
 				ED84C4A5247284FE009D6742 /* Country.swift in Sources */,
+				EDDCB30324729CC300863066 /* CountryCellViewModelType.swift in Sources */,
 				EDDCB2FF24729B9B00863066 /* SignUpViewController.swift in Sources */,
 				ED84C49324727959009D6742 /* CodeTextField.swift in Sources */,
 				ED5F714E247299C7004DA1D3 /* CountryTableViewCell.swift in Sources */,

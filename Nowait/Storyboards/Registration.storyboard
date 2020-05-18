@@ -436,9 +436,12 @@
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="15" minY="22" maxX="15" maxY="11"/>
                                 <state key="normal" image="Close_icon"/>
+                                <connections>
+                                    <action selector="close:" destination="9km-Mu-Oew" eventType="touchUpInside" id="qct-jJ-tEw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбор страны" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSl-Fu-xGI">
-                                <rect key="frame" x="125" y="25" width="125" height="22"/>
+                                <rect key="frame" x="129.5" y="25" width="116" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Jfv-sT-cOC"/>
                                 </constraints>
@@ -461,6 +464,9 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="9km-Mu-Oew" id="IbK-bJ-SII"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -509,7 +515,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Украина (+380)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKp-7K-qEf">
-                                                    <rect key="frame" x="1" y="21" width="115.5" height="18"/>
+                                                    <rect key="frame" x="1" y="21" width="105" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="Eu7-7i-5qa"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -526,7 +535,9 @@
                                                 <constraint firstItem="YKp-7K-qEf" firstAttribute="leading" secondItem="LBc-VZ-IHf" secondAttribute="leading" constant="1" id="124-A2-0kF"/>
                                                 <constraint firstItem="YKp-7K-qEf" firstAttribute="centerY" secondItem="LBc-VZ-IHf" secondAttribute="centerY" id="8uS-Wm-7pr"/>
                                                 <constraint firstAttribute="bottom" secondItem="E6a-8z-4rB" secondAttribute="bottom" id="9Ev-Tq-fn7"/>
+                                                <constraint firstItem="YKp-7K-qEf" firstAttribute="top" secondItem="LBc-VZ-IHf" secondAttribute="top" constant="21" id="IiJ-fU-OYV"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YKp-7K-qEf" secondAttribute="trailing" constant="1" id="PdO-7G-YGa"/>
+                                                <constraint firstAttribute="bottom" secondItem="YKp-7K-qEf" secondAttribute="bottom" constant="21" id="aib-rK-q4y"/>
                                                 <constraint firstItem="E6a-8z-4rB" firstAttribute="leading" secondItem="LBc-VZ-IHf" secondAttribute="leading" id="jpt-EK-sXw"/>
                                                 <constraint firstAttribute="trailing" secondItem="E6a-8z-4rB" secondAttribute="trailing" id="wUz-84-5yk"/>
                                             </constraints>
@@ -536,6 +547,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9km-Mu-Oew" id="J97-nL-0gD"/>
+                                    <outlet property="delegate" destination="9km-Mu-Oew" id="vai-Bg-wRf"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -557,6 +572,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8C0-6b-4PT"/>
                     <connections>
+                        <outlet property="searchTF" destination="irr-0x-4xl" id="KcU-MT-fyB"/>
                         <outlet property="tableView" destination="mHF-0y-sXP" id="CaI-vy-qaD"/>
                     </connections>
                 </viewController>

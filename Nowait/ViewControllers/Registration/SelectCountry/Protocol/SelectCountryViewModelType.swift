@@ -9,4 +9,7 @@
 import Foundation
 
 protocol SelectCountryViewModelType {
+    func numberOfRow() -> Int
+    func cellForRow(at indexPath: IndexPath) -> CountryCellViewModelType
+    func didSelect(at indexPath: IndexPath)
 }

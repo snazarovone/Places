@@ -12,4 +12,9 @@ class CountryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleCountry: UILabel!
     
+    weak var dataCountry: CountryCellViewModelType?{
+        willSet(data){
+            self.titleCountry.text = data?.titleCountry
+        }
+    }
 }

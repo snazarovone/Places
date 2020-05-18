@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		437DCEF5CF935E80733C7C78 /* Pods_Nowait.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760A5EC3A6915C23C98B2C6C /* Pods_Nowait.framework */; };
 		ED03586624725959005A6745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED03586524725959005A6745 /* AppDelegate.swift */; };
 		ED03586824725959005A6745 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED03586724725959005A6745 /* SceneDelegate.swift */; };
-		ED03586A24725959005A6745 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED03586924725959005A6745 /* ViewController.swift */; };
+		ED03586A24725959005A6745 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED03586924725959005A6745 /* MainViewController.swift */; };
 		ED03586D24725959005A6745 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED03586B24725959005A6745 /* Main.storyboard */; };
 		ED03587024725959005A6745 /* Nowait.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED03586E24725959005A6745 /* Nowait.xcdatamodeld */; };
 		ED03587224725961005A6745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED03587124725961005A6745 /* Assets.xcassets */; };
@@ -18,6 +19,8 @@
 		ED03588624725E8D005A6745 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED03588324725E8D005A6745 /* SFProDisplay-Regular.ttf */; };
 		ED03588724725E8D005A6745 /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED03588424725E8D005A6745 /* SFProDisplay-Medium.ttf */; };
 		ED03588824725E8D005A6745 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED03588524725E8D005A6745 /* SFProDisplay-Semibold.ttf */; };
+		ED5F713D2472890E004DA1D3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F713C2472890E004DA1D3 /* MainViewModel.swift */; };
+		ED5F714024728922004DA1D3 /* MainViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F713F24728922004DA1D3 /* MainViewModelType.swift */; };
 		ED84C481247261A6009D6742 /* DesignableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C480247261A6009D6742 /* DesignableUIView.swift */; };
 		ED84C483247266F5009D6742 /* DesignableUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C482247266F5009D6742 /* DesignableUIButton.swift */; };
 		ED84C485247267C5009D6742 /* Circle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED84C484247267C5009D6742 /* Circle-Regular.ttf */; };
@@ -27,13 +30,21 @@
 		ED84C48D247274A5009D6742 /* SFProText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED84C48C247274A5009D6742 /* SFProText-Regular.ttf */; };
 		ED84C4912472792E009D6742 /* CodeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C4902472792E009D6742 /* CodeTextFieldDelegate.swift */; };
 		ED84C49324727959009D6742 /* CodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C49224727959009D6742 /* CodeTextField.swift */; };
+		ED84C498247282D8009D6742 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C497247282D8009D6742 /* SignUpViewController.swift */; };
+		ED84C49D24728345009D6742 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C49C24728345009D6742 /* SignUpViewModel.swift */; };
+		ED84C49F24728354009D6742 /* SignUpViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C49E24728354009D6742 /* SignUpViewModelType.swift */; };
+		ED84C4A224728392009D6742 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C4A124728392009D6742 /* ExtensionString.swift */; };
+		ED84C4A5247284FE009D6742 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C4A4247284FE009D6742 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C675F1E6F98531AC9D1348C /* Pods-Nowait.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nowait.debug.xcconfig"; path = "Target Support Files/Pods-Nowait/Pods-Nowait.debug.xcconfig"; sourceTree = "<group>"; };
+		760A5EC3A6915C23C98B2C6C /* Pods_Nowait.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nowait.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A81D279F2DB5F3AE9299B5F0 /* Pods-Nowait.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nowait.release.xcconfig"; path = "Target Support Files/Pods-Nowait/Pods-Nowait.release.xcconfig"; sourceTree = "<group>"; };
 		ED03586224725959005A6745 /* Nowait.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nowait.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED03586524725959005A6745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED03586724725959005A6745 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ED03586924725959005A6745 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED03586924725959005A6745 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ED03586C24725959005A6745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED03586F24725959005A6745 /* Nowait.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nowait.xcdatamodel; sourceTree = "<group>"; };
 		ED03587124725961005A6745 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +54,8 @@
 		ED03588324725E8D005A6745 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		ED03588424725E8D005A6745 /* SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
 		ED03588524725E8D005A6745 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		ED5F713C2472890E004DA1D3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		ED5F713F24728922004DA1D3 /* MainViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelType.swift; sourceTree = "<group>"; };
 		ED84C480247261A6009D6742 /* DesignableUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUIView.swift; sourceTree = "<group>"; };
 		ED84C482247266F5009D6742 /* DesignableUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUIButton.swift; sourceTree = "<group>"; };
 		ED84C484247267C5009D6742 /* Circle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circle-Regular.ttf"; sourceTree = "<group>"; };
@@ -52,6 +65,11 @@
 		ED84C48C247274A5009D6742 /* SFProText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Regular.ttf"; sourceTree = "<group>"; };
 		ED84C4902472792E009D6742 /* CodeTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextFieldDelegate.swift; sourceTree = "<group>"; };
 		ED84C49224727959009D6742 /* CodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextField.swift; sourceTree = "<group>"; };
+		ED84C497247282D8009D6742 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
+		ED84C49C24728345009D6742 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		ED84C49E24728354009D6742 /* SignUpViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModelType.swift; sourceTree = "<group>"; };
+		ED84C4A124728392009D6742 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
+		ED84C4A4247284FE009D6742 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +77,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437DCEF5CF935E80733C7C78 /* Pods_Nowait.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09493B762B636B448B3A3E47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C675F1E6F98531AC9D1348C /* Pods-Nowait.debug.xcconfig */,
+				A81D279F2DB5F3AE9299B5F0 /* Pods-Nowait.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		76E69FB6DD5FF18CFAAAE2B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				760A5EC3A6915C23C98B2C6C /* Pods_Nowait.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED03585924725959005A6745 = {
 			isa = PBXGroup;
 			children = (
 				ED03586424725959005A6745 /* Nowait */,
 				ED03586324725959005A6745 /* Products */,
+				09493B762B636B448B3A3E47 /* Pods */,
+				76E69FB6DD5FF18CFAAAE2B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,7 +165,8 @@
 		ED03587F24725AC3005A6745 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				ED03586924725959005A6745 /* ViewController.swift */,
+				ED84C494247280E4009D6742 /* Registration */,
+				ED5F7139247288EA004DA1D3 /* New Group */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -147,9 +186,44 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		ED5F7139247288EA004DA1D3 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				ED5F713E24728917004DA1D3 /* Protocols */,
+				ED5F713B247288F9004DA1D3 /* ViewModel */,
+				ED5F713A247288F1004DA1D3 /* View */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		ED5F713A247288F1004DA1D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED03586924725959005A6745 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED5F713B247288F9004DA1D3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED5F713C2472890E004DA1D3 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ED5F713E24728917004DA1D3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				ED5F713F24728922004DA1D3 /* MainViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		ED84C47E24726165009D6742 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				ED84C4A02472837E009D6742 /* Extensions */,
 				ED84C48F2472791C009D6742 /* Protocols */,
 				ED84C48E2472790C009D6742 /* Classes */,
 			);
@@ -181,6 +255,57 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		ED84C494247280E4009D6742 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				ED84C4A3247284E4009D6742 /* Model */,
+				ED84C49B2472832E009D6742 /* Protocol */,
+				ED84C49A24728328009D6742 /* ViewModel */,
+				ED84C49924728323009D6742 /* View */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		ED84C49924728323009D6742 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED84C497247282D8009D6742 /* SignUpViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED84C49A24728328009D6742 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED84C49C24728345009D6742 /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ED84C49B2472832E009D6742 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				ED84C49E24728354009D6742 /* SignUpViewModelType.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		ED84C4A02472837E009D6742 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED84C4A124728392009D6742 /* ExtensionString.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ED84C4A3247284E4009D6742 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED84C4A4247284FE009D6742 /* Country.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +313,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED03587924725961005A6745 /* Build configuration list for PBXNativeTarget "Nowait" */;
 			buildPhases = (
+				DC1A1D691E3C241F74E41357 /* [CP] Check Pods Manifest.lock */,
 				ED03585E24725959005A6745 /* Sources */,
 				ED03585F24725959005A6745 /* Frameworks */,
 				ED03586024725959005A6745 /* Resources */,
+				7912784781074E095C391C9B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +383,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7912784781074E095C391C9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nowait/Pods-Nowait-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nowait/Pods-Nowait-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nowait/Pods-Nowait-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC1A1D691E3C241F74E41357 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nowait-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ED03585E24725959005A6745 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -263,9 +432,16 @@
 			files = (
 				ED84C481247261A6009D6742 /* DesignableUIView.swift in Sources */,
 				ED84C483247266F5009D6742 /* DesignableUIButton.swift in Sources */,
+				ED5F714024728922004DA1D3 /* MainViewModelType.swift in Sources */,
+				ED84C49D24728345009D6742 /* SignUpViewModel.swift in Sources */,
+				ED84C49F24728354009D6742 /* SignUpViewModelType.swift in Sources */,
+				ED84C4A5247284FE009D6742 /* Country.swift in Sources */,
 				ED84C49324727959009D6742 /* CodeTextField.swift in Sources */,
-				ED03586A24725959005A6745 /* ViewController.swift in Sources */,
+				ED84C498247282D8009D6742 /* SignUpViewController.swift in Sources */,
+				ED5F713D2472890E004DA1D3 /* MainViewModel.swift in Sources */,
+				ED03586A24725959005A6745 /* MainViewController.swift in Sources */,
 				ED84C4912472792E009D6742 /* CodeTextFieldDelegate.swift in Sources */,
+				ED84C4A224728392009D6742 /* ExtensionString.swift in Sources */,
 				ED03587024725959005A6745 /* Nowait.xcdatamodeld in Sources */,
 				ED03586624725959005A6745 /* AppDelegate.swift in Sources */,
 				ED03586824725959005A6745 /* SceneDelegate.swift in Sources */,
@@ -410,6 +586,7 @@
 		};
 		ED03587A24725961005A6745 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C675F1E6F98531AC9D1348C /* Pods-Nowait.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -429,6 +606,7 @@
 		};
 		ED03587B24725961005A6745 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A81D279F2DB5F3AE9299B5F0 /* Pods-Nowait.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

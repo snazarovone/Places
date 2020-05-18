@@ -6,5 +6,10 @@ target 'Nowait' do
   use_frameworks!
 
   # Pods for Nowait
+  pod 'SwiftOverlays'
+  pod 'RxSwift', '~> 5.0'
+  pod 'RxCocoa', '~> 5.0'
+  pod 'Moya/RxSwift', '~> 14.0'
+  pod 'Moya-ObjectMapper/RxSwift', '~> 2.9'
 
 end

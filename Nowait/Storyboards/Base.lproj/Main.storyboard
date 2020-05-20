@@ -364,11 +364,20 @@
                         <outletCollection property="helpersSectionCells" destination="LQ0-fs-V9a" collectionClass="NSMutableArray" id="XIY-yR-qUc"/>
                         <outletCollection property="helpersSectionCells" destination="h7R-vv-gel" collectionClass="NSMutableArray" id="XbK-so-6Ed"/>
                         <outletCollection property="helpersSectionCells" destination="p2j-nv-tRN" collectionClass="NSMutableArray" id="fkc-3l-dfS"/>
+                        <segue destination="8VE-ZA-M9a" kind="presentation" identifier="AlertLogoutViewController" animates="NO" modalPresentationStyle="overFullScreen" id="j9M-61-4WK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZm-w9-fVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="967" y="116"/>
+        </scene>
+        <!--AlertLogoutViewController-->
+        <scene sceneID="U1Z-gD-D9C">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Alerts" referencedIdentifier="AlertLogoutViewController" id="8VE-ZA-M9a" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXv-hz-Oea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1603" y="-233"/>
         </scene>
     </scenes>
     <resources>

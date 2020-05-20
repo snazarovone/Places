@@ -52,6 +52,28 @@ class MainTableViewController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    //MARK:- Prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == String(describing: AlertLogoutViewController.self){
+            if let dvc = segue.destination as? AlertLogoutViewController{
+                dvc.isLogout = {
+                    [weak self] in
+                    self?.logout()
+                }
+            }
+        }
+    }
+    
+    private func logout(){
+        let facebookAuthService = FacebookAuthService()
+        facebookAuthService.logout()
+        
+        let googleAuthService = GoogleAuthService()
+        googleAuthService.logout()
+        
+        self.requestLogout()
+    }
+    
     private func updateHeaderView(){
         if mainViewModel.checkExistValidToken() == true{
             createAccount.isHidden = true
@@ -156,7 +178,11 @@ class MainTableViewController: UITableViewController {
             }
             return MainMenuSectionModel.settings.cellNotAuth.count
         }else{
-            return MainMenuSectionModel.helpers.cellFull.count
+            if mainViewModel.checkExistValidToken() == true{
+                return MainMenuSectionModel.helpers.cellFull.count
+            }else{
+                return MainMenuSectionModel.helpers.cellNotAuth.count
+            }
         }
     }
 
@@ -202,13 +228,9 @@ class MainTableViewController: UITableViewController {
         switch cell {
         case .logout:
             //MARK:- Logout
-            let facebookAuthService = FacebookAuthService()
-            facebookAuthService.logout()
-            
-            let googleAuthService = GoogleAuthService()
-            googleAuthService.logout()
-            
-            self.requestLogout()
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: String(describing: AlertLogoutViewController.self), sender: nil)
+            }
         default:
             break
         }

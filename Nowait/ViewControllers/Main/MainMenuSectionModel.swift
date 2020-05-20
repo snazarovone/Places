@@ -37,7 +37,7 @@ extension MainMenuSectionModel{
         case .settings:
             return [.notification]
         case .helpers:
-            return [.terms, .help, .logout]
+            return [.terms, .help]
         }
     }
     

@@ -16,6 +16,8 @@ enum AuthServerAPI{
     case checkLogin(phone: String, verification_code: String)
     case logout
     case userInfo
+    case facebook(provider_uid: String, email: String?, first_name: String?, last_name: String?)
+    case google(provider_uid: String, email: String?, first_name: String?, last_name: String?)
 }
 
 extension AuthServerAPI: TargetType{
@@ -35,12 +37,16 @@ extension AuthServerAPI: TargetType{
             return "/auth/logout"
         case .userInfo:
             return "/user/current"
+        case .facebook:
+            return "/auth/facebook"
+        case .google:
+            return "/auth/google"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .register, .checkLogin:
+        case .register, .checkLogin, .facebook, .google:
             return .post
         case .listCountry, .logout, .userInfo:
             return .get
@@ -61,6 +67,21 @@ extension AuthServerAPI: TargetType{
             return .requestParameters(parameters: ["phone": phone,
                                                    "verification_code": verification_code],
                                       encoding: URLEncoding.default)
+        case .facebook(let provider_uid, let email, let first_name, let last_name), .google(let provider_uid, let email, let first_name, let last_name):
+            var params: [String: String] = ["provider_uid": provider_uid]
+            if let email = email{
+                params["email"] = email
+            }
+            
+            if let first_name = first_name{
+                params["first_name"] = first_name
+            }
+            
+            if let last_name = last_name{
+                params["last_name"] = last_name
+            }
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+            
         }
     }
     
@@ -68,7 +89,7 @@ extension AuthServerAPI: TargetType{
         let params: [String: String]
         
         switch self {
-        case .register, .listCountry, .checkLogin:
+        case .register, .listCountry, .checkLogin, .facebook, .google:
             params = ["Content-Type": "application/x-www-form-urlencoded",
                       "Accept": "application/json"]
         case .logout, .userInfo:

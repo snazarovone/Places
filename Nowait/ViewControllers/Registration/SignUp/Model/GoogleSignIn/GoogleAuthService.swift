@@ -28,7 +28,9 @@ class GoogleAuthService: NSObject, GoogleAuthProviderProtocol{
     }
     
     func logout() {
-        GIDSignIn.sharedInstance().signOut()
+        if GIDSignIn.sharedInstance()?.currentUser != nil ?? nil{
+            GIDSignIn.sharedInstance().signOut()
+        }
     }
     
 }

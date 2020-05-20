@@ -86,4 +86,41 @@ class SignUpViewModel: SignUpViewModelType{
             }
         }
     }
+    
+    func requestFacebookLogin(at token: FacebookAuthToken, callback: @escaping (ResultResponce, TokenModel?)->()){
+        guard let id = token.accessToken?.userID else{
+            AuthTokenNowait.shared.removeData()
+            callback(.fail, TokenModel(success: false, message: "Повторите попытку позднее", error: "Ошибка"))
+            return
+        }
+        AuthAPI.requstAuthAPI(type: TokenModel.self, request: .facebook(provider_uid: id, email: token.email, first_name: token.firstName, last_name: token.lastName)) { (value) in
+            if value?.success ?? false, let value = value{
+                AuthTokenNowait.shared.setData(token: value)
+                callback(.success, nil)
+            }else{
+                AuthTokenNowait.shared.removeData()
+                callback(.fail, nil)
+            }
+        }
+    }
+    
+    func requestGoogleLogin(at token: GoogleAuthToken, callback: @escaping (ResultResponce, TokenModel?)->()){
+        guard let id = token.userId else{
+            AuthTokenNowait.shared.removeData()
+            callback(.fail, TokenModel(success: false, message: "Повторите попытку позднее", error: "Ошибка"))
+            return
+        }
+        AuthAPI.requstAuthAPI(type: TokenModel.self, request: .facebook(provider_uid: id,
+                                                                        email: token.email,
+                                                                        first_name: token.familyName,
+                                                                        last_name: token.givenName)) { (value) in
+            if value?.success ?? false, let value = value{
+                AuthTokenNowait.shared.setData(token: value)
+                callback(.success, nil)
+            }else{
+                AuthTokenNowait.shared.removeData()
+                callback(.fail, nil)
+            }
+        }
+    }
 }

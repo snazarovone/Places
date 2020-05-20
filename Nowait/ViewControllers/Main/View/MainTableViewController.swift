@@ -65,7 +65,9 @@ class MainTableViewController: UITableViewController {
             phone.text = nil
             phone.isHidden = false
             
-            reuestUserInfo()
+            DispatchQueue.main.async {
+                self.requestUserInfo()
+            }
         }else{
             createAccount.isHidden = false
             photoUser.isHidden = true
@@ -99,7 +101,11 @@ class MainTableViewController: UITableViewController {
             }
         }
 
-        phone.text = userInfo.phone
+        if let phoneUser = userInfo.phone{
+            phone.text = phoneUser
+        }else{
+            phone.text = userInfo.email
+        }
         
     }
     
@@ -121,7 +127,7 @@ class MainTableViewController: UITableViewController {
     }
     
     //MARK:- RequestUserInfo
-    private func reuestUserInfo(){
+    private func requestUserInfo(){
         showWaitOverlay()
         view.isUserInteractionEnabled = false
         mainViewModel.requestUserInfo { [weak self] (resultResponce, userInfoModel) in
@@ -196,6 +202,12 @@ class MainTableViewController: UITableViewController {
         switch cell {
         case .logout:
             //MARK:- Logout
+            let facebookAuthService = FacebookAuthService()
+            facebookAuthService.logout()
+            
+            let googleAuthService = GoogleAuthService()
+            googleAuthService.logout()
+            
             self.requestLogout()
         default:
             break

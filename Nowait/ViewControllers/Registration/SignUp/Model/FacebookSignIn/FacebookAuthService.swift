@@ -22,12 +22,39 @@ class FacebookAuthService: FacebookAuthProviderProtocol{
     
     func login(vc: UIViewController) {
         loginManager.logIn(permissions: ["public_profile", "email"], from: vc) { [weak self] (result, error) in
-            self?.authResultSubject.onNext(FacebookAuthToken(accessToken: result?.token, error: error))
+            
+            if error == nil{
+                let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields": "first_name, last_name, email"])
+                
+                request.start { [weak self] (graphRequestConnection, r, error) in
+                    guard let Info = r as? [String: Any] else {
+                        let fb = FacebookAuthToken(accessToken: result?.token,
+                                                   error: error,
+                                                   firstName: nil, lastName: nil, email: nil)
+                        self?.authResultSubject.onNext(fb)
+                        return
+                        
+                    }
+                    
+                    let fb = FacebookAuthToken(accessToken: result?.token,
+                                               error: error,
+                                               firstName: Info["first_name"] as? String,
+                                               lastName: Info["last_name"] as? String, email: Info["email"] as? String)
+                    self?.authResultSubject.onNext(fb)
+                }
+            }else{
+                let fb = FacebookAuthToken(accessToken: result?.token,
+                                           error: error,
+                                           firstName: nil, lastName: nil, email: nil)
+                self?.authResultSubject.onNext(fb)
+            }
         }
     }
     
     func logout() {
-        loginManager.logOut()
+        if AccessToken.isCurrentAccessTokenActive{
+            loginManager.logOut()
+        }
     }
     
 }

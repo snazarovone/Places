@@ -12,10 +12,17 @@ import FBSDKCoreKit
 class FacebookAuthToken{
     
     let accessToken: AccessToken?
+    let firstName: String?
+    let lastName: String?
+    let email: String?
+    
     let error: Error?
     
-    init(accessToken: AccessToken?, error: Error?){
+    init(accessToken: AccessToken?, error: Error?, firstName: String?, lastName: String?, email: String?){
         self.accessToken = accessToken
         self.error = error
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
     }
 }

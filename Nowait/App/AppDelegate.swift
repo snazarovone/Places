@@ -9,24 +9,47 @@
 import UIKit
 import CoreData
 import GoogleSignIn
+import FBSDKCoreKit
+import Moya
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let disposeBag = DisposeBag()
+    
+    //MARK:- Providers
+    var providerAuthServerAPI = MoyaProvider<AuthServerAPI>(session: DefaultAlamofireManager.sharedManager, plugins: [
+        NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: [.verbose, .formatRequestAscURL]))
+    ])
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+      
+        //MARK:- Google SignIn
         var nsDictionary: NSDictionary?
         if let path = Bundle.main.path(forResource: "credentials", ofType: "plist") {
             nsDictionary = NSDictionary(contentsOfFile: path)
         }
-        // Initialize sign-in
         GIDSignIn.sharedInstance().clientID = nsDictionary?["CLIENT_ID"] as? String
+       
+        //MARK:- Facebook SignIn
+        ApplicationDelegate.shared.application( application, didFinishLaunchingWithOptions: launchOptions )
+        
         return true
     }
+
+    
+        
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url)
+        
+        let fb = ApplicationDelegate.shared.application( app, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation] )
+        
+        let vk = GIDSignIn.sharedInstance().handle(url)
+        return fb || vk
     }
 
     // MARK: UISceneSession Lifecycle

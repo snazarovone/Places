@@ -12,4 +12,5 @@ target 'Nowait' do
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'Moya-ObjectMapper/RxSwift', '~> 2.9'
   pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
 end

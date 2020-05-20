@@ -18,6 +18,9 @@ protocol SignUpViewModelType {
     var selectCountry: BehaviorRelay<Country?> {get}
     
     var isValidPhoneNumber: Bool {get}
+    var fullphone: String {get}
     
+    func requestRegistrationAtPhone(callback: @escaping ((ResultResponce, BaseResponseModel?)->()))
+    func requestListCountry(callback: @escaping ((ResultResponce, BaseResponseModel?)->()))
     
 }

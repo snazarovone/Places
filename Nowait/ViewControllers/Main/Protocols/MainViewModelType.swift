@@ -7,6 +7,16 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 protocol MainViewModelType {
+    
+    var country: BehaviorRelay<[Country]> {get}
+    var userInfo: BehaviorRelay<UserInfo?> {get}
+    
+    func checkExistValidToken() -> Bool
+    
+    func requestLogOut(callback: @escaping ((ResultResponce, BaseResponseModel?)->()))
+    func requestUserInfo(callback: @escaping ((ResultResponce, UserInfoModel?)->()))
 }

@@ -457,7 +457,7 @@
                                 <rect key="frame" x="16" y="82.666666666666671" width="343" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search icon" translatesAutoresizingMaskIntoConstraints="NO" id="zda-3i-Hto">
-                                        <rect key="frame" x="10" y="10.333333333333329" width="15" height="15"/>
+                                        <rect key="frame" x="10" y="10.666666666666657" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="15" id="GPo-u9-MW4"/>
                                             <constraint firstAttribute="height" constant="15" id="lol-Nr-CaQ"/>

@@ -24,6 +24,7 @@ class CodeViewController: UIViewController {
     
     //PUBLIC
     public var codeViewModel: CodeViewModel!
+    public var isComplite: (()->())? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +66,15 @@ class CodeViewController: UIViewController {
         var texts:  [String] = []
         OTPTxtFields.forEach {  texts.append($0.text!)}
         let currentText = texts.reduce("", +)
-        if currentText == codeViewModel.succsessCode{
-            print("Success Code")
+        
+        codeViewModel.codeTF = currentText
+       
+        //MARK:- CheckCode
+        requestCheckCode()
+    }
+    
+    private func resultCheck(isValid: Bool){
+        if isValid{
             OTPViews.forEach { (v) in
                 v.borderC = .black
                 v.backgroundColor = .clear
@@ -95,6 +103,28 @@ class CodeViewController: UIViewController {
             }else{
                 v.borderC = #colorLiteral(red: 0.746999979, green: 0.746999979, blue: 0.746999979, alpha: 1)
                 v.backgroundColor = .clear
+            }
+        }
+    }
+    
+    //MARK:- Request
+    private func requestCheckCode(){
+        showWaitOverlay()
+        view.isUserInteractionEnabled = false
+        
+        codeViewModel.requestCheckLogin { [weak self] (resultResponce, tokenModel) in
+            
+            self?.removeAllOverlays()
+            self?.view?.isUserInteractionEnabled = false
+            
+            switch resultResponce{
+            case .success:
+                self?.resultCheck(isValid: true)
+                self?.dismiss(animated: true, completion: {
+                    self?.isComplite?()
+                })
+            case .fail:
+                self?.resultCheck(isValid: false)
             }
         }
     }

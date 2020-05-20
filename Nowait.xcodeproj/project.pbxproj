@@ -38,6 +38,9 @@
 		ED84C49F24728354009D6742 /* SignUpViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C49E24728354009D6742 /* SignUpViewModelType.swift */; };
 		ED84C4A224728392009D6742 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C4A124728392009D6742 /* ExtensionString.swift */; };
 		ED84C4A5247284FE009D6742 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C4A4247284FE009D6742 /* Country.swift */; };
+		EDA43272247549B100A2BB52 /* MainViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43271247549B100A2BB52 /* MainViewDelegate.swift */; };
+		EDA4327524754BC600A2BB52 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4327424754BC600A2BB52 /* UserInfoModel.swift */; };
+		EDA4327724754C5600A2BB52 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4327624754C5600A2BB52 /* UserInfo.swift */; };
 		EDDCB2FF24729B9B00863066 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */; };
 		EDDCB30124729CB800863066 /* CountryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB30024729CB800863066 /* CountryCellViewModel.swift */; };
 		EDDCB30324729CC300863066 /* CountryCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB30224729CC300863066 /* CountryCellViewModelType.swift */; };
@@ -51,6 +54,27 @@
 		EDDCB31E2473218A00863066 /* GoogleAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB31D2473218A00863066 /* GoogleAuthToken.swift */; };
 		EDDCB3202473229D00863066 /* GoogleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB31F2473229D00863066 /* GoogleAuthService.swift */; };
 		EDDCB322247322E400863066 /* GoogleAuthProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB321247322E400863066 /* GoogleAuthProviderProtocol.swift */; };
+		EDDCB324247402FB00863066 /* DesignableUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB323247402FB00863066 /* DesignableUIImageView.swift */; };
+		EDDCB3262474089C00863066 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3252474089C00863066 /* MainTableViewController.swift */; };
+		EDDCB328247436D200863066 /* MainHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDCB327247436D200863066 /* MainHeader.xib */; };
+		EDDCB32A247437A700863066 /* MainHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB329247437A700863066 /* MainHeaderUIView.swift */; };
+		EDDCB32C247437FB00863066 /* MainMenuSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB32B247437FB00863066 /* MainMenuSectionModel.swift */; };
+		EDDCB32F247438EF00863066 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB32E247438EF00863066 /* ExtensionUIView.swift */; };
+		EDDCB3322474455E00863066 /* FacebookAuthProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3312474455E00863066 /* FacebookAuthProviderProtocol.swift */; };
+		EDDCB3352474464E00863066 /* FacebookAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3342474464E00863066 /* FacebookAuthToken.swift */; };
+		EDDCB337247446B000863066 /* FacebookAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB336247446B000863066 /* FacebookAuthService.swift */; };
+		EDDCB342247502F700863066 /* AuthServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB341247502F700863066 /* AuthServerAPI.swift */; };
+		EDDCB3452475039000863066 /* BaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3442475039000863066 /* BaseUrl.swift */; };
+		EDDCB347247504F300863066 /* DefaultAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB346247504F300863066 /* DefaultAlamofireManager.swift */; };
+		EDDCB3492475050D00863066 /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3482475050D00863066 /* BaseResponseModel.swift */; };
+		EDDCB34B2475060A00863066 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB34A2475060A00863066 /* AuthAPI.swift */; };
+		EDDCB34E2475087800863066 /* CountryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB34D2475087800863066 /* CountryModels.swift */; };
+		EDF862A324750B15000FC85B /* ResultResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF862A224750B15000FC85B /* ResultResponce.swift */; };
+		EDF862A624750E46000FC85B /* UDID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF862A524750E46000FC85B /* UDID.swift */; };
+		EDF862A824750ED0000FC85B /* AuthTokenNowait.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF862A724750ED0000FC85B /* AuthTokenNowait.swift */; };
+		EDF862AA24750F27000FC85B /* AuthTokenNowaitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF862A924750F27000FC85B /* AuthTokenNowaitType.swift */; };
+		EDF862AD2475179C000FC85B /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF862AC2475179C000FC85B /* TokenModel.swift */; };
+		EDF862AF24753BEB000FC85B /* MainMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF862AE24753BEB000FC85B /* MainMenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +113,9 @@
 		ED84C49E24728354009D6742 /* SignUpViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModelType.swift; sourceTree = "<group>"; };
 		ED84C4A124728392009D6742 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		ED84C4A4247284FE009D6742 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		EDA43271247549B100A2BB52 /* MainViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDelegate.swift; sourceTree = "<group>"; };
+		EDA4327424754BC600A2BB52 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		EDA4327624754C5600A2BB52 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../../../../../../../../../../../Downloads/SignUpViewController.swift; sourceTree = "<group>"; };
 		EDDCB30024729CB800863066 /* CountryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellViewModel.swift; sourceTree = "<group>"; };
 		EDDCB30224729CC300863066 /* CountryCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellViewModelType.swift; sourceTree = "<group>"; };
@@ -103,6 +130,27 @@
 		EDDCB31D2473218A00863066 /* GoogleAuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthToken.swift; sourceTree = "<group>"; };
 		EDDCB31F2473229D00863066 /* GoogleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthService.swift; sourceTree = "<group>"; };
 		EDDCB321247322E400863066 /* GoogleAuthProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthProviderProtocol.swift; sourceTree = "<group>"; };
+		EDDCB323247402FB00863066 /* DesignableUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUIImageView.swift; sourceTree = "<group>"; };
+		EDDCB3252474089C00863066 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		EDDCB327247436D200863066 /* MainHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainHeader.xib; sourceTree = "<group>"; };
+		EDDCB329247437A700863066 /* MainHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderUIView.swift; sourceTree = "<group>"; };
+		EDDCB32B247437FB00863066 /* MainMenuSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainMenuSectionModel.swift; path = ../MainMenuSectionModel.swift; sourceTree = "<group>"; };
+		EDDCB32E247438EF00863066 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
+		EDDCB3312474455E00863066 /* FacebookAuthProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthProviderProtocol.swift; sourceTree = "<group>"; };
+		EDDCB3342474464E00863066 /* FacebookAuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthToken.swift; sourceTree = "<group>"; };
+		EDDCB336247446B000863066 /* FacebookAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthService.swift; sourceTree = "<group>"; };
+		EDDCB341247502F700863066 /* AuthServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServerAPI.swift; sourceTree = "<group>"; };
+		EDDCB3442475039000863066 /* BaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUrl.swift; sourceTree = "<group>"; };
+		EDDCB346247504F300863066 /* DefaultAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlamofireManager.swift; sourceTree = "<group>"; };
+		EDDCB3482475050D00863066 /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
+		EDDCB34A2475060A00863066 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		EDDCB34D2475087800863066 /* CountryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModels.swift; sourceTree = "<group>"; };
+		EDF862A224750B15000FC85B /* ResultResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultResponce.swift; sourceTree = "<group>"; };
+		EDF862A524750E46000FC85B /* UDID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDID.swift; sourceTree = "<group>"; };
+		EDF862A724750ED0000FC85B /* AuthTokenNowait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthTokenNowait.swift; path = ../../../ViewControllers/Main/Model/AuthTokenNowait.swift; sourceTree = "<group>"; };
+		EDF862A924750F27000FC85B /* AuthTokenNowaitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenNowaitType.swift; sourceTree = "<group>"; };
+		EDF862AC2475179C000FC85B /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		EDF862AE24753BEB000FC85B /* MainMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				EDDCB3162472F67300863066 /* Nowait.entitlements */,
+				EDDCB33F247502B100863066 /* API */,
 				ED03587D24725A91005A6745 /* App */,
 				ED03587F24725AC3005A6745 /* ViewControllers */,
 				ED03587E24725AAE005A6745 /* Storyboards */,
@@ -226,6 +275,7 @@
 			children = (
 				ED5F713E24728917004DA1D3 /* Protocols */,
 				ED5F713B247288F9004DA1D3 /* ViewModel */,
+				EDDCB32D2474380000863066 /* Model */,
 				ED5F713A247288F1004DA1D3 /* View */,
 			);
 			path = Main;
@@ -235,6 +285,9 @@
 			isa = PBXGroup;
 			children = (
 				ED03586924725959005A6745 /* MainViewController.swift */,
+				EDDCB3252474089C00863066 /* MainTableViewController.swift */,
+				EDDCB327247436D200863066 /* MainHeader.xib */,
+				EDDCB329247437A700863066 /* MainHeaderUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				ED5F713F24728922004DA1D3 /* MainViewModelType.swift */,
+				EDF862A924750F27000FC85B /* AuthTokenNowaitType.swift */,
+				EDA43271247549B100A2BB52 /* MainViewDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -306,6 +361,7 @@
 		ED84C47E24726165009D6742 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EDF862A424750E32000FC85B /* UserDefaults */,
 				ED84C4A02472837E009D6742 /* Extensions */,
 				ED84C48F2472791C009D6742 /* Protocols */,
 				ED84C48E2472790C009D6742 /* Classes */,
@@ -317,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				ED84C480247261A6009D6742 /* DesignableUIView.swift */,
+				EDDCB323247402FB00863066 /* DesignableUIImageView.swift */,
 				ED84C482247266F5009D6742 /* DesignableUIButton.swift */,
 			);
 			path = Designable;
@@ -325,6 +382,7 @@
 		ED84C48E2472790C009D6742 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EDA432792475548700A2BB52 /* Singletones */,
 				ED84C49224727959009D6742 /* CodeTextField.swift */,
 			);
 			path = Classes;
@@ -367,6 +425,7 @@
 		ED84C49B2472832E009D6742 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				EDDCB3302474453A00863066 /* FacebookSignIn */,
 				EDDCB31A2473213400863066 /* GoogleSignIn */,
 				EDDCB30E2472ECED00863066 /* AppleID */,
 				ED84C49E24728354009D6742 /* SignUpViewModelType.swift */,
@@ -378,6 +437,7 @@
 			isa = PBXGroup;
 			children = (
 				ED84C4A124728392009D6742 /* ExtensionString.swift */,
+				EDDCB32E247438EF00863066 /* ExtensionUIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -385,11 +445,37 @@
 		ED84C4A3247284E4009D6742 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EDDCB3332474462400863066 /* FacebookSignIn */,
 				EDDCB3192473211F00863066 /* GoogleSignIn */,
 				EDDCB3132472EDAD00863066 /* AppleID */,
-				ED84C4A4247284FE009D6742 /* Country.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EDA4327324754BAF00A2BB52 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EDA4327424754BC600A2BB52 /* UserInfoModel.swift */,
+				EDA4327624754C5600A2BB52 /* UserInfo.swift */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		EDA432782475546A00A2BB52 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB34D2475087800863066 /* CountryModels.swift */,
+				ED84C4A4247284FE009D6742 /* Country.swift */,
+			);
+			path = Country;
+			sourceTree = "<group>";
+		};
+		EDA432792475548700A2BB52 /* Singletones */ = {
+			isa = PBXGroup;
+			children = (
+				EDF862A724750ED0000FC85B /* AuthTokenNowait.swift */,
+			);
+			path = Singletones;
 			sourceTree = "<group>";
 		};
 		EDDCB3042472BDB900863066 /* Code */ = {
@@ -458,6 +544,80 @@
 				EDDCB321247322E400863066 /* GoogleAuthProviderProtocol.swift */,
 			);
 			path = GoogleSignIn;
+			sourceTree = "<group>";
+		};
+		EDDCB32D2474380000863066 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB32B247437FB00863066 /* MainMenuSectionModel.swift */,
+				EDF862AE24753BEB000FC85B /* MainMenuCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EDDCB3302474453A00863066 /* FacebookSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB3312474455E00863066 /* FacebookAuthProviderProtocol.swift */,
+			);
+			path = FacebookSignIn;
+			sourceTree = "<group>";
+		};
+		EDDCB3332474462400863066 /* FacebookSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB3342474464E00863066 /* FacebookAuthToken.swift */,
+				EDDCB336247446B000863066 /* FacebookAuthService.swift */,
+			);
+			path = FacebookSignIn;
+			sourceTree = "<group>";
+		};
+		EDDCB33F247502B100863066 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB3432475038200863066 /* Models */,
+				EDDCB340247502DA00863066 /* Auth */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EDDCB340247502DA00863066 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EDF862AB2475178D000FC85B /* Models */,
+				EDDCB341247502F700863066 /* AuthServerAPI.swift */,
+				EDDCB34A2475060A00863066 /* AuthAPI.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		EDDCB3432475038200863066 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB3442475039000863066 /* BaseUrl.swift */,
+				EDDCB346247504F300863066 /* DefaultAlamofireManager.swift */,
+				EDDCB3482475050D00863066 /* BaseResponseModel.swift */,
+				EDF862A224750B15000FC85B /* ResultResponce.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDF862A424750E32000FC85B /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				EDF862A524750E46000FC85B /* UDID.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		EDF862AB2475178D000FC85B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDA4327324754BAF00A2BB52 /* UserInfo */,
+				EDA432782475546A00A2BB52 /* Country */,
+				EDF862AC2475179C000FC85B /* TokenModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,6 +694,7 @@
 				ED84C48B247271E0009D6742 /* SFProText-Semibold.ttf in Resources */,
 				ED84C485247267C5009D6742 /* Circle-Regular.ttf in Resources */,
 				EDDCB318247315A400863066 /* credentials.plist in Resources */,
+				EDDCB328247436D200863066 /* MainHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,34 +766,57 @@
 			files = (
 				ED5F714C247299AB004DA1D3 /* SelectCountryViewModelType.swift in Sources */,
 				EDDCB31E2473218A00863066 /* GoogleAuthToken.swift in Sources */,
+				EDDCB34B2475060A00863066 /* AuthAPI.swift in Sources */,
 				EDDCB30124729CB800863066 /* CountryCellViewModel.swift in Sources */,
+				EDDCB347247504F300863066 /* DefaultAlamofireManager.swift in Sources */,
 				ED84C481247261A6009D6742 /* DesignableUIView.swift in Sources */,
+				EDDCB3262474089C00863066 /* MainTableViewController.swift in Sources */,
 				ED84C483247266F5009D6742 /* DesignableUIButton.swift in Sources */,
+				EDDCB3452475039000863066 /* BaseUrl.swift in Sources */,
+				EDF862AF24753BEB000FC85B /* MainMenuCell.swift in Sources */,
 				ED5F714024728922004DA1D3 /* MainViewModelType.swift in Sources */,
 				ED84C49D24728345009D6742 /* SignUpViewModel.swift in Sources */,
 				ED84C49F24728354009D6742 /* SignUpViewModelType.swift in Sources */,
+				EDDCB32F247438EF00863066 /* ExtensionUIView.swift in Sources */,
 				ED84C4A5247284FE009D6742 /* Country.swift in Sources */,
 				EDDCB30324729CC300863066 /* CountryCellViewModelType.swift in Sources */,
 				EDDCB2FF24729B9B00863066 /* SignUpViewController.swift in Sources */,
+				EDF862AD2475179C000FC85B /* TokenModel.swift in Sources */,
+				EDDCB3492475050D00863066 /* BaseResponseModel.swift in Sources */,
+				EDDCB342247502F700863066 /* AuthServerAPI.swift in Sources */,
+				EDDCB34E2475087800863066 /* CountryModels.swift in Sources */,
 				ED84C49324727959009D6742 /* CodeTextField.swift in Sources */,
+				EDA4327524754BC600A2BB52 /* UserInfoModel.swift in Sources */,
 				ED5F714E247299C7004DA1D3 /* CountryTableViewCell.swift in Sources */,
+				EDDCB32A247437A700863066 /* MainHeaderUIView.swift in Sources */,
 				EDDCB3152472EDC300863066 /* AppleAuthService.swift in Sources */,
 				ED5F713D2472890E004DA1D3 /* MainViewModel.swift in Sources */,
+				EDDCB32C247437FB00863066 /* MainMenuSectionModel.swift in Sources */,
 				ED03586A24725959005A6745 /* MainViewController.swift in Sources */,
 				ED5F714A2472999D004DA1D3 /* SelectCountryViewModel.swift in Sources */,
+				EDF862A624750E46000FC85B /* UDID.swift in Sources */,
 				EDDCB3102472ECFC00863066 /* AuthProviderProtocol.swift in Sources */,
+				EDDCB3322474455E00863066 /* FacebookAuthProviderProtocol.swift in Sources */,
 				EDDCB30A2472C19400863066 /* CodeViewModel.swift in Sources */,
 				EDDCB3202473229D00863066 /* GoogleAuthService.swift in Sources */,
 				EDDCB322247322E400863066 /* GoogleAuthProviderProtocol.swift in Sources */,
+				EDDCB324247402FB00863066 /* DesignableUIImageView.swift in Sources */,
 				ED84C4912472792E009D6742 /* CodeTextFieldDelegate.swift in Sources */,
 				ED84C4A224728392009D6742 /* ExtensionString.swift in Sources */,
 				ED03587024725959005A6745 /* Nowait.xcdatamodeld in Sources */,
 				EDDCB30D2472C1AF00863066 /* CodeViewModelType.swift in Sources */,
+				EDF862A324750B15000FC85B /* ResultResponce.swift in Sources */,
+				EDF862A824750ED0000FC85B /* AuthTokenNowait.swift in Sources */,
 				ED5F71482472990C004DA1D3 /* SelectCountryViewController.swift in Sources */,
+				EDA4327724754C5600A2BB52 /* UserInfo.swift in Sources */,
 				ED03586624725959005A6745 /* AppDelegate.swift in Sources */,
+				EDDCB3352474464E00863066 /* FacebookAuthToken.swift in Sources */,
+				EDF862AA24750F27000FC85B /* AuthTokenNowaitType.swift in Sources */,
 				EDDCB3122472ED7800863066 /* AuthToken.swift in Sources */,
+				EDDCB337247446B000863066 /* FacebookAuthService.swift in Sources */,
 				ED03586824725959005A6745 /* SceneDelegate.swift in Sources */,
 				EDDCB3062472BDD800863066 /* CodeViewController.swift in Sources */,
+				EDA43272247549B100A2BB52 /* MainViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

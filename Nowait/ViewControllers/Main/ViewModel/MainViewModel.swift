@@ -13,16 +13,43 @@ import RxCocoa
 class MainViewModel: MainViewModelType{
     
     public var country: BehaviorRelay<[Country]> = BehaviorRelay(value: [])
+    public var userInfo: BehaviorRelay<UserInfo?> = BehaviorRelay(value: nil)
+    
+    public let authTokenNowait = AuthTokenNowait.shared
     
     init(){
-        initCountry()
     }
     
-    private func initCountry(){
-        let counryInit: [Country] = [Country(name: "Украина (+380)", mask: "XXX XXX XX XX", code: "+380"),
-                                     Country(name: "Россия (+7)", mask: "XXX XXX XX XX", code: "+7")
-        ]
-        
-        country.accept(counryInit)
+    public func checkExistValidToken() -> Bool{
+        if authTokenNowait.tokenModel.value?.token != nil && authTokenNowait.tokenModel.value?.token_type != nil{
+            return true
+        }else{
+            return false
+        }
+    }
+    
+    public func requestLogOut(callback: @escaping ((ResultResponce, BaseResponseModel?)->())){
+        AuthAPI.requstAuthAPI(type: BaseResponseModel.self, request: .logout) { (value) in
+            if value?.success ?? false{
+                callback(.success, nil)
+            }else{
+                callback(.fail, value)
+            }
+        }
+    }
+    
+    public func requestUserInfo(callback: @escaping ((ResultResponce, UserInfoModel?)->())){
+        AuthAPI.requstAuthAPI(type: UserInfoModel.self, request: .userInfo) { [weak self] (value) in
+            if value?.success ?? false{
+                self?.userInfo.accept(value?.data)
+                callback(.success, nil)
+            }else{
+                callback(.fail, value)
+            }
+        }
+    }
+    
+    func removeInfoUser(){
+        userInfo.accept(nil)
     }
 }

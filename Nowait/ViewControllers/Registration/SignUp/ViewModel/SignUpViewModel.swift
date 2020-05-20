@@ -16,9 +16,13 @@ class SignUpViewModel: SignUpViewModelType{
     var selectCountry: BehaviorRelay<Country?> = BehaviorRelay(value: nil)
   
     var currentTextPhoneTF: String = ""
+    var fullphone = ""
     
     init(country: BehaviorRelay<[Country]>){
         self.country = country
+    }
+    
+    public func setSelectCountry(){
         selectCountry.accept(country.value.first)
     }
     
@@ -54,4 +58,32 @@ class SignUpViewModel: SignUpViewModelType{
         return true
     }
     
+    func requestRegistrationAtPhone(callback: @escaping ((ResultResponce, BaseResponseModel?)->())){
+        guard let selectCountry = selectCountry.value, let code = selectCountry.code?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+            callback(.fail, BaseResponseModel(success: false, message: "Выберите страну", error: "Ошибка"))
+            return
+        }
+         
+        let fullphone = "\(code) \(currentTextPhoneTF)"
+        self.fullphone = fullphone
+        
+        AuthAPI.requstAuthAPI(type: BaseResponseModel.self, request: .register(phone: fullphone)) { (value) in
+            if value?.success ?? false{
+                callback(.success, nil)
+            }else{
+                callback(.fail, value)
+            }
+        }
+    }
+    
+    func requestListCountry(callback: @escaping ((ResultResponce, BaseResponseModel?)->())){
+        AuthAPI.requstAuthAPI(type: CountryModels.self, request: .listCountry) { [weak self] (value) in
+            if value?.success == true {
+                self?.country.accept(value?.data ?? [])
+                callback(.success, nil)
+            }else{
+                callback(.fail, value)
+            }
+        }
+    }
 }

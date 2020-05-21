@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Regular.ttf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SFProText-Semibold.ttf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Alert Logout View Controller-->
+        <scene sceneID="7hi-Ez-KXW">
+            <objects>
+                <viewController storyboardIdentifier="AlertLogoutViewController" id="L8I-qN-5Ed" customClass="AlertLogoutViewController" customModule="Nowait" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TSs-gH-drJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tdb-Le-uuK" customClass="DesignableUIView" customModule="Nowait" customModuleProvider="target">
+                                <rect key="frame" x="72" y="391" width="270" height="124"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4l-OI-OuF">
+                                        <rect key="frame" x="0.0" y="79.5" width="270" height="0.5"/>
+                                        <color key="backgroundColor" name="CCCCCC"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="p1V-nh-LoN"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFj-8Q-GUK">
+                                        <rect key="frame" x="135" y="80" width="0.5" height="44"/>
+                                        <color key="backgroundColor" name="CCCCCC"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="0.5" id="hU7-bN-Eli"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiU-Tf-h6N">
+                                        <rect key="frame" x="0.0" y="80" width="135" height="44"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                        <state key="normal" title="Выйти">
+                                            <color key="titleColor" name="FF3B30"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logout:" destination="L8I-qN-5Ed" eventType="touchUpInside" id="bsw-j4-GuF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xI-9j-mix">
+                                        <rect key="frame" x="135" y="80" width="135" height="44"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                                        <state key="normal" title="Отмена">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel:" destination="L8I-qN-5Ed" eventType="touchUpInside" id="3TV-Oa-fyu"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы уверенны, что хотите выйти?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iek-VH-2hr">
+                                        <rect key="frame" x="16" y="0.0" width="238" height="79.5"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="KFj-8Q-GUK" firstAttribute="leading" secondItem="CiU-Tf-h6N" secondAttribute="trailing" id="22C-U3-8V9"/>
+                                    <constraint firstAttribute="bottom" secondItem="KFj-8Q-GUK" secondAttribute="bottom" id="6LX-JG-Lg8"/>
+                                    <constraint firstItem="CiU-Tf-h6N" firstAttribute="top" secondItem="g4l-OI-OuF" secondAttribute="bottom" id="7Xc-bA-fG9"/>
+                                    <constraint firstItem="Iek-VH-2hr" firstAttribute="top" secondItem="Tdb-Le-uuK" secondAttribute="top" id="7uy-PO-aQI"/>
+                                    <constraint firstAttribute="trailing" secondItem="g4l-OI-OuF" secondAttribute="trailing" id="9BP-aE-MRR"/>
+                                    <constraint firstItem="KFj-8Q-GUK" firstAttribute="top" secondItem="g4l-OI-OuF" secondAttribute="bottom" id="9d0-ml-n9s"/>
+                                    <constraint firstItem="g4l-OI-OuF" firstAttribute="top" secondItem="Iek-VH-2hr" secondAttribute="bottom" id="Gnc-WF-eYn"/>
+                                    <constraint firstItem="KFj-8Q-GUK" firstAttribute="centerX" secondItem="Tdb-Le-uuK" secondAttribute="centerX" id="HyH-4T-Nr9"/>
+                                    <constraint firstItem="6xI-9j-mix" firstAttribute="top" secondItem="g4l-OI-OuF" secondAttribute="bottom" id="KSh-eu-rfU"/>
+                                    <constraint firstAttribute="bottom" secondItem="6xI-9j-mix" secondAttribute="bottom" id="L1H-bE-kHv"/>
+                                    <constraint firstAttribute="bottom" secondItem="CiU-Tf-h6N" secondAttribute="bottom" id="UYm-F0-Lid"/>
+                                    <constraint firstItem="g4l-OI-OuF" firstAttribute="leading" secondItem="Tdb-Le-uuK" secondAttribute="leading" id="YZ5-Ml-icK"/>
+                                    <constraint firstItem="Iek-VH-2hr" firstAttribute="centerX" secondItem="Tdb-Le-uuK" secondAttribute="centerX" id="fah-E9-0db"/>
+                                    <constraint firstItem="6xI-9j-mix" firstAttribute="leading" secondItem="CiU-Tf-h6N" secondAttribute="trailing" id="gNI-HH-NAy"/>
+                                    <constraint firstAttribute="width" constant="270" id="hNG-U7-mAo"/>
+                                    <constraint firstAttribute="height" constant="124" id="l0U-sQ-Pyo"/>
+                                    <constraint firstItem="CiU-Tf-h6N" firstAttribute="leading" secondItem="Tdb-Le-uuK" secondAttribute="leading" id="lJ0-Aa-uWS"/>
+                                    <constraint firstAttribute="bottom" secondItem="g4l-OI-OuF" secondAttribute="bottom" constant="44" id="pC8-Cl-nMt"/>
+                                    <constraint firstItem="Iek-VH-2hr" firstAttribute="leading" secondItem="Tdb-Le-uuK" secondAttribute="leading" constant="16" id="pff-Uh-zDq"/>
+                                    <constraint firstAttribute="trailing" secondItem="6xI-9j-mix" secondAttribute="trailing" id="s4m-Ta-GAu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                        <real key="value" value="54"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="0.0" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tdb-Le-uuK" firstAttribute="centerX" secondItem="CdT-Mh-nVl" secondAttribute="centerX" id="aHw-ga-uPY"/>
+                            <constraint firstItem="Tdb-Le-uuK" firstAttribute="centerY" secondItem="CdT-Mh-nVl" secondAttribute="centerY" id="yki-dI-ibe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CdT-Mh-nVl"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertView" destination="Tdb-Le-uuK" id="OJq-89-6ml"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05J-p6-45Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1.4492753623188408" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="CCCCCC">
+            <color red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FF3B30">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

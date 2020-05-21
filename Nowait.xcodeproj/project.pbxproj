@@ -19,6 +19,7 @@
 		ED03588624725E8D005A6745 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED03588324725E8D005A6745 /* SFProDisplay-Regular.ttf */; };
 		ED03588724725E8D005A6745 /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED03588424725E8D005A6745 /* SFProDisplay-Medium.ttf */; };
 		ED03588824725E8D005A6745 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED03588524725E8D005A6745 /* SFProDisplay-Semibold.ttf */; };
+		ED06CDEA2477106800AF0DB0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */; };
 		ED5F713D2472890E004DA1D3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F713C2472890E004DA1D3 /* MainViewModel.swift */; };
 		ED5F714024728922004DA1D3 /* MainViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F713F24728922004DA1D3 /* MainViewModelType.swift */; };
 		ED5F71482472990C004DA1D3 /* SelectCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F71472472990C004DA1D3 /* SelectCountryViewController.swift */; };
@@ -43,7 +44,6 @@
 		EDA4327724754C5600A2BB52 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4327624754C5600A2BB52 /* UserInfo.swift */; };
 		EDA4327B247568D600A2BB52 /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA4327A247568D600A2BB52 /* Alerts.storyboard */; };
 		EDA4327E24756DCB00A2BB52 /* AlertLogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4327D24756DCB00A2BB52 /* AlertLogoutViewController.swift */; };
-		EDDCB2FF24729B9B00863066 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */; };
 		EDDCB30124729CB800863066 /* CountryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB30024729CB800863066 /* CountryCellViewModel.swift */; };
 		EDDCB30324729CC300863066 /* CountryCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB30224729CC300863066 /* CountryCellViewModelType.swift */; };
 		EDDCB3062472BDD800863066 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3052472BDD800863066 /* CodeViewController.swift */; };
@@ -120,7 +120,7 @@
 		EDA4327624754C5600A2BB52 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		EDA4327A247568D600A2BB52 /* Alerts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alerts.storyboard; sourceTree = "<group>"; };
 		EDA4327D24756DCB00A2BB52 /* AlertLogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLogoutViewController.swift; sourceTree = "<group>"; };
-		EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../../../../../../../../../../../Downloads/SignUpViewController.swift; sourceTree = "<group>"; };
+		EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EDDCB30024729CB800863066 /* CountryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellViewModel.swift; sourceTree = "<group>"; };
 		EDDCB30224729CC300863066 /* CountryCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellViewModelType.swift; sourceTree = "<group>"; };
 		EDDCB3052472BDD800863066 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CodeViewController.swift; path = ../CodeViewController.swift; sourceTree = "<group>"; };
@@ -785,6 +785,7 @@
 				EDDCB30124729CB800863066 /* CountryCellViewModel.swift in Sources */,
 				EDDCB347247504F300863066 /* DefaultAlamofireManager.swift in Sources */,
 				ED84C481247261A6009D6742 /* DesignableUIView.swift in Sources */,
+				ED06CDEA2477106800AF0DB0 /* SignUpViewController.swift in Sources */,
 				EDDCB3262474089C00863066 /* MainTableViewController.swift in Sources */,
 				ED84C483247266F5009D6742 /* DesignableUIButton.swift in Sources */,
 				EDDCB3452475039000863066 /* BaseUrl.swift in Sources */,
@@ -796,7 +797,6 @@
 				EDDCB32F247438EF00863066 /* ExtensionUIView.swift in Sources */,
 				ED84C4A5247284FE009D6742 /* Country.swift in Sources */,
 				EDDCB30324729CC300863066 /* CountryCellViewModelType.swift in Sources */,
-				EDDCB2FF24729B9B00863066 /* SignUpViewController.swift in Sources */,
 				EDF862AD2475179C000FC85B /* TokenModel.swift in Sources */,
 				EDDCB3492475050D00863066 /* BaseResponseModel.swift in Sources */,
 				EDDCB342247502F700863066 /* AuthServerAPI.swift in Sources */,

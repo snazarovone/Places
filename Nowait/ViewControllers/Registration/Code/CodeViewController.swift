@@ -115,7 +115,7 @@ class CodeViewController: UIViewController {
         codeViewModel.requestCheckLogin { [weak self] (resultResponce, tokenModel) in
             
             self?.removeAllOverlays()
-            self?.view?.isUserInteractionEnabled = false
+            self?.view?.isUserInteractionEnabled = true
             
             switch resultResponce{
             case .success:

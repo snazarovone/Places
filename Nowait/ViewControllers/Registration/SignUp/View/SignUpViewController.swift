@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import GoogleSignIn
+import FBSDKCoreKit
 
 class SignUpViewController: UIViewController {
     
@@ -23,10 +27,64 @@ class SignUpViewController: UIViewController {
     
     //PRIVATE
     private var tap: UITapGestureRecognizer!
+    private let disposeBag = DisposeBag()
+    
+    @available(iOS 13.0, *)
+    private(set) lazy var appleAuth = AppleAuthService()
+    
+    private(set) lazy var googleAuth = GoogleAuthService()
+    
+    private(set) lazy var facebookAuth = FacebookAuthService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configKeyboard()
+        subscribes()
+
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+
+        // Automatically sign in the user.
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+        
+        requestListCountry()
+    }
+    
+    private func subscribes(){
+        signUpViewModel.selectCountry.asObservable().subscribe(onNext: { [weak self] (country) in
+            self?.countryLabel.text = country?.name
+            self?.phoneNumberTF.text = self?.signUpViewModel.formattedNumber(number: "")
+            self?.checkValidation()
+        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+        
+        signUpViewModel.country.asObservable().subscribe(onNext: { [weak self] (_) in
+            self?.signUpViewModel.setSelectCountry()
+        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+        
+        if #available(iOS 13.0, *) {
+            appleAuth.authResult.subscribe(onNext: { (value) in
+                switch value {
+                case .apple(let code, let name):
+                    print("code:", code, "name:", name)
+                }
+            }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+        }
+        
+        
+        googleAuth.googleAuthToken.subscribe(onNext: { [weak self] (info) in
+            if info.userId != nil{
+                self?.requestLoginGoogle(googleAuthToken: info)
+            }else{
+                self?.googleAuth.logout()
+            }
+        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+        
+        facebookAuth.facebookAuthToken.subscribe(onNext: { [weak self] (facebookAuthToken) in
+            if facebookAuthToken.accessToken?.userID != nil{
+                self?.requestLoginFacabook(facebookAuthToken: facebookAuthToken)
+            }else{
+                self?.facebookAuth.logout()
+            }
+        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -35,9 +93,113 @@ class SignUpViewController: UIViewController {
         removeNotificationKeyBoard()
     }
     
+    //MARK:- Alert
+    private func showAlert(message: String, title: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "ОК", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    //MARK:- Request
+    private func requestRegistration(){
+        showWaitOverlay()
+        view.isUserInteractionEnabled = false
+        
+        signUpViewModel.requestRegistrationAtPhone { [weak self] (resultResponce, baseResponseModel) in
+           
+            self?.removeAllOverlays()
+            self?.view.isUserInteractionEnabled = true
+            
+            switch resultResponce{
+            case .success:
+                self?.performSegue(withIdentifier: String(describing: CodeViewController.self), sender: nil)
+            case.fail:
+                self?.showAlert(message: baseResponseModel?.message ?? "", title: baseResponseModel?.error ?? "")
+            }
+        }
+    }
+    
+    private func requestListCountry(){
+        showWaitOverlay()
+        self.view.isUserInteractionEnabled = false
+        signUpViewModel.requestListCountry { [weak self] (resultResponce, data) in
+           
+            self?.removeAllOverlays()
+            self?.view.isUserInteractionEnabled = true
+            
+            switch resultResponce{
+            case .success:
+                break;
+            case .fail:
+                self?.showAlert(message: data?.message ?? "", title: data?.error ?? "")
+            }
+        }
+    }
+    
+    private func requestLoginFacabook(facebookAuthToken: FacebookAuthToken){
+        showWaitOverlay()
+        self.view.isUserInteractionEnabled = false
+        
+        signUpViewModel.requestFacebookLogin(at: facebookAuthToken, callback: { [weak self] (resultResponce, tokenModel) in
+            
+            self?.removeAllOverlays()
+            self?.view.isUserInteractionEnabled = true
+            
+            switch resultResponce{
+            case .success:
+                self?.dismiss(animated: true, completion: nil)
+            case .fail:
+                self?.showAlert(message: tokenModel?.message ?? "",
+                               title: tokenModel?.error ?? "")
+            }
+        })
+    }
+    
+    private func requestLoginGoogle(googleAuthToken: GoogleAuthToken){
+        showWaitOverlay()
+        self.view.isUserInteractionEnabled = false
+        
+        signUpViewModel.requestGoogleLogin(at: googleAuthToken, callback: { [weak self] (resultResponce, tokenModel) in
+            
+            self?.removeAllOverlays()
+            self?.view.isUserInteractionEnabled = true
+            
+            switch resultResponce{
+            case .success:
+                self?.dismiss(animated: true, completion: nil)
+            case .fail:
+                self?.showAlert(message: tokenModel?.message ?? "",
+                               title: tokenModel?.error ?? "")
+            }
+        })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == String(describing: SelectCountryViewController.self){
+            if let dvc = segue.destination as? SelectCountryViewController{
+                dvc.selectCountryViewModel = SelectCountryViewModel(country: signUpViewModel.country, selectCountry: signUpViewModel.selectCountry)
+            }
+            return
+        }
+        
+        if segue.identifier == String(describing: CodeViewController.self){
+            if let dvc = segue.destination as? CodeViewController{
+                dvc.codeViewModel = CodeViewModel(phoneNumber: signUpViewModel.currentTextPhoneTF, fullPhoneNumber: signUpViewModel.fullphone)
+                
+                dvc.isComplite = {
+                    [weak self] in
+                    self?.dismiss(animated: false, completion: nil)
+                }
+            }
+            return
+        }
+    }
+    
     //MARK:- Actions
     @IBAction func close(_ sender: Any) {
         dismissKeyboard()
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func selectCountry(_ sender: Any) {
@@ -46,18 +208,29 @@ class SignUpViewController: UIViewController {
     
     @IBAction func next(_ sender: UIButton) {
         dismissKeyboard()
+        requestRegistration()
     }
     
+    //MARK:- apple
     @IBAction func appleID(_ sender: Any) {
         dismissKeyboard()
+        if #available(iOS 13.0, *) {
+            appleAuth.login()
+        } else {
+            return
+        }
     }
     
+    //MARK:- facebook
     @IBAction func facebook(_ sender: Any) {
         dismissKeyboard()
+        facebookAuth.login(vc: self)
     }
     
+    //MARK:- google
     @IBAction func google(_ sender: Any) {
         dismissKeyboard()
+        googleAuth.login()
     }
     
     @IBAction func login(_ sender: UIButton) {
@@ -125,7 +298,6 @@ extension SignUpViewController: UITextFieldDelegate{
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         tap.isEnabled = true
-        
         checkValidation()
     }
     

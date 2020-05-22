@@ -19,7 +19,6 @@
 		ED03588624725E8D005A6745 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED03588324725E8D005A6745 /* SFProDisplay-Regular.ttf */; };
 		ED03588724725E8D005A6745 /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED03588424725E8D005A6745 /* SFProDisplay-Medium.ttf */; };
 		ED03588824725E8D005A6745 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED03588524725E8D005A6745 /* SFProDisplay-Semibold.ttf */; };
-		ED06CDEA2477106800AF0DB0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */; };
 		ED5F713D2472890E004DA1D3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F713C2472890E004DA1D3 /* MainViewModel.swift */; };
 		ED5F714024728922004DA1D3 /* MainViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F713F24728922004DA1D3 /* MainViewModelType.swift */; };
 		ED5F71482472990C004DA1D3 /* SelectCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F71472472990C004DA1D3 /* SelectCountryViewController.swift */; };
@@ -39,6 +38,7 @@
 		ED84C49F24728354009D6742 /* SignUpViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C49E24728354009D6742 /* SignUpViewModelType.swift */; };
 		ED84C4A224728392009D6742 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C4A124728392009D6742 /* ExtensionString.swift */; };
 		ED84C4A5247284FE009D6742 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84C4A4247284FE009D6742 /* Country.swift */; };
+		ED9135752477F7F4008065E2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9135742477F7F4008065E2 /* SignUpViewController.swift */; };
 		EDA43272247549B100A2BB52 /* MainViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43271247549B100A2BB52 /* MainViewDelegate.swift */; };
 		EDA4327524754BC600A2BB52 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4327424754BC600A2BB52 /* UserInfoModel.swift */; };
 		EDA4327724754C5600A2BB52 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4327624754C5600A2BB52 /* UserInfo.swift */; };
@@ -115,12 +115,12 @@
 		ED84C49E24728354009D6742 /* SignUpViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModelType.swift; sourceTree = "<group>"; };
 		ED84C4A124728392009D6742 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		ED84C4A4247284FE009D6742 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		ED9135742477F7F4008065E2 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EDA43271247549B100A2BB52 /* MainViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDelegate.swift; sourceTree = "<group>"; };
 		EDA4327424754BC600A2BB52 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		EDA4327624754C5600A2BB52 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		EDA4327A247568D600A2BB52 /* Alerts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alerts.storyboard; sourceTree = "<group>"; };
 		EDA4327D24756DCB00A2BB52 /* AlertLogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLogoutViewController.swift; sourceTree = "<group>"; };
-		EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EDDCB30024729CB800863066 /* CountryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellViewModel.swift; sourceTree = "<group>"; };
 		EDDCB30224729CC300863066 /* CountryCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellViewModelType.swift; sourceTree = "<group>"; };
 		EDDCB3052472BDD800863066 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CodeViewController.swift; path = ../CodeViewController.swift; sourceTree = "<group>"; };
@@ -415,7 +415,7 @@
 		ED84C49924728323009D6742 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EDDCB2FE24729B9B00863066 /* SignUpViewController.swift */,
+				ED9135742477F7F4008065E2 /* SignUpViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -785,7 +785,7 @@
 				EDDCB30124729CB800863066 /* CountryCellViewModel.swift in Sources */,
 				EDDCB347247504F300863066 /* DefaultAlamofireManager.swift in Sources */,
 				ED84C481247261A6009D6742 /* DesignableUIView.swift in Sources */,
-				ED06CDEA2477106800AF0DB0 /* SignUpViewController.swift in Sources */,
+				ED9135752477F7F4008065E2 /* SignUpViewController.swift in Sources */,
 				EDDCB3262474089C00863066 /* MainTableViewController.swift in Sources */,
 				ED84C483247266F5009D6742 /* DesignableUIButton.swift in Sources */,
 				EDDCB3452475039000863066 /* BaseUrl.swift in Sources */,

@@ -26,22 +26,27 @@ class MainTableViewController: UITableViewController {
     //PRIVATE
     private let mainViewModel = MainViewModel()
     private let disposeBag = DisposeBag()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         subscribes()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.hideNavigationBar()
     }
     
     private func subscribes(){
         mainViewModel.authTokenNowait.tokenModel.asObservable().subscribe(onNext: { [weak self] _ in
             self?.tableView.reloadData()
             self?.updateHeaderView()
-        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+            }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
         
         mainViewModel.userInfo.skip(1).asObservable().subscribe(onNext: { [weak self] (userInfo) in
             print("userInfo")
             self?.setDataUserInfo(userInfo: userInfo)
-        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+            }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
     }
     
     //MARK:- Alert
@@ -58,9 +63,18 @@ class MainTableViewController: UITableViewController {
             if let dvc = segue.destination as? AlertLogoutViewController{
                 dvc.isLogout = {
                     [weak self] in
+                    //MARK:- Logout
                     self?.logout()
                 }
             }
+            return
+        }
+        
+        if segue.identifier == String(describing: PersonalInformationViewController.self){
+            if let dvc = segue.destination as? PersonalInformationViewController{
+                dvc.personalInfoViewModel = PersonalInformationViewModel(userInfo: mainViewModel.userInfo)
+            }
+            return
         }
     }
     
@@ -77,7 +91,7 @@ class MainTableViewController: UITableViewController {
     private func updateHeaderView(){
         if mainViewModel.checkExistValidToken() == true{
             createAccount.isHidden = true
-          
+            
             photoUser.image = nil
             photoUser.isHidden = false
             
@@ -107,7 +121,7 @@ class MainTableViewController: UITableViewController {
             phone.isHidden = true
             return
         }
-    
+        
         
         if let n = userInfo.name{
             if let lastName = userInfo.last_name{
@@ -122,7 +136,7 @@ class MainTableViewController: UITableViewController {
                 name.text = nil
             }
         }
-
+        
         if let phoneUser = userInfo.phone{
             phone.text = phoneUser
         }else{
@@ -164,13 +178,13 @@ class MainTableViewController: UITableViewController {
             }
         }
     }
-
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return MainMenuSectionModel.allCases.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if MainMenuSectionModel.settings.section == section{
             if mainViewModel.checkExistValidToken() == true{
@@ -185,7 +199,7 @@ class MainTableViewController: UITableViewController {
             }
         }
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if MainMenuSectionModel.settings.section == indexPath.section{
@@ -197,7 +211,7 @@ class MainTableViewController: UITableViewController {
             return helpersSectionCells[indexPath.row]
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = UIView.viewFromNibName(name: "MainHeader") as! MainHeaderUIView
         header.titleName.text = ""
@@ -231,6 +245,11 @@ class MainTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: String(describing: AlertLogoutViewController.self), sender: nil)
             }
+        case .userInfo:
+            //MARK:- UserInfo
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: String(describing: PersonalInformationViewController.self), sender: nil)
+            }
         default:
             break
         }
@@ -240,7 +259,7 @@ class MainTableViewController: UITableViewController {
     @IBAction func login(_ sender: UIButton){
         mainView?.showSignInVC()
     }
-
+    
     //MARK:- deinit
     deinit{
         print("MainTableViewController is deinit")

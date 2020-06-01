@@ -38,6 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //MARK:- Facebook SignIn
         ApplicationDelegate.shared.application( application, didFinishLaunchingWithOptions: launchOptions )
         
+        //MARK:- UITabBar
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.black], for: .selected)
+        
         return true
     }
 

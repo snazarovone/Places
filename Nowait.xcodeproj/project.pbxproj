@@ -71,12 +71,23 @@
 		EDDCB3492475050D00863066 /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3482475050D00863066 /* BaseResponseModel.swift */; };
 		EDDCB34B2475060A00863066 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB34A2475060A00863066 /* AuthAPI.swift */; };
 		EDDCB34E2475087800863066 /* CountryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB34D2475087800863066 /* CountryModels.swift */; };
+		EDEE6BB424856767004DBFB3 /* EditFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEE6BB324856767004DBFB3 /* EditFields.swift */; };
+		EDEE6BB724856B3D004DBFB3 /* PersonalInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEE6BB624856B3D004DBFB3 /* PersonalInformationViewModel.swift */; };
+		EDEE6BBA24856B5D004DBFB3 /* PersonalInformationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEE6BB924856B5D004DBFB3 /* PersonalInformationViewModelType.swift */; };
+		EDEE6BBC24858858004DBFB3 /* ListCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEE6BBB24858858004DBFB3 /* ListCountry.swift */; };
+		EDEFC3D32485261E003636F2 /* InteractivePopRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEFC3D22485261E003636F2 /* InteractivePopRecognizer.swift */; };
+		EDEFC3D524852649003636F2 /* HiddenNavBarNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEFC3D424852649003636F2 /* HiddenNavBarNavigationController.swift */; };
+		EDEFC3D724852740003636F2 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEFC3D624852740003636F2 /* ExtensionUIViewController.swift */; };
+		EDEFC3DA24852862003636F2 /* TabBarNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEFC3D924852862003636F2 /* TabBarNavigationDelegate.swift */; };
+		EDEFC3DD24853C67003636F2 /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEFC3DC24853C67003636F2 /* PersonalInformationViewController.swift */; };
 		EDF862A324750B15000FC85B /* ResultResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF862A224750B15000FC85B /* ResultResponce.swift */; };
 		EDF862A624750E46000FC85B /* UDID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF862A524750E46000FC85B /* UDID.swift */; };
 		EDF862A824750ED0000FC85B /* AuthTokenNowait.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF862A724750ED0000FC85B /* AuthTokenNowait.swift */; };
 		EDF862AA24750F27000FC85B /* AuthTokenNowaitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF862A924750F27000FC85B /* AuthTokenNowaitType.swift */; };
 		EDF862AD2475179C000FC85B /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF862AC2475179C000FC85B /* TokenModel.swift */; };
 		EDF862AF24753BEB000FC85B /* MainMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF862AE24753BEB000FC85B /* MainMenuCell.swift */; };
+		EDFA474E24827F58001F9575 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA474D24827F58001F9575 /* TabBarViewController.swift */; };
+		EDFA475324828035001F9575 /* ItemsTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA475224828035001F9575 /* ItemsTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,7 +149,7 @@
 		EDDCB3252474089C00863066 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		EDDCB327247436D200863066 /* MainHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainHeader.xib; sourceTree = "<group>"; };
 		EDDCB329247437A700863066 /* MainHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderUIView.swift; sourceTree = "<group>"; };
-		EDDCB32B247437FB00863066 /* MainMenuSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainMenuSectionModel.swift; path = ../MainMenuSectionModel.swift; sourceTree = "<group>"; };
+		EDDCB32B247437FB00863066 /* MainMenuSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuSectionModel.swift; sourceTree = "<group>"; };
 		EDDCB32E247438EF00863066 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		EDDCB3312474455E00863066 /* FacebookAuthProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthProviderProtocol.swift; sourceTree = "<group>"; };
 		EDDCB3342474464E00863066 /* FacebookAuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthToken.swift; sourceTree = "<group>"; };
@@ -149,12 +160,23 @@
 		EDDCB3482475050D00863066 /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
 		EDDCB34A2475060A00863066 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		EDDCB34D2475087800863066 /* CountryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModels.swift; sourceTree = "<group>"; };
+		EDEE6BB324856767004DBFB3 /* EditFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFields.swift; sourceTree = "<group>"; };
+		EDEE6BB624856B3D004DBFB3 /* PersonalInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewModel.swift; sourceTree = "<group>"; };
+		EDEE6BB924856B5D004DBFB3 /* PersonalInformationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewModelType.swift; sourceTree = "<group>"; };
+		EDEE6BBB24858858004DBFB3 /* ListCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCountry.swift; sourceTree = "<group>"; };
+		EDEFC3D22485261E003636F2 /* InteractivePopRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractivePopRecognizer.swift; sourceTree = "<group>"; };
+		EDEFC3D424852649003636F2 /* HiddenNavBarNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenNavBarNavigationController.swift; sourceTree = "<group>"; };
+		EDEFC3D624852740003636F2 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
+		EDEFC3D924852862003636F2 /* TabBarNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNavigationDelegate.swift; sourceTree = "<group>"; };
+		EDEFC3DC24853C67003636F2 /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonalInformationViewController.swift; path = ../PersonalInformationViewController.swift; sourceTree = "<group>"; };
 		EDF862A224750B15000FC85B /* ResultResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultResponce.swift; sourceTree = "<group>"; };
 		EDF862A524750E46000FC85B /* UDID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDID.swift; sourceTree = "<group>"; };
-		EDF862A724750ED0000FC85B /* AuthTokenNowait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthTokenNowait.swift; path = ../../../ViewControllers/Main/Model/AuthTokenNowait.swift; sourceTree = "<group>"; };
+		EDF862A724750ED0000FC85B /* AuthTokenNowait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthTokenNowait.swift; path = ../../../ViewControllers/Main/Profile/Model/AuthTokenNowait.swift; sourceTree = "<group>"; };
 		EDF862A924750F27000FC85B /* AuthTokenNowaitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenNowaitType.swift; sourceTree = "<group>"; };
 		EDF862AC2475179C000FC85B /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		EDF862AE24753BEB000FC85B /* MainMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCell.swift; sourceTree = "<group>"; };
+		EDFA474D24827F58001F9575 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		EDFA475224828035001F9575 /* ItemsTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +276,7 @@
 		ED03587F24725AC3005A6745 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EDEFC3D1248525F1003636F2 /* NavigationController */,
 				EDA4327C24756DB200A2BB52 /* Alerts */,
 				ED84C494247280E4009D6742 /* Registration */,
 				ED5F7139247288EA004DA1D3 /* Main */,
@@ -279,10 +302,9 @@
 		ED5F7139247288EA004DA1D3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				ED5F713E24728917004DA1D3 /* Protocols */,
-				ED5F713B247288F9004DA1D3 /* ViewModel */,
-				EDDCB32D2474380000863066 /* Model */,
-				ED5F713A247288F1004DA1D3 /* View */,
+				EDEFC3DE2485442B003636F2 /* Profile */,
+				EDEFC3E0248545A0003636F2 /* ContainerMain */,
+				EDFA474F24828004001F9575 /* TabBar */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -291,9 +313,6 @@
 			isa = PBXGroup;
 			children = (
 				ED03586924725959005A6745 /* MainViewController.swift */,
-				EDDCB3252474089C00863066 /* MainTableViewController.swift */,
-				EDDCB327247436D200863066 /* MainHeader.xib */,
-				EDDCB329247437A700863066 /* MainHeaderUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,7 +330,6 @@
 			children = (
 				ED5F713F24728922004DA1D3 /* MainViewModelType.swift */,
 				EDF862A924750F27000FC85B /* AuthTokenNowaitType.swift */,
-				EDA43271247549B100A2BB52 /* MainViewDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -405,6 +423,7 @@
 		ED84C494247280E4009D6742 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				EDEFC3DB24853C4E003636F2 /* PersonalInformation */,
 				EDDCB3042472BDB900863066 /* Code */,
 				ED5F7142247298BA004DA1D3 /* SelectCountry */,
 				ED5F7141247298AE004DA1D3 /* SignUp */,
@@ -444,6 +463,7 @@
 			children = (
 				ED84C4A124728392009D6742 /* ExtensionString.swift */,
 				EDDCB32E247438EF00863066 /* ExtensionUIView.swift */,
+				EDEFC3D624852740003636F2 /* ExtensionUIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -480,6 +500,7 @@
 			isa = PBXGroup;
 			children = (
 				EDF862A724750ED0000FC85B /* AuthTokenNowait.swift */,
+				EDEE6BBB24858858004DBFB3 /* ListCountry.swift */,
 			);
 			path = Singletones;
 			sourceTree = "<group>";
@@ -616,6 +637,95 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		EDEE6BB12485674B004DBFB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDEFC3DC24853C67003636F2 /* PersonalInformationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDEE6BB224856752004DBFB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EDEE6BB324856767004DBFB3 /* EditFields.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EDEE6BB524856B29004DBFB3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EDEE6BB624856B3D004DBFB3 /* PersonalInformationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EDEE6BB824856B4B004DBFB3 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EDEE6BB924856B5D004DBFB3 /* PersonalInformationViewModelType.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EDEFC3D1248525F1003636F2 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				EDEFC3D22485261E003636F2 /* InteractivePopRecognizer.swift */,
+				EDEFC3D424852649003636F2 /* HiddenNavBarNavigationController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		EDEFC3D824852845003636F2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EDEFC3D924852862003636F2 /* TabBarNavigationDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EDEFC3DB24853C4E003636F2 /* PersonalInformation */ = {
+			isa = PBXGroup;
+			children = (
+				EDEE6BB824856B4B004DBFB3 /* Protocol */,
+				EDEE6BB524856B29004DBFB3 /* ViewModel */,
+				EDEE6BB224856752004DBFB3 /* Model */,
+				EDEE6BB12485674B004DBFB3 /* View */,
+			);
+			path = PersonalInformation;
+			sourceTree = "<group>";
+		};
+		EDEFC3DE2485442B003636F2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB32D2474380000863066 /* Model */,
+				EDEFC3DF2485448D003636F2 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		EDEFC3DF2485448D003636F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCB3252474089C00863066 /* MainTableViewController.swift */,
+				EDDCB327247436D200863066 /* MainHeader.xib */,
+				EDDCB329247437A700863066 /* MainHeaderUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDEFC3E0248545A0003636F2 /* ContainerMain */ = {
+			isa = PBXGroup;
+			children = (
+				ED5F713B247288F9004DA1D3 /* ViewModel */,
+				ED5F713E24728917004DA1D3 /* Protocols */,
+				ED5F713A247288F1004DA1D3 /* View */,
+			);
+			path = ContainerMain;
+			sourceTree = "<group>";
+		};
 		EDF862A424750E32000FC85B /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,6 +742,33 @@
 				EDF862AC2475179C000FC85B /* TokenModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EDFA474F24828004001F9575 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EDA43271247549B100A2BB52 /* MainViewDelegate.swift */,
+				EDEFC3D824852845003636F2 /* Protocols */,
+				EDFA47502482800E001F9575 /* Models */,
+				EDFA475124828014001F9575 /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		EDFA47502482800E001F9575 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDFA475224828035001F9575 /* ItemsTabBar.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDFA475124828014001F9575 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDFA474D24827F58001F9575 /* TabBarViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -791,7 +928,9 @@
 				EDDCB3452475039000863066 /* BaseUrl.swift in Sources */,
 				EDF862AF24753BEB000FC85B /* MainMenuCell.swift in Sources */,
 				ED5F714024728922004DA1D3 /* MainViewModelType.swift in Sources */,
+				EDEFC3DA24852862003636F2 /* TabBarNavigationDelegate.swift in Sources */,
 				EDA4327E24756DCB00A2BB52 /* AlertLogoutViewController.swift in Sources */,
+				EDFA474E24827F58001F9575 /* TabBarViewController.swift in Sources */,
 				ED84C49D24728345009D6742 /* SignUpViewModel.swift in Sources */,
 				ED84C49F24728354009D6742 /* SignUpViewModelType.swift in Sources */,
 				EDDCB32F247438EF00863066 /* ExtensionUIView.swift in Sources */,
@@ -801,19 +940,24 @@
 				EDDCB3492475050D00863066 /* BaseResponseModel.swift in Sources */,
 				EDDCB342247502F700863066 /* AuthServerAPI.swift in Sources */,
 				EDDCB34E2475087800863066 /* CountryModels.swift in Sources */,
+				EDEFC3D524852649003636F2 /* HiddenNavBarNavigationController.swift in Sources */,
 				ED84C49324727959009D6742 /* CodeTextField.swift in Sources */,
 				EDA4327524754BC600A2BB52 /* UserInfoModel.swift in Sources */,
+				EDEFC3D32485261E003636F2 /* InteractivePopRecognizer.swift in Sources */,
 				ED5F714E247299C7004DA1D3 /* CountryTableViewCell.swift in Sources */,
 				EDDCB32A247437A700863066 /* MainHeaderUIView.swift in Sources */,
 				EDDCB3152472EDC300863066 /* AppleAuthService.swift in Sources */,
 				ED5F713D2472890E004DA1D3 /* MainViewModel.swift in Sources */,
 				EDDCB32C247437FB00863066 /* MainMenuSectionModel.swift in Sources */,
+				EDEE6BBC24858858004DBFB3 /* ListCountry.swift in Sources */,
 				ED03586A24725959005A6745 /* MainViewController.swift in Sources */,
 				ED5F714A2472999D004DA1D3 /* SelectCountryViewModel.swift in Sources */,
 				EDF862A624750E46000FC85B /* UDID.swift in Sources */,
 				EDDCB3102472ECFC00863066 /* AuthProviderProtocol.swift in Sources */,
+				EDFA475324828035001F9575 /* ItemsTabBar.swift in Sources */,
 				EDDCB3322474455E00863066 /* FacebookAuthProviderProtocol.swift in Sources */,
 				EDDCB30A2472C19400863066 /* CodeViewModel.swift in Sources */,
+				EDEFC3D724852740003636F2 /* ExtensionUIViewController.swift in Sources */,
 				EDDCB3202473229D00863066 /* GoogleAuthService.swift in Sources */,
 				EDDCB322247322E400863066 /* GoogleAuthProviderProtocol.swift in Sources */,
 				EDDCB324247402FB00863066 /* DesignableUIImageView.swift in Sources */,
@@ -823,15 +967,19 @@
 				EDDCB30D2472C1AF00863066 /* CodeViewModelType.swift in Sources */,
 				EDF862A324750B15000FC85B /* ResultResponce.swift in Sources */,
 				EDF862A824750ED0000FC85B /* AuthTokenNowait.swift in Sources */,
+				EDEFC3DD24853C67003636F2 /* PersonalInformationViewController.swift in Sources */,
 				ED5F71482472990C004DA1D3 /* SelectCountryViewController.swift in Sources */,
 				EDA4327724754C5600A2BB52 /* UserInfo.swift in Sources */,
 				ED03586624725959005A6745 /* AppDelegate.swift in Sources */,
 				EDDCB3352474464E00863066 /* FacebookAuthToken.swift in Sources */,
+				EDEE6BB724856B3D004DBFB3 /* PersonalInformationViewModel.swift in Sources */,
 				EDF862AA24750F27000FC85B /* AuthTokenNowaitType.swift in Sources */,
+				EDEE6BBA24856B5D004DBFB3 /* PersonalInformationViewModelType.swift in Sources */,
 				EDDCB3122472ED7800863066 /* AuthToken.swift in Sources */,
 				EDDCB337247446B000863066 /* FacebookAuthService.swift in Sources */,
 				ED03586824725959005A6745 /* SceneDelegate.swift in Sources */,
 				EDDCB3062472BDD800863066 /* CodeViewController.swift in Sources */,
+				EDEE6BB424856767004DBFB3 /* EditFields.swift in Sources */,
 				EDA43272247549B100A2BB52 /* MainViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

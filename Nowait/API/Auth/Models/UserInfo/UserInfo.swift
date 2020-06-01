@@ -19,6 +19,7 @@ struct UserInfo : Mappable {
     var email_verified_at : String?
     var created_at : String?
     var updated_at : String?
+    var birth_date: String?
 
     init?(map: Map) {
 
@@ -35,6 +36,7 @@ struct UserInfo : Mappable {
         email_verified_at <- map["email_verified_at"]
         created_at <- map["created_at"]
         updated_at <- map["updated_at"]
+        birth_date <- map["birth_date"]
     }
 
 }

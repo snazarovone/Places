@@ -15,6 +15,7 @@ import SwiftOverlays
 class MainViewController: UIViewController {
     
     private let mainViewModel = MainViewModel()
+    private weak var tabBarNavigationDelegate: TabBarNavigationDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class MainViewController: UIViewController {
         
         if mainViewModel.checkExistValidToken() == false{
             showSignInVC()
+            self.tabBarNavigationDelegate?.showTab(item: .profile)
         }
     }
     
@@ -36,9 +38,11 @@ class MainViewController: UIViewController {
             return
         }
         
-        if segue.identifier == String(describing: MainTableViewController.self){
-            if let dvc = segue.destination as? MainTableViewController{
+        if segue.identifier == String(describing: TabBarViewController.self){
+            if let tabBarVC = segue.destination as? TabBarViewController, let navProfile = tabBarVC.viewControllers?[ItemsTabBar.profile.index] as? UINavigationController, let dvc = navProfile.viewControllers.first as? MainTableViewController{
                 dvc.mainView = self
+          
+                self.tabBarNavigationDelegate = tabBarVC
             }
             return
         }

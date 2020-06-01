@@ -58,4 +58,5 @@ class DesignableUIImageView: UIImageView{
         super.layoutSubviews()
         applyCornerRadius()
     }
+    
 }

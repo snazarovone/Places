@@ -115,5 +115,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Приложение запрашивает доступ к библиотеке фотографий</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Приложение запрашивает доступ к фотоаппарату устройства</string>
 </dict>
 </plist>

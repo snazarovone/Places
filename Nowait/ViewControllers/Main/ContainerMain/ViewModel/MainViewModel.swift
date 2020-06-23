@@ -18,6 +18,7 @@ class MainViewModel: MainViewModelType{
     public let authTokenNowait = AuthTokenNowait.shared
     
     init(){
+        userInfo = UserInfoData.shared.userInfo
     }
     
     public func checkExistValidToken() -> Bool{
@@ -36,20 +37,5 @@ class MainViewModel: MainViewModelType{
                 callback(.fail, value)
             }
         }
-    }
-    
-    public func requestUserInfo(callback: @escaping ((ResultResponce, UserInfoModel?)->())){
-        AuthAPI.requstAuthAPI(type: UserInfoModel.self, request: .userInfo) { [weak self] (value) in
-            if value?.success ?? false{
-                self?.userInfo.accept(value?.data)
-                callback(.success, nil)
-            }else{
-                callback(.fail, value)
-            }
-        }
-    }
-    
-    func removeInfoUser(){
-        userInfo.accept(nil)
     }
 }

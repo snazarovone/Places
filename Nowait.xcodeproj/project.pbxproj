@@ -71,6 +71,9 @@
 		EDDCB3492475050D00863066 /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB3482475050D00863066 /* BaseResponseModel.swift */; };
 		EDDCB34B2475060A00863066 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB34A2475060A00863066 /* AuthAPI.swift */; };
 		EDDCB34E2475087800863066 /* CountryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB34D2475087800863066 /* CountryModels.swift */; };
+		EDE6E16C248692B000C06998 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6E16B248692B000C06998 /* LaunchViewController.swift */; };
+		EDE6E1742486983D00C06998 /* UserInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6E1732486983D00C06998 /* UserInfoData.swift */; };
+		EDE6E17624869AF300C06998 /* ErrorResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6E17524869AF300C06998 /* ErrorResponce.swift */; };
 		EDEE6BB424856767004DBFB3 /* EditFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEE6BB324856767004DBFB3 /* EditFields.swift */; };
 		EDEE6BB724856B3D004DBFB3 /* PersonalInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEE6BB624856B3D004DBFB3 /* PersonalInformationViewModel.swift */; };
 		EDEE6BBA24856B5D004DBFB3 /* PersonalInformationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEE6BB924856B5D004DBFB3 /* PersonalInformationViewModelType.swift */; };
@@ -160,6 +163,9 @@
 		EDDCB3482475050D00863066 /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
 		EDDCB34A2475060A00863066 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		EDDCB34D2475087800863066 /* CountryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModels.swift; sourceTree = "<group>"; };
+		EDE6E16B248692B000C06998 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchViewController.swift; path = ../LaunchViewController.swift; sourceTree = "<group>"; };
+		EDE6E1732486983D00C06998 /* UserInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoData.swift; sourceTree = "<group>"; };
+		EDE6E17524869AF300C06998 /* ErrorResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponce.swift; sourceTree = "<group>"; };
 		EDEE6BB324856767004DBFB3 /* EditFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFields.swift; sourceTree = "<group>"; };
 		EDEE6BB624856B3D004DBFB3 /* PersonalInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewModel.swift; sourceTree = "<group>"; };
 		EDEE6BB924856B5D004DBFB3 /* PersonalInformationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewModelType.swift; sourceTree = "<group>"; };
@@ -276,6 +282,7 @@
 		ED03587F24725AC3005A6745 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EDE6E16A2486929100C06998 /* Launch */,
 				EDEFC3D1248525F1003636F2 /* NavigationController */,
 				EDA4327C24756DB200A2BB52 /* Alerts */,
 				ED84C494247280E4009D6742 /* Registration */,
@@ -501,6 +508,8 @@
 			children = (
 				EDF862A724750ED0000FC85B /* AuthTokenNowait.swift */,
 				EDEE6BBB24858858004DBFB3 /* ListCountry.swift */,
+				EDE6E1732486983D00C06998 /* UserInfoData.swift */,
+				EDE6E17524869AF300C06998 /* ErrorResponce.swift */,
 			);
 			path = Singletones;
 			sourceTree = "<group>";
@@ -635,6 +644,22 @@
 				EDF862A224750B15000FC85B /* ResultResponce.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EDE6E16A2486929100C06998 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				EDE6E17724869D2300C06998 /* View */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		EDE6E17724869D2300C06998 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDE6E16B248692B000C06998 /* LaunchViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EDEE6BB12485674B004DBFB3 /* View */ = {
@@ -923,6 +948,7 @@
 				EDDCB347247504F300863066 /* DefaultAlamofireManager.swift in Sources */,
 				ED84C481247261A6009D6742 /* DesignableUIView.swift in Sources */,
 				ED9135752477F7F4008065E2 /* SignUpViewController.swift in Sources */,
+				EDE6E1742486983D00C06998 /* UserInfoData.swift in Sources */,
 				EDDCB3262474089C00863066 /* MainTableViewController.swift in Sources */,
 				ED84C483247266F5009D6742 /* DesignableUIButton.swift in Sources */,
 				EDDCB3452475039000863066 /* BaseUrl.swift in Sources */,
@@ -935,6 +961,8 @@
 				ED84C49F24728354009D6742 /* SignUpViewModelType.swift in Sources */,
 				EDDCB32F247438EF00863066 /* ExtensionUIView.swift in Sources */,
 				ED84C4A5247284FE009D6742 /* Country.swift in Sources */,
+				EDE6E16C248692B000C06998 /* LaunchViewController.swift in Sources */,
+				EDE6E17624869AF300C06998 /* ErrorResponce.swift in Sources */,
 				EDDCB30324729CC300863066 /* CountryCellViewModelType.swift in Sources */,
 				EDF862AD2475179C000FC85B /* TokenModel.swift in Sources */,
 				EDDCB3492475050D00863066 /* BaseResponseModel.swift in Sources */,

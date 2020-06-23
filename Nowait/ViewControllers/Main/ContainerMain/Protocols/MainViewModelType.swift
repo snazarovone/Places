@@ -18,5 +18,4 @@ protocol MainViewModelType {
     func checkExistValidToken() -> Bool
     
     func requestLogOut(callback: @escaping ((ResultResponce, BaseResponseModel?)->()))
-    func requestUserInfo(callback: @escaping ((ResultResponce, UserInfoModel?)->()))
 }

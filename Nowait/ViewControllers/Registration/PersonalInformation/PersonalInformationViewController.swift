@@ -10,6 +10,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Photos
+import SwiftOverlays
+import SDWebImage
 
 class PersonalInformationViewController: UIViewController {
     
@@ -36,8 +38,7 @@ class PersonalInformationViewController: UIViewController {
     private let imagePicker = UIImagePickerController()
     private let cameraPicker = UIImagePickerController()
     
-    //PUBLIC
-    public var personalInfoViewModel: PersonalInformationViewModel!
+    private let personalInfoViewModel = PersonalInformationViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,11 +48,13 @@ class PersonalInformationViewController: UIViewController {
         bottomConstPicView.constant = hideConst
         viewPicker.shadowOpacity = 0.0
         limitPickerView()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configKeyboard()
+        
     }
     
     private func subscribe(){
@@ -59,7 +62,7 @@ class PersonalInformationViewController: UIViewController {
             self?.setDataInFields(at: user)
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
         
-        personalInfoViewModel.imageUser.asObservable().subscribe(onNext: { [weak self] (img) in
+        personalInfoViewModel.imageUser.skip(1).asObservable().subscribe(onNext: { [weak self] (img) in
             if img != nil{
                 self?.photoImg.contentMode = .scaleAspectFill
                 self?.photoImg.image = img
@@ -106,6 +109,15 @@ class PersonalInformationViewController: UIViewController {
                 self.textFields[field.tag].text = user?.email
             case .phone:
                 self.textFields[field.tag].text = user?.phone
+            }
+        }
+        
+        if let img = user?.image, let urlImage = URL(string: "\(img)"){
+            DispatchQueue.main.async {
+                SDWebImageManager.shared.loadImage(with: urlImage, options: .highPriority, progress: nil) { [weak self]
+                    (image, data, error, cacheType, isFinished, imageUrl) in
+                    self?.personalInfoViewModel.imageUser.accept(image)
+                }
             }
         }
         
@@ -176,6 +188,35 @@ class PersonalInformationViewController: UIViewController {
         
     }
     
+    //MARK:- Alert
+    private func showAlert(message: String, title: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "ОК", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    //MARK:- Request
+    private func requestUpdateUser(){
+        SwiftOverlays.showBlockingWaitOverlay()
+        personalInfoViewModel.requestUpdateUserInfo { [weak self] (resultResponce, error) in
+            SwiftOverlays.removeAllBlockingOverlays()
+            switch resultResponce{
+            case .success:
+                break
+            case .fail:
+                if let e = error{
+                    switch e {
+                    case .unknow(let title, let message):
+                        self?.showAlert(message: message ?? "", title: title ?? "")
+                    default:
+                        self?.showAlert(message: "", title: e.value)
+                    }
+                }
+            }
+        }
+    }
+    
     //MARK:- Actions
     @IBAction func back(_ sender: UIButton){
         self.navigationController?.popViewController(animated: true)
@@ -186,6 +227,7 @@ class PersonalInformationViewController: UIViewController {
             editing()
         }else{
             save()
+            requestUpdateUser()
         }
         fieldsEdit()
     }
@@ -252,6 +294,8 @@ extension PersonalInformationViewController: UITextFieldDelegate{
         if textField.tag + 1 != EditFields.birthday.tag{
             if textField.tag + 1 < textFields.count{
                 textFields[textField.tag + 1].becomeFirstResponder()
+            }else{
+                dismissKeyboard()
             }
         }else{
             //open select date picker

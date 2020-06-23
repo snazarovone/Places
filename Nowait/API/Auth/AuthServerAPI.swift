@@ -18,6 +18,7 @@ enum AuthServerAPI{
     case userInfo
     case facebook(provider_uid: String, email: String?, first_name: String?, last_name: String?)
     case google(provider_uid: String, email: String?, first_name: String?, last_name: String?)
+    case editUserInfo(name: String, last_name: String, email: String, phone: String, image: Data?, birth_date: String)
 }
 
 extension AuthServerAPI: TargetType{
@@ -41,12 +42,14 @@ extension AuthServerAPI: TargetType{
             return "/auth/facebook"
         case .google:
             return "/auth/google"
+        case .editUserInfo:
+            return "/user/current/update"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .register, .checkLogin, .facebook, .google:
+        case .register, .checkLogin, .facebook, .google, .editUserInfo:
             return .post
         case .listCountry, .logout, .userInfo:
             return .get
@@ -81,6 +84,17 @@ extension AuthServerAPI: TargetType{
                 params["last_name"] = last_name
             }
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
+    
+        case .editUserInfo(let name, let last_name, let email, let phone, let image, let birth_date):
+            let params: [String: String] = ["name": name, "last_name": last_name, "email": email, "phone": phone, "birth_date": birth_date]
+
+            if let image = image{
+                let imgData = MultipartFormData.init(provider: .data(image), name: "image", fileName: "photo.png", mimeType: "image/png")
+                
+                return .uploadCompositeMultipart([imgData], urlParameters: params)
+            }else{
+                return .requestParameters(parameters: params, encoding: URLEncoding.default)
+            }
             
         }
     }
@@ -99,6 +113,14 @@ extension AuthServerAPI: TargetType{
                           "Accept": "application/json"]
             }else{
                 params = ["Accept": "application/json"]
+            }
+        case .editUserInfo(_, _, _, _, let image, _):
+            let tokenModel = AuthTokenNowait.shared.tokenModel
+            if let token = tokenModel.value?.token, let tokenType = tokenModel.value?.token_type{
+                params = ["Authorization": "\(tokenType) \(token)",
+                          "content-type": "multipart/form-data"]
+            }else{
+                params = ["content-type": "multipart/form-data"]
             }
         }
         return params

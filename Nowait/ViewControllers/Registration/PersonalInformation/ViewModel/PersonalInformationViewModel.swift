@@ -19,9 +19,12 @@ class PersonalInformationViewModel: PersonalInformationViewModelType{
     let country: BehaviorRelay<[Country]>
     
     var imageUser: BehaviorRelay<UIImage?> = BehaviorRelay(value: nil)
+    var currentMask = ""
     
-    init(userInfo: BehaviorRelay<UserInfo?>) {
-        self.userInfo = userInfo
+    private var dataImage: Data?
+    
+    init() {
+        self.userInfo = UserInfoData.shared.userInfo
         self.country = ListCountry.shared.country
     }
     
@@ -82,6 +85,7 @@ class PersonalInformationViewModel: PersonalInformationViewModelType{
                     for _ in code{
                         mm += "C"
                     }
+                    currentMask = "+\(mm) \(c.mask ?? "")"
                     return "\(mm) \(c.mask ?? "")"
                 }
             }
@@ -94,6 +98,7 @@ class PersonalInformationViewModel: PersonalInformationViewModelType{
             }
         }
         
+        currentMask = "+\(mm) \(country.value.first?.mask ?? "")"
         return "\(mm) \(country.value.first?.mask ?? "")"
     }
     
@@ -108,5 +113,52 @@ class PersonalInformationViewModel: PersonalInformationViewModelType{
             self.fields[EditFields.birthday.tag] = dateFormatter.string(from: Date())
             return dateFormatter.string(from: Date())
         }
+    }
+    
+    public func requestUpdateUserInfo(callback: @escaping ((ResultResponce, ErrorResponce?)->())){
+        validData()
+        AuthAPI.requstAuthAPI(type: BaseResponseModel.self, request: .editUserInfo(name: fields[EditFields.name.tag],
+                                                                              last_name: fields[EditFields.lastName.tag],
+                                                                              email: fields[EditFields.email.tag],
+                                                                              phone: fields[EditFields.phone.tag],
+                                                                              image: dataImage,
+                                                                              birth_date: fields[EditFields.birthday.tag])) { (value) in
+                                                                              
+                                                                                UserInfoData.shared.requestUserInfo { (resultResponce, error) in
+                                                                                  
+                                                                                    if value?.success == true{
+                                                                                         callback(resultResponce, error)
+                                                                                    }else{
+                                                                                        if resultResponce == .success{
+                                                                                            let error = (value?.error ?? "").getError(message: value?.message)
+                                                                                            callback(.fail, error)
+                                                                                        }else{
+                                                                                            callback(resultResponce, error)
+                                                                                        }
+                                                                                    }
+
+                                                                                }
+        }
+    }
+    
+    private func validData(){
+        for f in EditFields.allCases{
+            switch f {
+            case .name, .lastName, .birthday:
+                fields[f.tag] = fields[f.tag].trimmingCharacters(in: .whitespacesAndNewlines)
+            case .email:
+                if fields[f.tag].isValidEmail() == false{
+                    fields[f.tag] = ""
+                }
+            case .phone:
+                if currentMask.isEmpty == false{
+                    if currentMask.count != fields[f.tag].count{
+                        fields[f.tag] = ""
+                    }
+                }
+            }
+        }
+        
+        dataImage = imageUser.value?.pngData()
     }
 }

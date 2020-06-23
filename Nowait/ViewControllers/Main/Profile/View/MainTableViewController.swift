@@ -9,6 +9,8 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SwiftOverlays
+import SDWebImage
 
 class MainTableViewController: UITableViewController {
     
@@ -38,7 +40,7 @@ class MainTableViewController: UITableViewController {
     }
     
     private func subscribes(){
-        mainViewModel.authTokenNowait.tokenModel.asObservable().subscribe(onNext: { [weak self] _ in
+        mainViewModel.authTokenNowait.tokenModel.asObservable().subscribe(onNext: { [weak self] value in
             self?.tableView.reloadData()
             self?.updateHeaderView()
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
@@ -66,13 +68,6 @@ class MainTableViewController: UITableViewController {
                     //MARK:- Logout
                     self?.logout()
                 }
-            }
-            return
-        }
-        
-        if segue.identifier == String(describing: PersonalInformationViewController.self){
-            if let dvc = segue.destination as? PersonalInformationViewController{
-                dvc.personalInfoViewModel = PersonalInformationViewModel(userInfo: mainViewModel.userInfo)
             }
             return
         }
@@ -110,7 +105,7 @@ class MainTableViewController: UITableViewController {
             name.isHidden = true
             phone.isHidden = true
             
-            mainViewModel.removeInfoUser()
+            UserInfoData.shared.removeInfoUser()
         }
     }
     
@@ -143,6 +138,25 @@ class MainTableViewController: UITableViewController {
             phone.text = userInfo.email
         }
         
+
+        if let img = userInfo.image, let urlImage = URL(string: "\(img)"){
+            DispatchQueue.main.async {
+                SDWebImageManager.shared.loadImage(with: urlImage, options: .highPriority, progress: nil) { [weak self]
+                    (image, data, error, cacheType, isFinished, imageUrl) in
+                    self?.photoUser.image = image
+                    if image != nil{
+                        self?.photoUser.isHidden = false
+                    }else{
+                        self?.photoUser.isHidden = true
+                    }
+                }
+            }
+        }
+        else{
+            photoUser.image = nil
+            photoUser.isHidden = true
+        }
+        
     }
     
     //MARK:- RequestLogout
@@ -164,19 +178,12 @@ class MainTableViewController: UITableViewController {
     
     //MARK:- RequestUserInfo
     private func requestUserInfo(){
-        showWaitOverlay()
-        view.isUserInteractionEnabled = false
-        mainViewModel.requestUserInfo { [weak self] (resultResponce, userInfoModel) in
-            self?.removeAllOverlays()
-            self?.view.isUserInteractionEnabled = true
-            switch resultResponce{
-            case .success:
-                break;
-            case .fail:
-                self?.showAlert(message: userInfoModel?.message ?? "",
-                                title: userInfoModel?.error ?? "")
-            }
+        SwiftOverlays.showBlockingWaitOverlay()
+        
+        UserInfoData.shared.requestUserInfo { (_, _) in
+            SwiftOverlays.removeAllBlockingOverlays()
         }
+        
     }
     
     // MARK: - Table view data source

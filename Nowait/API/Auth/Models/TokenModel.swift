@@ -20,8 +20,8 @@ class TokenModel: BaseResponseModel {
         self.token_type = token_type
     }
  
-    required init(success: Bool?, message: String?, error: String?) {
-        super.init(success: success, message: message, error: error)
+    required init(success: Bool?, message: String?, error: String?, statusCode: Int?) {
+        super.init(success: success, message: message, error: error, statusCode: statusCode)
     }
     
     required init?(map: Map) {

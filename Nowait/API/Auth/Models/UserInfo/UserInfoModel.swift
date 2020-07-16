@@ -21,8 +21,8 @@ class UserInfoModel: BaseResponseModel{
         super.init(map: map)
     }
     
-    required init(success: Bool?, message: String?, error: String?) {
-        super.init(success: success, message: message, error: error)
+    required init(success: Bool?, message: String?, error: String?, statusCode: Int?) {
+        super.init(success: success, message: message, error: error, statusCode: statusCode)
     }
     
     

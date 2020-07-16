@@ -21,17 +21,12 @@ class UserInfoData{
                 self?.userInfo.accept(value?.data)
                 callback(.success, nil)
             }else{
-               let error = (value?.error ?? "").getError(message: value?.message)
-
-                switch error {
-                case .unauthorized:
-                    self?.userInfo.accept(nil)
+                if value?.statusCode == 401{
                     AuthTokenNowait.shared.removeData()
-                default:
-                    break
+                    callback(.fail, .unauthorized)
+                }else{
+                    callback(.fail, .unknow(title: "Ошибка", message: value?.message))
                 }
-                
-                callback(.fail, error)
             }
         }
     }

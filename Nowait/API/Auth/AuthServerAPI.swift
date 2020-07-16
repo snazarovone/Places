@@ -114,7 +114,7 @@ extension AuthServerAPI: TargetType{
             }else{
                 params = ["Accept": "application/json"]
             }
-        case .editUserInfo(_, _, _, _, let image, _):
+        case .editUserInfo(_, _, _, _, _, _):
             let tokenModel = AuthTokenNowait.shared.tokenModel
             if let token = tokenModel.value?.token, let tokenType = tokenModel.value?.token_type{
                 params = ["Authorization": "\(tokenType) \(token)",

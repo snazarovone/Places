@@ -32,12 +32,5 @@ extension String {
         }
     }
     
-    func getError(message: String?) -> ErrorResponce{
-        for e in ErrorResponce.allCases{
-            if e.value.uppercased() == self.uppercased(){
-                return e
-            }
-        }
-        return .unknow(title: self, message: message)
-    }
+    
 }

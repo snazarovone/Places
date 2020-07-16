@@ -117,27 +117,18 @@ class PersonalInformationViewModel: PersonalInformationViewModelType{
     
     public func requestUpdateUserInfo(callback: @escaping ((ResultResponce, ErrorResponce?)->())){
         validData()
-        AuthAPI.requstAuthAPI(type: BaseResponseModel.self, request: .editUserInfo(name: fields[EditFields.name.tag],
-                                                                              last_name: fields[EditFields.lastName.tag],
-                                                                              email: fields[EditFields.email.tag],
-                                                                              phone: fields[EditFields.phone.tag],
-                                                                              image: dataImage,
-                                                                              birth_date: fields[EditFields.birthday.tag])) { (value) in
-                                                                              
-                                                                                UserInfoData.shared.requestUserInfo { (resultResponce, error) in
-                                                                                  
-                                                                                    if value?.success == true{
-                                                                                         callback(resultResponce, error)
-                                                                                    }else{
-                                                                                        if resultResponce == .success{
-                                                                                            let error = (value?.error ?? "").getError(message: value?.message)
-                                                                                            callback(.fail, error)
-                                                                                        }else{
-                                                                                            callback(resultResponce, error)
-                                                                                        }
-                                                                                    }
-
-                                                                                }
+        AuthAPI.requstAuthAPI(type: BaseResponseModel.self,
+                              request: .editUserInfo(name: fields[EditFields.name.tag],
+                                                     
+              last_name: fields[EditFields.lastName.tag],
+              email: fields[EditFields.email.tag],
+              phone: fields[EditFields.phone.tag],
+              image: dataImage,
+              birth_date: fields[EditFields.birthday.tag])) { (value) in
+              
+                UserInfoData.shared.requestUserInfo { (resultResponce, error) in
+                    callback(resultResponce, error)
+                }
         }
     }
     

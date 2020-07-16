@@ -60,7 +60,7 @@ class SignUpViewModel: SignUpViewModelType{
     
     func requestRegistrationAtPhone(callback: @escaping ((ResultResponce, BaseResponseModel?)->())){
         guard let selectCountry = selectCountry.value, let code = selectCountry.code?.trimmingCharacters(in: .whitespacesAndNewlines) else {
-            callback(.fail, BaseResponseModel(success: false, message: "Выберите страну", error: "Ошибка"))
+            callback(.fail, BaseResponseModel(success: false, message: "Выберите страну", error: "Ошибка", statusCode: nil))
             return
         }
          
@@ -90,7 +90,7 @@ class SignUpViewModel: SignUpViewModelType{
     func requestFacebookLogin(at token: FacebookAuthToken, callback: @escaping (ResultResponce, TokenModel?)->()){
         guard let id = token.accessToken?.userID else{
             AuthTokenNowait.shared.removeData()
-            callback(.fail, TokenModel(success: false, message: "Повторите попытку позднее", error: "Ошибка"))
+            callback(.fail, TokenModel(success: false, message: "Повторите попытку позднее", error: "Ошибка", statusCode: nil))
             return
         }
         AuthAPI.requstAuthAPI(type: TokenModel.self, request: .facebook(provider_uid: id, email: token.email, first_name: token.firstName, last_name: token.lastName)) { (value) in
@@ -107,7 +107,7 @@ class SignUpViewModel: SignUpViewModelType{
     func requestGoogleLogin(at token: GoogleAuthToken, callback: @escaping (ResultResponce, TokenModel?)->()){
         guard let id = token.userId else{
             AuthTokenNowait.shared.removeData()
-            callback(.fail, TokenModel(success: false, message: "Повторите попытку позднее", error: "Ошибка"))
+            callback(.fail, TokenModel(success: false, message: "Повторите попытку позднее", error: "Ошибка", statusCode: nil))
             return
         }
         AuthAPI.requstAuthAPI(type: TokenModel.self, request: .facebook(provider_uid: id,

@@ -22,7 +22,7 @@ class AuthAPI{
         }, onError: { e in
             
             let error = e as! MoyaError
-            let responce = T(success: false, message: error.localizedDescription, error: nil)
+            let responce = T(success: false, message: error.localizedDescription, error: nil, statusCode: error.response?.statusCode)
             callback(responce)
         }, onCompleted: nil, onDisposed: nil).disposed(by: delegate.disposeBag)
     }

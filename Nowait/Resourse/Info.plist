@@ -56,6 +56,7 @@
 		<string>SFProText-Medium.ttf</string>
 		<string>SFProText-Semibold.ttf</string>
 		<string>SFProText-Regular.ttf</string>
+		<string>SFProText-Bold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
@@ -119,5 +120,7 @@
 	<string>Приложение запрашивает доступ к библиотеке фотографий</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Приложение запрашивает доступ к фотоаппарату устройства</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This application show user location</string>
 </dict>
 </plist>

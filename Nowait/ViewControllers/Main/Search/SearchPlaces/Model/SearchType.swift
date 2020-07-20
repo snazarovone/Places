@@ -18,7 +18,7 @@ extension SearchType{
     var type: String{
         switch self {
         case .shop:
-            return "shop"
+            return "name"
         case .address:
             return "address"
         case .dish:

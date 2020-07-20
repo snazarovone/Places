@@ -12,6 +12,7 @@ import GoogleSignIn
 import FBSDKCoreKit
 import Moya
 import RxSwift
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,6 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             nsDictionary = NSDictionary(contentsOfFile: path)
         }
         GIDSignIn.sharedInstance().clientID = nsDictionary?["CLIENT_ID"] as? String
+        
+        if let apiKeyMap = nsDictionary?["API_KEY_MAP"] as? String{
+            GMSServices.provideAPIKey(apiKeyMap)
+        }
         
         //MARK:- Facebook SignIn
         ApplicationDelegate.shared.application( application, didFinishLaunchingWithOptions: launchOptions )

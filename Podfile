@@ -16,4 +16,5 @@ target 'Nowait' do
   pod 'SDWebImage'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'AnimatedCollectionViewLayout'
 end

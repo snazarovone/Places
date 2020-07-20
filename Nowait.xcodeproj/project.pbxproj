@@ -31,6 +31,11 @@
 		ED18608C24BF5B8100D80150 /* ResultSearchCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18608B24BF5B8100D80150 /* ResultSearchCellViewModelType.swift */; };
 		ED1DD03524BF42A8005BB18A /* SearchHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DD03424BF42A8005BB18A /* SearchHeaderCollectionReusableView.swift */; };
 		ED3DB5DC24C5BCEB00526556 /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3DB5DB24C5BCEB00526556 /* SearchType.swift */; };
+		ED3DB5DF24C5C68300526556 /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3DB5DE24C5C68300526556 /* MapSearchViewController.swift */; };
+		ED3DB5E324C5E3EB00526556 /* MapSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3DB5E224C5E3EB00526556 /* MapSearchViewModel.swift */; };
+		ED3DB5E624C5E40300526556 /* MapSearchViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3DB5E524C5E40300526556 /* MapSearchViewModelType.swift */; };
+		ED3DB5E924C5F05000526556 /* RSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3DB5E724C5F05000526556 /* RSearchCollectionViewCell.swift */; };
+		ED3DB5EA24C5F05000526556 /* RSearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED3DB5E824C5F05000526556 /* RSearchCollectionViewCell.xib */; };
 		ED5F713D2472890E004DA1D3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F713C2472890E004DA1D3 /* MainViewModel.swift */; };
 		ED5F714024728922004DA1D3 /* MainViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F713F24728922004DA1D3 /* MainViewModelType.swift */; };
 		ED5F71482472990C004DA1D3 /* SelectCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F71472472990C004DA1D3 /* SelectCountryViewController.swift */; };
@@ -161,6 +166,11 @@
 		ED18608B24BF5B8100D80150 /* ResultSearchCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchCellViewModelType.swift; sourceTree = "<group>"; };
 		ED1DD03424BF42A8005BB18A /* SearchHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		ED3DB5DB24C5BCEB00526556 /* SearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchType.swift; sourceTree = "<group>"; };
+		ED3DB5DE24C5C68300526556 /* MapSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapSearchViewController.swift; path = ../MapSearchViewController.swift; sourceTree = "<group>"; };
+		ED3DB5E224C5E3EB00526556 /* MapSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewModel.swift; sourceTree = "<group>"; };
+		ED3DB5E524C5E40300526556 /* MapSearchViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewModelType.swift; sourceTree = "<group>"; };
+		ED3DB5E724C5F05000526556 /* RSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED3DB5E824C5F05000526556 /* RSearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RSearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		ED5F713C2472890E004DA1D3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		ED5F713F24728922004DA1D3 /* MainViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelType.swift; sourceTree = "<group>"; };
 		ED5F71472472990C004DA1D3 /* SelectCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCountryViewController.swift; sourceTree = "<group>"; };
@@ -439,6 +449,42 @@
 				ED3DB5DB24C5BCEB00526556 /* SearchType.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ED3DB5DD24C5C66500526556 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				ED3DB5E424C5E3F600526556 /* Protocols */,
+				ED3DB5E124C5E3D700526556 /* ViewModel */,
+				ED3DB5E024C5C68800526556 /* View */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		ED3DB5E024C5C68800526556 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED3DB5DE24C5C68300526556 /* MapSearchViewController.swift */,
+				ED3DB5E724C5F05000526556 /* RSearchCollectionViewCell.swift */,
+				ED3DB5E824C5F05000526556 /* RSearchCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED3DB5E124C5E3D700526556 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED3DB5E224C5E3EB00526556 /* MapSearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ED3DB5E424C5E3F600526556 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				ED3DB5E524C5E40300526556 /* MapSearchViewModelType.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		ED5F7139247288EA004DA1D3 /* Main */ = {
@@ -944,6 +990,7 @@
 				ED6B31B724BDDDFA00D6348F /* Search */,
 				ED6B31D224BF210200D6348F /* SearchPlaces */,
 				ED6B31B624BDDDF000D6348F /* ResultSearch */,
+				ED3DB5DD24C5C66500526556 /* Map */,
 				ED6B31D624BF327B00D6348F /* BaseSearchViewController.swift */,
 			);
 			path = Search;
@@ -1153,6 +1200,7 @@
 				ED03588624725E8D005A6745 /* SFProDisplay-Regular.ttf in Resources */,
 				ED6B31AB24BDC3B500D6348F /* SFProText-Bold.ttf in Resources */,
 				ED6B31AD24BDC4F400D6348F /* SearchHeader.xib in Resources */,
+				ED3DB5EA24C5F05000526556 /* RSearchCollectionViewCell.xib in Resources */,
 				ED84C48D247274A5009D6742 /* SFProText-Regular.ttf in Resources */,
 				EDA4327B247568D600A2BB52 /* Alerts.storyboard in Resources */,
 				ED03586D24725959005A6745 /* Main.storyboard in Resources */,
@@ -1251,6 +1299,7 @@
 				EDF862AF24753BEB000FC85B /* MainMenuCell.swift in Sources */,
 				ED5F714024728922004DA1D3 /* MainViewModelType.swift in Sources */,
 				ED6B31C824BDEF4200D6348F /* SearchAPI.swift in Sources */,
+				ED3DB5DF24C5C68300526556 /* MapSearchViewController.swift in Sources */,
 				ED9F28D524C0E03E00EB17CA /* ResultSearchViewModel.swift in Sources */,
 				EDEFC3DA24852862003636F2 /* TabBarNavigationDelegate.swift in Sources */,
 				EDA4327E24756DCB00A2BB52 /* AlertLogoutViewController.swift in Sources */,
@@ -1264,6 +1313,7 @@
 				ED84C4A5247284FE009D6742 /* Country.swift in Sources */,
 				EDE6E16C248692B000C06998 /* LaunchViewController.swift in Sources */,
 				EDE6E17624869AF300C06998 /* ErrorResponce.swift in Sources */,
+				ED3DB5E624C5E40300526556 /* MapSearchViewModelType.swift in Sources */,
 				EDDCB30324729CC300863066 /* CountryCellViewModelType.swift in Sources */,
 				ED6B31C424BDEE7800D6348F /* KitchensModel.swift in Sources */,
 				ED6B31B324BDC6C200D6348F /* SearchCollectionViewCell.swift in Sources */,
@@ -1275,6 +1325,7 @@
 				ED3DB5DC24C5BCEB00526556 /* SearchType.swift in Sources */,
 				EDDCB34E2475087800863066 /* CountryModels.swift in Sources */,
 				ED6B31C024BDEDDA00D6348F /* PlacesData.swift in Sources */,
+				ED3DB5E924C5F05000526556 /* RSearchCollectionViewCell.swift in Sources */,
 				ED6B31D924BF3B7500D6348F /* SearchCellViewModel.swift in Sources */,
 				EDEFC3D524852649003636F2 /* HiddenNavBarNavigationController.swift in Sources */,
 				ED84C49324727959009D6742 /* CodeTextField.swift in Sources */,
@@ -1315,6 +1366,7 @@
 				ED9F28E424C2329400EB17CA /* RSearchTableViewCell.swift in Sources */,
 				EDDCB30D2472C1AF00863066 /* CodeViewModelType.swift in Sources */,
 				EDF862A324750B15000FC85B /* ResultResponce.swift in Sources */,
+				ED3DB5E324C5E3EB00526556 /* MapSearchViewModel.swift in Sources */,
 				ED6B31BD24BDE90100D6348F /* SearchServerAPI.swift in Sources */,
 				EDF862A824750ED0000FC85B /* AuthTokenNowait.swift in Sources */,
 				EDEFC3DD24853C67003636F2 /* PersonalInformationViewController.swift in Sources */,

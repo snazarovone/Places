@@ -58,6 +58,15 @@ class ResultSearchViewController: BaseSearchViewController {
         }
     }
     
+    //MARK:- Prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == String(describing: MapSearchViewController.self), let dvc = segue.destination as? MapSearchViewController{
+            dvc.viewModel = MapSearchViewModel(resultSearch: resultSearchViewModel.resultSearch, searchText: resultSearchViewModel.searchText)
+            return
+        }
+    }
+    
+    //MARK:- Actions
     @IBAction func sortAction(_ sender: DesignableUIButton) {
     }
     
@@ -65,6 +74,7 @@ class ResultSearchViewController: BaseSearchViewController {
     }
     
     @IBAction func mapAction(_ sender: DesignableUIButton) {
+        self.performSegue(withIdentifier: String(describing: MapSearchViewController.self), sender: nil)
     }
     
     @IBAction func search(_ sender: UIButton) {

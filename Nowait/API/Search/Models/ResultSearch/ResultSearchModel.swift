@@ -19,7 +19,7 @@ class ResultSearchModel: Mappable{
     }
     
     func mapping(map: Map) {
-        shop <- map["shop"]
+        shop <- map["name"]
         address <- map["address"]
         dish <- map["dish"]
     }

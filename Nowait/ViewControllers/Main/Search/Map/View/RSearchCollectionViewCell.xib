@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Bold.ttf">
+            <string>SFProText-Bold</string>
+        </array>
+        <array key="SFProText-Light.ttf">
+            <string>SFProText-Light</string>
+        </array>
+        <array key="SFProText-Medium.ttf">
+            <string>SFProText-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RSearchCollectionViewCell" id="gTV-IL-0wX" customClass="RSearchCollectionViewCell" customModule="Nowait" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="450" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="450" height="114"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZM-aO-MGK">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="114"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restoran-babel-v-1-m-nikoloschepovskom-pereulke_19f83_full-36554 1" translatesAutoresizingMaskIntoConstraints="NO" id="Sjk-wp-ces" customClass="DesignableUIImageView" customModule="Nowait" customModuleProvider="target">
+                                <rect key="frame" x="16" y="13" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="IJu-ka-g63"/>
+                                    <constraint firstAttribute="height" constant="88" id="TNp-2K-0rI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZ7-oD-uJ4">
+                                <rect key="frame" x="413" y="15" width="21" height="18"/>
+                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" name="282829"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="151" horizontalCompressionResistancePriority="700" text="Матисс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmp-31-4zR">
+                                <rect key="frame" x="115" y="13" width="60" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Ivp-tU-J5R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
+                                <color key="textColor" name="282829"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="151" text="10:00 - 02:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSB-CG-iDU">
+                                <rect key="frame" x="115" y="39" width="83.5" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="4g1-9c-qPc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="14"/>
+                                <color key="textColor" name="282829"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="151" text="550m   ул. Ярослава Мудрого, 56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9m8-al-oC1">
+                                <rect key="frame" x="115" y="62" width="218.5" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="MbB-Q7-bPg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="14"/>
+                                <color key="textColor" name="282829"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="151" text="165 ₴ средний чек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59U-bx-uTX">
+                                <rect key="frame" x="115" y="85" width="122" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="0Sb-cZ-LUp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="14"/>
+                                <color key="textColor" name="282829"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="59U-bx-uTX" secondAttribute="trailing" constant="16" id="EuC-tt-HJw"/>
+                            <constraint firstItem="9m8-al-oC1" firstAttribute="leading" secondItem="Sjk-wp-ces" secondAttribute="trailing" constant="11" id="LvC-un-vpV"/>
+                            <constraint firstItem="cSB-CG-iDU" firstAttribute="leading" secondItem="Sjk-wp-ces" secondAttribute="trailing" constant="11" id="QDf-ZR-Uhi"/>
+                            <constraint firstItem="Sjk-wp-ces" firstAttribute="centerY" secondItem="kZM-aO-MGK" secondAttribute="centerY" id="UPc-pW-gc6"/>
+                            <constraint firstItem="59U-bx-uTX" firstAttribute="leading" secondItem="Sjk-wp-ces" secondAttribute="trailing" constant="11" id="bfS-vI-hgB"/>
+                            <constraint firstItem="cSB-CG-iDU" firstAttribute="top" secondItem="Wmp-31-4zR" secondAttribute="bottom" constant="6" id="dol-9l-wFh"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cSB-CG-iDU" secondAttribute="trailing" constant="16" id="gkV-8c-wwT"/>
+                            <constraint firstItem="Wmp-31-4zR" firstAttribute="leading" secondItem="Sjk-wp-ces" secondAttribute="trailing" constant="11" id="iWi-7H-9P0"/>
+                            <constraint firstItem="59U-bx-uTX" firstAttribute="top" secondItem="9m8-al-oC1" secondAttribute="bottom" constant="6" id="lFj-1K-ZQI"/>
+                            <constraint firstItem="Sjk-wp-ces" firstAttribute="leading" secondItem="kZM-aO-MGK" secondAttribute="leading" constant="16" id="lmY-jf-vjo"/>
+                            <constraint firstItem="HZ7-oD-uJ4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Wmp-31-4zR" secondAttribute="trailing" constant="8" id="m8K-rn-fnF"/>
+                            <constraint firstItem="HZ7-oD-uJ4" firstAttribute="top" secondItem="kZM-aO-MGK" secondAttribute="top" constant="15" id="pJK-75-jnn"/>
+                            <constraint firstItem="Wmp-31-4zR" firstAttribute="top" secondItem="kZM-aO-MGK" secondAttribute="top" constant="13" id="r0K-AF-7Ak"/>
+                            <constraint firstItem="9m8-al-oC1" firstAttribute="top" secondItem="cSB-CG-iDU" secondAttribute="bottom" constant="6" id="rVM-K2-SFH"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9m8-al-oC1" secondAttribute="trailing" constant="16" id="tsT-fi-csb"/>
+                            <constraint firstAttribute="trailing" secondItem="HZ7-oD-uJ4" secondAttribute="trailing" constant="16" id="xZN-rf-iVr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kZM-aO-MGK" secondAttribute="trailing" id="3QW-w6-LBq"/>
+                <constraint firstAttribute="bottom" secondItem="kZM-aO-MGK" secondAttribute="bottom" id="HDd-uK-TRC"/>
+                <constraint firstItem="kZM-aO-MGK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HzK-N4-8EC"/>
+                <constraint firstItem="kZM-aO-MGK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Oo1-T3-nQN"/>
+            </constraints>
+            <size key="customSize" width="450" height="187"/>
+            <connections>
+                <outlet property="address" destination="9m8-al-oC1" id="nBV-dp-hZO"/>
+                <outlet property="name" destination="Wmp-31-4zR" id="ya6-vZ-bkA"/>
+                <outlet property="picture" destination="Sjk-wp-ces" id="RLt-vR-WVq"/>
+                <outlet property="price" destination="59U-bx-uTX" id="k4w-h5-MOW"/>
+                <outlet property="rating" destination="HZ7-oD-uJ4" id="Lz8-oy-8ry"/>
+                <outlet property="time" destination="cSB-CG-iDU" id="vYE-AL-8oe"/>
+            </connections>
+            <point key="canvasLocation" x="427.536231884058" y="178.125"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="restoran-babel-v-1-m-nikoloschepovskom-pereulke_19f83_full-36554 1" width="186" height="168"/>
+        <namedColor name="282829">
+            <color red="0.15700000524520874" green="0.15700000524520874" blue="0.16099999845027924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

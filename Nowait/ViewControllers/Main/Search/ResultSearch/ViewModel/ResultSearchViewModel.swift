@@ -14,16 +14,18 @@ class ResultSearchViewModel: ResultSearchViewModelType{
     
     var searchText: String?
     var resultSearch: BehaviorRelay<[PlacesModel]> = BehaviorRelay(value: [])
+    let type: SearchType
     
-    init(searchText: String?){
+    init(searchText: String?, type: SearchType){
         self.searchText = searchText
+        self.type = type
     }
     
     func requestSearchFinish(callback: @escaping ((ResultResponce, ErrorResponce?)->())){
         
         guard let searchText = searchText else {return}
         
-        SearchAPI.requstSearchAPI(type: PlacesData.self, request: .searchFinish(text: searchText, kitchens: nil)) { [weak self] (value) in
+        SearchAPI.requstSearchAPI(type: PlacesData.self, request: .searchFinish(text: searchText, kitchens: nil, type: type)) { [weak self] (value) in
             
             self?.resultSearch.accept(value?.data ?? [])
             

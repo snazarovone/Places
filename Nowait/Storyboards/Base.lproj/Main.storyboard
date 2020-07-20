@@ -92,10 +92,10 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="WiA-mg-9zP">
-                                    <rect key="frame" x="106.33333333333333" y="15" width="162.33333333333337" height="126"/>
+                                    <rect key="frame" x="109.33333333333333" y="15" width="156.33333333333337" height="126"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2x-Lv-H7j" customClass="DesignableUIImageView" customModule="Nowait" customModuleProvider="target">
-                                            <rect key="frame" x="46.333333333333329" y="0.0" width="70" height="70"/>
+                                            <rect key="frame" x="43.333333333333329" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" name="828282"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="70" id="BAX-CW-MRN"/>
@@ -106,13 +106,13 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Елена Иванова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouN-lN-ezR">
-                                            <rect key="frame" x="0.0" y="74" width="162.33333333333334" height="26.333333333333329"/>
+                                            <rect key="frame" x="0.0" y="74" width="156.33333333333334" height="25.666666666666671"/>
                                             <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="22"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+380 67 123 45 67" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6w-25-L8f">
-                                            <rect key="frame" x="13.333333333333343" y="108" width="136" height="18"/>
+                                            <rect key="frame" x="15.333333333333343" y="108.33333333333333" width="126" height="17.666666666666671"/>
                                             <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                             <color key="textColor" name="696969"/>
                                             <nil key="highlightedColor"/>
@@ -172,7 +172,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Банковская карта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOh-Ey-6h7">
-                                                    <rect key="frame" x="16" y="15" width="147.33333333333334" height="20"/>
+                                                    <rect key="frame" x="16" y="15" width="144.33333333333334" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="CuJ-Ce-z3G"/>
                                                     </constraints>
@@ -207,7 +207,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Уведомления" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIg-97-VyG">
-                                                    <rect key="frame" x="16" y="15" width="112" height="20"/>
+                                                    <rect key="frame" x="15.999999999999993" y="15" width="107.33333333333331" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="DaN-0S-fIj"/>
                                                     </constraints>
@@ -242,7 +242,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Личная информация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0l-fh-O4m">
-                                                    <rect key="frame" x="16" y="15" width="171.33333333333334" height="20"/>
+                                                    <rect key="frame" x="16" y="15" width="165" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="lkL-93-Dnt"/>
                                                     </constraints>
@@ -281,7 +281,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Условия использования" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2en-EH-UkX">
-                                                    <rect key="frame" x="16" y="15" width="199.33333333333334" height="20"/>
+                                                    <rect key="frame" x="16" y="15" width="193" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="1af-al-ofZ"/>
                                                     </constraints>
@@ -316,7 +316,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Помощь" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTL-Nl-cWD">
-                                                    <rect key="frame" x="16" y="15" width="69" height="20"/>
+                                                    <rect key="frame" x="16" y="15" width="66.666666666666671" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="pDg-uE-VaO"/>
                                                     </constraints>
@@ -351,7 +351,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выйти" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ye-B5-XTP">
-                                                    <rect key="frame" x="15.999999999999996" y="15" width="52.666666666666657" height="20"/>
+                                                    <rect key="frame" x="16" y="15" width="51" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="rvx-fE-6Jo"/>
                                                     </constraints>

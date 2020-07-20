@@ -79,7 +79,10 @@ class SearchPlacesViewController: BaseSearchViewController {
     //MARK:- Prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == String(describing: ResultSearchViewController.self), let dvc = segue.destination as? ResultSearchViewController{
-            dvc.resultSearchViewModel = ResultSearchViewModel(searchText: sender as? String)
+            let dataSender = (sender as! (String, SearchType))
+            dvc.resultSearchViewModel = ResultSearchViewModel(searchText: dataSender.0,
+                                                              type: dataSender.1)
+            
             dvc.searchPlacesViewModel = viewModel
         }
     }
@@ -250,6 +253,12 @@ extension SearchPlacesViewController: UITableViewDelegate, UITableViewDataSource
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: String(describing: ResultSearchViewController.self), sender: self.viewModel.didSelect(at: indexPath))
             }
+        }else{
+            let text = viewModel.didSelectHistory(at: indexPath)
+            searchTF.text = text
+            viewModel.searchText = text
+            viewModel.resultSearch.accept(nil)
+            self.requestSearchAtText()
         }
     }
     

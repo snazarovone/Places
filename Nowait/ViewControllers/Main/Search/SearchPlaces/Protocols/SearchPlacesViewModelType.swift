@@ -21,5 +21,6 @@ protocol SearchPlacesViewModelType: class {
     func section() -> Int
     func numberOfRow(section: Int) -> Int
     func cellForRow(at indexPath: IndexPath) -> ResultSearchCellViewModelType
-    func didSelect(at indexPath: IndexPath) -> String
+    func didSelect(at indexPath: IndexPath) -> (String, SearchType)
+    func didSelectHistory(at indexPath: IndexPath) -> String
 }

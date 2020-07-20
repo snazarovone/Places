@@ -30,6 +30,7 @@
 		ED18608A24BF5B6B00D80150 /* ResultSearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18608924BF5B6B00D80150 /* ResultSearchCellViewModel.swift */; };
 		ED18608C24BF5B8100D80150 /* ResultSearchCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18608B24BF5B8100D80150 /* ResultSearchCellViewModelType.swift */; };
 		ED1DD03524BF42A8005BB18A /* SearchHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DD03424BF42A8005BB18A /* SearchHeaderCollectionReusableView.swift */; };
+		ED3DB5DC24C5BCEB00526556 /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3DB5DB24C5BCEB00526556 /* SearchType.swift */; };
 		ED5F713D2472890E004DA1D3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F713C2472890E004DA1D3 /* MainViewModel.swift */; };
 		ED5F714024728922004DA1D3 /* MainViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F713F24728922004DA1D3 /* MainViewModelType.swift */; };
 		ED5F71482472990C004DA1D3 /* SelectCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F71472472990C004DA1D3 /* SelectCountryViewController.swift */; };
@@ -40,7 +41,6 @@
 		ED6B31AD24BDC4F400D6348F /* SearchHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6B31AC24BDC4F400D6348F /* SearchHeader.xib */; };
 		ED6B31B124BDC66300D6348F /* SearchViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6B31B024BDC66300D6348F /* SearchViewHeader.swift */; };
 		ED6B31B324BDC6C200D6348F /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6B31B224BDC6C200D6348F /* SearchCollectionViewCell.swift */; };
-		ED6B31B524BDDD0800D6348F /* ResultSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6B31B424BDDD0800D6348F /* ResultSearch.xib */; };
 		ED6B31BA24BDDE3100D6348F /* ResultSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6B31B924BDDE3100D6348F /* ResultSearch.swift */; };
 		ED6B31BD24BDE90100D6348F /* SearchServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6B31BC24BDE90100D6348F /* SearchServerAPI.swift */; };
 		ED6B31C024BDEDDA00D6348F /* PlacesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6B31BF24BDEDDA00D6348F /* PlacesData.swift */; };
@@ -72,9 +72,10 @@
 		ED9F28D224C0DDF300EB17CA /* ResultSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F28D124C0DDF300EB17CA /* ResultSearchViewController.swift */; };
 		ED9F28D524C0E03E00EB17CA /* ResultSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F28D424C0E03E00EB17CA /* ResultSearchViewModel.swift */; };
 		ED9F28D924C0E06300EB17CA /* ResultSearchViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F28D824C0E06300EB17CA /* ResultSearchViewModelType.swift */; };
-		ED9F28DB24C0EAC400EB17CA /* RSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F28DA24C0EAC400EB17CA /* RSearchTableViewCell.swift */; };
 		ED9F28DF24C0EBA700EB17CA /* RSearchCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F28DE24C0EBA700EB17CA /* RSearchCellViewModelType.swift */; };
 		ED9F28E124C0EBC100EB17CA /* RSearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F28E024C0EBC100EB17CA /* RSearchCellViewModel.swift */; };
+		ED9F28E424C2329400EB17CA /* RSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F28E224C2329400EB17CA /* RSearchTableViewCell.swift */; };
+		ED9F28E524C2329400EB17CA /* RSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED9F28E324C2329400EB17CA /* RSearchTableViewCell.xib */; };
 		EDA43272247549B100A2BB52 /* MainViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43271247549B100A2BB52 /* MainViewDelegate.swift */; };
 		EDA4327524754BC600A2BB52 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4327424754BC600A2BB52 /* UserInfoModel.swift */; };
 		EDA4327724754C5600A2BB52 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4327624754C5600A2BB52 /* UserInfo.swift */; };
@@ -159,6 +160,7 @@
 		ED18608924BF5B6B00D80150 /* ResultSearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchCellViewModel.swift; sourceTree = "<group>"; };
 		ED18608B24BF5B8100D80150 /* ResultSearchCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchCellViewModelType.swift; sourceTree = "<group>"; };
 		ED1DD03424BF42A8005BB18A /* SearchHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		ED3DB5DB24C5BCEB00526556 /* SearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchType.swift; sourceTree = "<group>"; };
 		ED5F713C2472890E004DA1D3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		ED5F713F24728922004DA1D3 /* MainViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelType.swift; sourceTree = "<group>"; };
 		ED5F71472472990C004DA1D3 /* SelectCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCountryViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +171,6 @@
 		ED6B31AC24BDC4F400D6348F /* SearchHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHeader.xib; sourceTree = "<group>"; };
 		ED6B31B024BDC66300D6348F /* SearchViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewHeader.swift; sourceTree = "<group>"; };
 		ED6B31B224BDC6C200D6348F /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
-		ED6B31B424BDDD0800D6348F /* ResultSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultSearch.xib; sourceTree = "<group>"; };
 		ED6B31B924BDDE3100D6348F /* ResultSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearch.swift; sourceTree = "<group>"; };
 		ED6B31BC24BDE90100D6348F /* SearchServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServerAPI.swift; sourceTree = "<group>"; };
 		ED6B31BF24BDEDDA00D6348F /* PlacesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlacesData.swift; path = ../PlacesData.swift; sourceTree = "<group>"; };
@@ -201,9 +202,10 @@
 		ED9F28D124C0DDF300EB17CA /* ResultSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchViewController.swift; sourceTree = "<group>"; };
 		ED9F28D424C0E03E00EB17CA /* ResultSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchViewModel.swift; sourceTree = "<group>"; };
 		ED9F28D824C0E06300EB17CA /* ResultSearchViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchViewModelType.swift; sourceTree = "<group>"; };
-		ED9F28DA24C0EAC400EB17CA /* RSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSearchTableViewCell.swift; sourceTree = "<group>"; };
 		ED9F28DE24C0EBA700EB17CA /* RSearchCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSearchCellViewModelType.swift; sourceTree = "<group>"; };
 		ED9F28E024C0EBC100EB17CA /* RSearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSearchCellViewModel.swift; sourceTree = "<group>"; };
+		ED9F28E224C2329400EB17CA /* RSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RSearchTableViewCell.swift; path = ../../../../../Storyboards/Search/RSearchTableViewCell.swift; sourceTree = "<group>"; };
+		ED9F28E324C2329400EB17CA /* RSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RSearchTableViewCell.xib; sourceTree = "<group>"; };
 		EDA43271247549B100A2BB52 /* MainViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDelegate.swift; sourceTree = "<group>"; };
 		EDA4327424754BC600A2BB52 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		EDA4327624754C5600A2BB52 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -431,6 +433,14 @@
 			path = ResultSearch;
 			sourceTree = "<group>";
 		};
+		ED3DB5DA24C5BCD500526556 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED3DB5DB24C5BCEB00526556 /* SearchType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		ED5F7139247288EA004DA1D3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,7 +530,7 @@
 			children = (
 				EDE7F5B424BDB2BE0028B778 /* Search.storyboard */,
 				ED6B31AC24BDC4F400D6348F /* SearchHeader.xib */,
-				ED6B31B424BDDD0800D6348F /* ResultSearch.xib */,
+				ED9F28E324C2329400EB17CA /* RSearchTableViewCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -564,7 +574,7 @@
 			children = (
 				ED9F28D124C0DDF300EB17CA /* ResultSearchViewController.swift */,
 				ED6B31B924BDDE3100D6348F /* ResultSearch.swift */,
-				ED9F28DA24C0EAC400EB17CA /* RSearchTableViewCell.swift */,
+				ED9F28E224C2329400EB17CA /* RSearchTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -618,6 +628,7 @@
 		ED6B31D224BF210200D6348F /* SearchPlaces */ = {
 			isa = PBXGroup;
 			children = (
+				ED3DB5DA24C5BCD500526556 /* Model */,
 				ED18607324BF50C300D80150 /* Protocols */,
 				ED18607224BF50B700D80150 /* ViewModel */,
 				ED6B31D324BF211100D6348F /* View */,
@@ -1144,11 +1155,11 @@
 				ED6B31AD24BDC4F400D6348F /* SearchHeader.xib in Resources */,
 				ED84C48D247274A5009D6742 /* SFProText-Regular.ttf in Resources */,
 				EDA4327B247568D600A2BB52 /* Alerts.storyboard in Resources */,
-				ED6B31B524BDDD0800D6348F /* ResultSearch.xib in Resources */,
 				ED03586D24725959005A6745 /* Main.storyboard in Resources */,
 				ED03588724725E8D005A6745 /* SFProDisplay-Medium.ttf in Resources */,
 				ED84C48B247271E0009D6742 /* SFProText-Semibold.ttf in Resources */,
 				ED84C485247267C5009D6742 /* Circle-Regular.ttf in Resources */,
+				ED9F28E524C2329400EB17CA /* RSearchTableViewCell.xib in Resources */,
 				EDDCB318247315A400863066 /* credentials.plist in Resources */,
 				EDE7F5B524BDB2BE0028B778 /* Search.storyboard in Resources */,
 				EDDCB328247436D200863066 /* MainHeader.xib in Resources */,
@@ -1261,6 +1272,7 @@
 				EDDCB342247502F700863066 /* AuthServerAPI.swift in Sources */,
 				ED18608424BF584F00D80150 /* ResultSearchModel.swift in Sources */,
 				ED9F28D224C0DDF300EB17CA /* ResultSearchViewController.swift in Sources */,
+				ED3DB5DC24C5BCEB00526556 /* SearchType.swift in Sources */,
 				EDDCB34E2475087800863066 /* CountryModels.swift in Sources */,
 				ED6B31C024BDEDDA00D6348F /* PlacesData.swift in Sources */,
 				ED6B31D924BF3B7500D6348F /* SearchCellViewModel.swift in Sources */,
@@ -1300,13 +1312,13 @@
 				ED84C4912472792E009D6742 /* CodeTextFieldDelegate.swift in Sources */,
 				ED84C4A224728392009D6742 /* ExtensionString.swift in Sources */,
 				ED03587024725959005A6745 /* Nowait.xcdatamodeld in Sources */,
+				ED9F28E424C2329400EB17CA /* RSearchTableViewCell.swift in Sources */,
 				EDDCB30D2472C1AF00863066 /* CodeViewModelType.swift in Sources */,
 				EDF862A324750B15000FC85B /* ResultResponce.swift in Sources */,
 				ED6B31BD24BDE90100D6348F /* SearchServerAPI.swift in Sources */,
 				EDF862A824750ED0000FC85B /* AuthTokenNowait.swift in Sources */,
 				EDEFC3DD24853C67003636F2 /* PersonalInformationViewController.swift in Sources */,
 				ED5F71482472990C004DA1D3 /* SelectCountryViewController.swift in Sources */,
-				ED9F28DB24C0EAC400EB17CA /* RSearchTableViewCell.swift in Sources */,
 				EDA4327724754C5600A2BB52 /* UserInfo.swift in Sources */,
 				ED6B31CB24BDF11600D6348F /* SearchViewModel.swift in Sources */,
 				ED03586624725959005A6745 /* AppDelegate.swift in Sources */,

@@ -14,4 +14,6 @@ target 'Nowait' do
   pod 'GoogleSignIn'
   pod 'FBSDKLoginKit'
   pod 'SDWebImage'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 end

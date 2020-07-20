@@ -15,7 +15,7 @@ enum SearchServerAPI{
     case popular
     case searchHistory
     case search(text: String)
-    case searchFinish(text: String, kitchens: String?)
+    case searchFinish(text: String, kitchens: String?, type: SearchType)
 }
 
 extension SearchServerAPI: TargetType{
@@ -58,15 +58,14 @@ extension SearchServerAPI: TargetType{
         case .nearby(let lat, let lng):
             return .requestParameters(parameters: ["lat" : lat, "lng": lng], encoding: URLEncoding.default)
         case .search(let text):
-            return .requestParameters(parameters: ["text" : text], encoding: URLEncoding.default)
-        case .searchFinish(let text, let kitchens):
-            var params: [String: String] = [:]
-            params["text"] = text
-            
+            return .requestParameters(parameters: ["text" : text], encoding: URLEncoding.queryString)
+        case .searchFinish(let text, let kitchens, let type):
+            var params = ["text": text, "type": type.type]
+
             if let kitchens = kitchens{
                 params["kitchens"] = kitchens
             }
-            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+            return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
         }
     }
     

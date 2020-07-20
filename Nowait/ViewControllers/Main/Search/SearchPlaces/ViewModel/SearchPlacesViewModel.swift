@@ -100,15 +100,19 @@ class SearchPlacesViewModel: SearchPlacesViewModelType {
         }
     }
     
-    func didSelect(at indexPath: IndexPath) -> String{
+    func didSelect(at indexPath: IndexPath) -> (String, SearchType){
         if indexPath.section == 0{
-            return resultSearch.value!.address![indexPath.row]
+            return (resultSearch.value!.address![indexPath.row], .address)
         }else{
             if indexPath.section == 1{
-                return resultSearch.value!.shop![indexPath.row]
+                return (resultSearch.value!.shop![indexPath.row], .shop)
             }else{
-                return resultSearch.value!.dish![indexPath.row]
+                return (resultSearch.value!.dish![indexPath.row], .dish)
             }
         }
+    }
+    
+    func didSelectHistory(at indexPath: IndexPath) -> String{
+        return historySearch.value[indexPath.row].text ?? ""
     }
 }

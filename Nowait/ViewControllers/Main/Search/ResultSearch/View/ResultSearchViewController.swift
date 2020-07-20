@@ -12,7 +12,7 @@ import RxCocoa
 import SwiftOverlays
 
 class ResultSearchViewController: BaseSearchViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var heightSearch: NSLayoutConstraint!
     @IBOutlet weak var iconSearchBtn: UIButton!
@@ -23,9 +23,12 @@ class ResultSearchViewController: BaseSearchViewController {
     public var resultSearchViewModel: ResultSearchViewModelType!
     public weak var searchPlacesViewModel: SearchPlacesViewModelType?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchTextBtn.setTitle(resultSearchViewModel.searchText, for: .normal)
+        
+        self.tableView.register(UINib.init(nibName: String(describing: RSearchTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: RSearchTableViewCell.self))
         
         subscribe()
         requestSearch()
@@ -41,9 +44,9 @@ class ResultSearchViewController: BaseSearchViewController {
     private func requestSearch(){
         SwiftOverlays.showBlockingWaitOverlay()
         resultSearchViewModel.requestSearchFinish { [weak self] (resultResponce, error) in
-           
+            
             SwiftOverlays.removeAllBlockingOverlays()
-          
+            
             switch resultResponce{
             case .success:
                 //перезапрашиваем историю поиска
@@ -72,7 +75,7 @@ class ResultSearchViewController: BaseSearchViewController {
     deinit{
         print("ResultSearchViewController is deinit")
     }
-
+    
 }
 
 extension ResultSearchViewController: UITableViewDelegate, UITableViewDataSource{
@@ -84,6 +87,10 @@ extension ResultSearchViewController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RSearchTableViewCell.self)) as! RSearchTableViewCell
         cell.dataRSearch = resultSearchViewModel.cellForRow(at: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 114.0
     }
     
     

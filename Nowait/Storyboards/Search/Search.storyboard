@@ -101,7 +101,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ministerium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLD-Li-qOC">
-                                                    <rect key="frame" x="0.0" y="155" width="77.666666666666671" height="16"/>
+                                                    <rect key="frame" x="0.0" y="155" width="67.666666666666671" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="5Af-Yu-qiR"/>
                                                     </constraints>
@@ -110,7 +110,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Французская" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vD5-FL-2t0">
-                                                    <rect key="frame" x="0.0" y="173" width="83.333333333333329" height="16"/>
+                                                    <rect key="frame" x="0.0" y="173" width="81.666666666666671" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="piI-5O-D4v"/>
                                                     </constraints>
@@ -119,7 +119,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Работает до 23:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQW-xQ-ZnM">
-                                                    <rect key="frame" x="0.0" y="191" width="116.66666666666667" height="16"/>
+                                                    <rect key="frame" x="0.0" y="191" width="111.33333333333333" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="o7o-K7-uu6"/>
                                                     </constraints>
@@ -536,7 +536,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lN-Mz-Flv">
-                                <rect key="frame" x="294" y="53.666666666666657" width="65" height="33"/>
+                                <rect key="frame" x="294" y="54" width="65" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="6sI-WO-Ii1"/>
                                 </constraints>
@@ -566,7 +566,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мое текущее местоположение" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XSx-6R-w8Q">
-                                                    <rect key="frame" x="38" y="10.666666666666664" width="258" height="20"/>
+                                                    <rect key="frame" x="38" y="10.666666666666664" width="247" height="20"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -583,7 +583,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="История поиска" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3Lv-Cq-E94">
-                                            <rect key="frame" x="16" y="75" width="142.66666666666666" height="20"/>
+                                            <rect key="frame" x="16" y="75" width="128.66666666666666" height="20"/>
                                             <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -797,10 +797,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="yaz-gG-zrN">
-                                <rect key="frame" x="16" y="98" width="312" height="33"/>
+                                <rect key="frame" x="16" y="98" width="307" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eal-2f-QS1" customClass="DesignableUIButton" customModule="Nowait" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="33"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="L5Y-fh-DtB"/>
@@ -826,7 +826,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkZ-kW-jnU" customClass="DesignableUIButton" customModule="Nowait" customModuleProvider="target">
-                                        <rect key="frame" x="139" y="0.0" width="87" height="33"/>
+                                        <rect key="frame" x="136" y="0.0" width="86" height="33"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="KMv-ar-lY1"/>
@@ -852,7 +852,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5j-tk-H1A" customClass="DesignableUIButton" customModule="Nowait" customModuleProvider="target">
-                                        <rect key="frame" x="237" y="0.0" width="75" height="33"/>
+                                        <rect key="frame" x="233" y="0.0" width="74" height="33"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="ZdQ-6h-cev"/>
@@ -913,11 +913,22 @@
                         <outlet property="tableView" destination="gJy-LL-0Y1" id="jQU-dM-26l"/>
                         <outlet property="topSort" destination="LYj-Kd-c9z" id="uBB-gs-EjP"/>
                         <segue destination="jjm-4E-Mfg" kind="show" identifier="MapSearchViewController" id="yj5-UL-Mgh"/>
+                        <segue destination="Yrd-Gh-7hl" kind="show" identifier="ShopViewController" id="Plw-G9-TCy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2d-WY-Mvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="601" y="-174"/>
+        </scene>
+        <!--ShopViewController-->
+        <scene sceneID="Y7h-cT-VV6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Shop" referencedIdentifier="ShopViewController" id="Yrd-Gh-7hl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uVa-IG-Nwt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vSG-zm-4in" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1210" y="-504"/>
         </scene>
     </scenes>
     <resources>

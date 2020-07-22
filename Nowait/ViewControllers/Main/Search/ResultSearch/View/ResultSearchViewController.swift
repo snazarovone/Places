@@ -64,6 +64,10 @@ class ResultSearchViewController: BaseSearchViewController {
             dvc.viewModel = MapSearchViewModel(resultSearch: resultSearchViewModel.resultSearch, searchText: resultSearchViewModel.searchText)
             return
         }
+        
+        if segue.identifier == String(describing: ShopViewController.self), let dvc = segue.destination as? ShopViewController{
+            dvc.viewModel = ShopViewModel(placesModel: sender as! PlacesModel)
+        }
     }
     
     //MARK:- Actions
@@ -97,6 +101,13 @@ extension ResultSearchViewController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RSearchTableViewCell.self)) as! RSearchTableViewCell
         cell.dataRSearch = resultSearchViewModel.cellForRow(at: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let placeModel = resultSearchViewModel.didSelect(at: indexPath)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: String(describing: ShopViewController.self), sender: placeModel)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

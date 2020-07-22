@@ -17,4 +17,5 @@ target 'Nowait' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'AnimatedCollectionViewLayout'
+  pod 'AlignedCollectionViewFlowLayout'
 end

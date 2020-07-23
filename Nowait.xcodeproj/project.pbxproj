@@ -29,7 +29,6 @@
 		ED18608824BF5B2A00D80150 /* ResultSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18608724BF5B2A00D80150 /* ResultSearchTableViewCell.swift */; };
 		ED18608A24BF5B6B00D80150 /* ResultSearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18608924BF5B6B00D80150 /* ResultSearchCellViewModel.swift */; };
 		ED18608C24BF5B8100D80150 /* ResultSearchCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18608B24BF5B8100D80150 /* ResultSearchCellViewModelType.swift */; };
-		ED1DD03524BF42A8005BB18A /* SearchHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DD03424BF42A8005BB18A /* SearchHeaderCollectionReusableView.swift */; };
 		ED3DB5DC24C5BCEB00526556 /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3DB5DB24C5BCEB00526556 /* SearchType.swift */; };
 		ED3DB5DF24C5C68300526556 /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3DB5DE24C5C68300526556 /* MapSearchViewController.swift */; };
 		ED3DB5E324C5E3EB00526556 /* MapSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3DB5E224C5E3EB00526556 /* MapSearchViewModel.swift */; };
@@ -190,7 +189,6 @@
 		ED18608724BF5B2A00D80150 /* ResultSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchTableViewCell.swift; sourceTree = "<group>"; };
 		ED18608924BF5B6B00D80150 /* ResultSearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchCellViewModel.swift; sourceTree = "<group>"; };
 		ED18608B24BF5B8100D80150 /* ResultSearchCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchCellViewModelType.swift; sourceTree = "<group>"; };
-		ED1DD03424BF42A8005BB18A /* SearchHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		ED3DB5DB24C5BCEB00526556 /* SearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchType.swift; sourceTree = "<group>"; };
 		ED3DB5DE24C5C68300526556 /* MapSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapSearchViewController.swift; path = ../MapSearchViewController.swift; sourceTree = "<group>"; };
 		ED3DB5E224C5E3EB00526556 /* MapSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewModel.swift; sourceTree = "<group>"; };
@@ -410,8 +408,8 @@
 		ED03587E24725AAE005A6745 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				ED3DB5EB24C721F100526556 /* Shop */,
 				ED84C47F24726175009D6742 /* Designable */,
+				ED3DB5EB24C721F100526556 /* Shop */,
 				ED03586B24725959005A6745 /* Main.storyboard */,
 				ED03587324725961005A6745 /* LaunchScreen.storyboard */,
 				ED03588024725D35005A6745 /* Registration.storyboard */,
@@ -664,7 +662,6 @@
 				EDE7F5B724BDB7290028B778 /* SearchViewController.swift */,
 				ED6B31B024BDC66300D6348F /* SearchViewHeader.swift */,
 				ED6B31B224BDC6C200D6348F /* SearchCollectionViewCell.swift */,
-				ED1DD03424BF42A8005BB18A /* SearchHeaderCollectionReusableView.swift */,
 			);
 			name = View;
 			path = ..;
@@ -1418,7 +1415,6 @@
 				ED74DB4624C89AB5001E8044 /* ContactCellViewModel.swift in Sources */,
 				EDDCB31E2473218A00863066 /* GoogleAuthToken.swift in Sources */,
 				EDD06EEB24C8765C001FEB56 /* ShopDescTableViewCell.swift in Sources */,
-				ED1DD03524BF42A8005BB18A /* SearchHeaderCollectionReusableView.swift in Sources */,
 				ED6B31D724BF327B00D6348F /* BaseSearchViewController.swift in Sources */,
 				EDDCB34B2475060A00863066 /* AuthAPI.swift in Sources */,
 				EDDCB30124729CB800863066 /* CountryCellViewModel.swift in Sources */,

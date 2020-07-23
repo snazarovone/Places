@@ -12,8 +12,9 @@ import RxCocoa
 import MapKit
 
 class SearchViewModel: SearchViewModelType{
-    
-    var searchOffers: BehaviorRelay<[SearchOffers]> = BehaviorRelay(value: [])
+
+    var searchOffersNearest: BehaviorRelay<SearchOffers?> = BehaviorRelay(value: nil)
+    var searchOffersBest: BehaviorRelay<SearchOffers?> = BehaviorRelay(value: nil)
     var locValue: CLLocationCoordinate2D?
     
     //MARK:- Requests
@@ -24,15 +25,8 @@ class SearchViewModel: SearchViewModelType{
         
         SearchAPI.requstSearchAPI(type: PlacesData.self, request: .nearby(lat: String(latitude), lng: String(longitude))) { [weak self] (value) in
             if value?.success == true{
-                if let self = self{
-                    var tempData = self.searchOffers.value
-                    if tempData.count == 2{
-                        tempData.remove(at: 0)
-                    }
-                    let searchOfferTepm = SearchOffers(placesModel: value?.data ?? [], title: "Места поблизости")
-                    tempData.insert(searchOfferTepm, at: 0)
-                    self.searchOffers.accept(tempData)
-                }
+                let searchOfferTepm = SearchOffers(placesModel: value?.data ?? [], title: "Места поблизости")
+                self?.searchOffersNearest.accept(searchOfferTepm)
                 callback(.success, nil)
             }else{
                 if value?.statusCode == 401{
@@ -52,15 +46,8 @@ class SearchViewModel: SearchViewModelType{
     public func requestPopular(callback: @escaping ((ResultResponce, ErrorResponce?)->())){
         SearchAPI.requstSearchAPI(type: PlacesData.self, request: .popular) { [weak self] (value) in
             if value?.success == true{
-                if let self = self{
-                    var tempData = self.searchOffers.value
-                    if tempData.count == 2{
-                        tempData.remove(at: 1)
-                    }
-                    let searchOfferTepm = SearchOffers(placesModel: value?.data ?? [], title: "Лучшие предложения")
-                    tempData.append(searchOfferTepm)
-                    self.searchOffers.accept(tempData)
-                }
+                let searchOfferTepm = SearchOffers(placesModel: value?.data ?? [], title: "Лучшие предложения")
+                self?.searchOffersBest.accept(searchOfferTepm)
                 callback(.success, nil)
             }else{
                 if value?.statusCode == 401{
@@ -80,21 +67,32 @@ class SearchViewModel: SearchViewModelType{
     
     
     //MARK:- CollectionView
-    func numberSection() -> Int {
-        return searchOffers.value.count
+    
+    var headerNearest: String?{
+        return searchOffersNearest.value?.title
+    }
+       
+    var headerBest: String?{
+        return searchOffersBest.value?.title
     }
     
-    func numberOfRow(section: Int) -> Int {
-        return searchOffers.value[section].placesModel.count
+    func numberOfRowNearest(section: Int) -> Int {
+        return searchOffersNearest.value?.placesModel.count ?? 0
     }
     
-    func cellForRow(at indexPath: IndexPath) -> SearchCellViewModelType {
+    func cellForRowNearest(at indexPath: IndexPath) -> SearchCellViewModelType {
         let placesModel: PlacesModel
-        placesModel = searchOffers.value[indexPath.section].placesModel[indexPath.row]
+        placesModel = searchOffersNearest.value!.placesModel[indexPath.row]
         return SearchCellViewModel(placesModel: placesModel)
     }
     
-    func header(at indexPath: IndexPath) -> String {
-        return searchOffers.value[indexPath.section].title
+    func numberOfRowBest(section: Int) -> Int {
+        return searchOffersBest.value?.placesModel.count ?? 0
+    }
+    
+    func cellForRowBest(at indexPath: IndexPath) -> SearchCellViewModelType {
+        let placesModel: PlacesModel
+        placesModel = searchOffersBest.value!.placesModel[indexPath.row]
+        return SearchCellViewModel(placesModel: placesModel)
     }
 }

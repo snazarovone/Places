@@ -55,7 +55,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.7" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGw-8p-Ps4">
-                                        <rect key="frame" x="280" y="9.6666666666666643" width="28.666666666666686" height="26"/>
+                                        <rect key="frame" x="278" y="9.6666666666666643" width="30.666666666666686" height="26"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -171,7 +171,7 @@
                                     </connections>
                                 </collectionView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ministerium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJl-sd-hZU">
-                                    <rect key="frame" x="123.00000000000001" y="209" width="129.33333333333337" height="29"/>
+                                    <rect key="frame" x="125.33333333333331" y="209" width="124.66666666666669" height="29"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="29" id="6tG-wy-7Gb"/>
                                     </constraints>

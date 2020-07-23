@@ -13,14 +13,20 @@ import MapKit
 
 protocol SearchViewModelType {
     
-    var searchOffers: BehaviorRelay<[SearchOffers]> {get}
+    var searchOffersNearest: BehaviorRelay<SearchOffers?> {get}
+    var searchOffersBest: BehaviorRelay<SearchOffers?> {get}
     var locValue: CLLocationCoordinate2D? {get set}
+    
+    var headerNearest: String? {get}
+    var headerBest: String? {get}
     
     func requestNearbyOffer(callback: @escaping ((ResultResponce, ErrorResponce?)->()))
     func requestPopular(callback: @escaping ((ResultResponce, ErrorResponce?)->()))
    
-    func numberSection() -> Int
-    func numberOfRow(section: Int) -> Int
-    func cellForRow(at indexPath: IndexPath) -> SearchCellViewModelType
-    func header(at indexPath: IndexPath) -> String
+    func numberOfRowNearest(section: Int) -> Int
+    func cellForRowNearest(at indexPath: IndexPath) -> SearchCellViewModelType
+    
+    func numberOfRowBest(section: Int) -> Int
+    func cellForRowBest(at indexPath: IndexPath) -> SearchCellViewModelType
+    
 }

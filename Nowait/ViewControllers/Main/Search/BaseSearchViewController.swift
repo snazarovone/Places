@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import MapKit
 
 class BaseSearchViewController: UIViewController {
     
@@ -29,6 +30,25 @@ class BaseSearchViewController: UIViewController {
                 if let tabBarNavigationDelegate = self.tabBarController as? TabBarNavigationDelegate{
                     self.logoutSocial()
                     tabBarNavigationDelegate.showTab(item: .profile)
+                }
+            }
+        }
+    }
+    
+    func updateDistance(listCafe: [PlacesModel], myLocation: CLLocation){
+        for cafe in listCafe{
+            if let latStr = cafe.lat, let lngStr = cafe.lng{
+                let lat = latStr.floatValue
+                let lng = lngStr.floatValue
+                
+                let locCafe = CLLocation(latitude: CLLocationDegrees(lat), longitude: CLLocationDegrees(lng))
+                let distanceInMeters = locCafe.distance(from: myLocation)
+                
+                let distanceInKm = Double(distanceInMeters) / 1000
+                if distanceInKm > 1{
+                    cafe.distanceIn = "\(String(format: "%.1f", distanceInKm))km"
+                }else{
+                    cafe.distanceIn = "\(Int(distanceInMeters))m"
                 }
             }
         }

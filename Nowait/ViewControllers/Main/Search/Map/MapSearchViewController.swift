@@ -31,7 +31,7 @@ class MapSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         setupMap()
         
         self.collectionview.register(UINib.init(nibName: String(describing: RSearchCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: RSearchCollectionViewCell.self))
@@ -46,6 +46,7 @@ class MapSearchViewController: UIViewController {
     
     //MARK:- Helpers
     private func setupMap(){
+        mapView.frame = .zero
         self.mapView.isMyLocationEnabled = true
         
         locationManager.delegate = self
@@ -165,5 +166,11 @@ extension MapSearchViewController: UICollectionViewDelegate, UICollectionViewDat
                 }
             }
         }
+    }
+}
+
+extension MapSearchViewController: PlaceDestanceUpdate{
+    func updateData() {
+        collectionview.reloadData()
     }
 }

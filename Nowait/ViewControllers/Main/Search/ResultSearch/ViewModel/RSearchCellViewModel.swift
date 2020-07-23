@@ -6,7 +6,7 @@
 //  Copyright © 2020 Sergey Nazarov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class RSearchCellViewModel: RSearchCellViewModelType{
     var picture: String?{
@@ -32,20 +32,55 @@ class RSearchCellViewModel: RSearchCellViewModelType{
         return nil
     }
     
-    var address: String?{
-        return placesModel.address
+    var address: NSMutableAttributedString?{
+        var text = ""
+        var distance = ""
+        if let distanceIn = placesModel.distanceIn{
+            text += distanceIn
+            distance = "\(distanceIn) • "
+            if let address = placesModel.address{
+                text += " • \(address)"
+            }
+        }else{
+            if let address = placesModel.address{
+                text += "\(address)"
+            }
+        }
+        
+        let rangeFullText = NSString(string: text).range(of: text, options: String.CompareOptions.caseInsensitive)
+        let rangeBold = NSString(string: text).range(of: distance, options: String.CompareOptions.caseInsensitive)
+        
+        return getAttribudedString(text: text, rangeFullText: rangeFullText, rangeBold: rangeBold)
     }
     
-    var price: String?{
+    var price: NSMutableAttributedString?{
         if let average_check = placesModel.average_check{
-            return "\(average_check) ₽ средний чек"
+            let text = "\(average_check) ₽ средний чек"
+            let boldText = "\(average_check) ₽"
+            
+            let rangeFullText = NSString(string: text).range(of: text, options: String.CompareOptions.caseInsensitive)
+            let rangeBold = NSString(string: text).range(of: boldText, options: String.CompareOptions.caseInsensitive)
+            
+            return getAttribudedString(text: text, rangeFullText: rangeFullText, rangeBold: rangeBold)
+            
+        }else{
+            return nil
         }
-        return ""
     }
     
     let placesModel: PlacesModel
     
     init(placesModel: PlacesModel){
         self.placesModel = placesModel
+    }
+    
+    private func getAttribudedString(text: String, rangeFullText: NSRange, rangeBold: NSRange) -> NSMutableAttributedString{
+        let attributedString = NSMutableAttributedString(string: text)
+        
+        attributedString.addAttributes([NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.1764705882, green: 0.1764705882, blue: 0.1764705882, alpha: 1),
+                                                   NSAttributedString.Key.font : UIFont.init(name: "SFProText-Light", size: 14)!], range: rangeFullText)
+        attributedString.addAttributes([NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.1764705882, green: 0.1764705882, blue: 0.1764705882, alpha: 1),
+                                        NSAttributedString.Key.font : UIFont.init(name: "SFProText-Medium", size: 14)!], range: rangeBold)
+        return attributedString
     }
 }

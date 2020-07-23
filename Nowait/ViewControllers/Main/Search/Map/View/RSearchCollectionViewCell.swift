@@ -27,8 +27,8 @@ class RSearchCollectionViewCell: UICollectionViewCell {
         willSet(data){
             name.text = data?.name
             time.text = data?.time
-            address.text = data?.address
-            price.text = data?.price
+            address.attributedText = data?.address
+            price.attributedText = data?.price
             rating.text = data?.rating
             
             getImage(url: data?.picture)

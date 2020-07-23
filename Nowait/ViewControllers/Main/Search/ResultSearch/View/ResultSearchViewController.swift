@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SwiftOverlays
+import MapKit
 
 class ResultSearchViewController: BaseSearchViewController {
     
@@ -23,6 +24,10 @@ class ResultSearchViewController: BaseSearchViewController {
     public var resultSearchViewModel: ResultSearchViewModelType!
     public weak var searchPlacesViewModel: SearchPlacesViewModelType?
     
+    //PRIVATE
+    private let locationManager = CLLocationManager()
+    
+    private weak var placeDestanceUpdate: PlaceDestanceUpdate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +35,7 @@ class ResultSearchViewController: BaseSearchViewController {
         
         self.tableView.register(UINib.init(nibName: String(describing: RSearchTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: RSearchTableViewCell.self))
         
+        setupUserLocation()
         subscribe()
         requestSearch()
     }
@@ -38,6 +44,20 @@ class ResultSearchViewController: BaseSearchViewController {
         resultSearchViewModel.resultSearch.asObservable().subscribe(onNext: { [weak self] (_) in
             self?.tableView.reloadData()
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+    }
+    
+    private func setupUserLocation(){
+        // Ask for Authorisation from the User.
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+            locationManager.requestWhenInUseAuthorization()
+        }else{
+            print("Location services are not enabled")
+        }
+        
     }
     
     //MARK:- Requests
@@ -62,6 +82,7 @@ class ResultSearchViewController: BaseSearchViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == String(describing: MapSearchViewController.self), let dvc = segue.destination as? MapSearchViewController{
             dvc.viewModel = MapSearchViewModel(resultSearch: resultSearchViewModel.resultSearch, searchText: resultSearchViewModel.searchText)
+            self.placeDestanceUpdate = dvc
             return
         }
         
@@ -114,5 +135,14 @@ extension ResultSearchViewController: UITableViewDelegate, UITableViewDataSource
         return 114.0
     }
     
-    
+}
+
+//MARK:- Location Delegate
+extension ResultSearchViewController: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue = manager.location else { return }
+        updateDistance(listCafe: resultSearchViewModel.resultSearch.value, myLocation: locValue)
+        tableView.reloadData()
+        placeDestanceUpdate?.updateData()
+    }
 }

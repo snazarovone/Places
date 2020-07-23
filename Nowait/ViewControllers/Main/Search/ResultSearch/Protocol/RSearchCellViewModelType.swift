@@ -13,6 +13,7 @@ protocol RSearchCellViewModelType: class {
     var rating: String? {get}
     var name: String? {get}
     var time: String? {get}
-    var address: String? {get}
-    var price: String? {get}
+    var address: NSMutableAttributedString? {get}
+    var price: NSMutableAttributedString? {get}
 }
+

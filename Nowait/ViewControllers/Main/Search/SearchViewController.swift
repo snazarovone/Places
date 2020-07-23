@@ -19,6 +19,7 @@ class SearchViewController: BaseSearchViewController {
     @IBOutlet weak var bestView: UIView!
     @IBOutlet weak var headerNearest: SearchViewHeader!
     @IBOutlet weak var headerBest: SearchViewHeader!
+    @IBOutlet weak var stackView: UIStackView!
     
     private let locationManager = CLLocationManager()
     
@@ -39,24 +40,28 @@ class SearchViewController: BaseSearchViewController {
     
     private func subscribes(){
         viewModel.searchOffersNearest.asObservable().subscribe(onNext: { [weak self] (value) in
-            if (value?.placesModel.count ?? 0) > 0{
-                self?.headerNearest.title.text = self?.viewModel.headerNearest
-                self?.nearestView.isHidden = false
-            }else{
-                self?.nearestView.isHidden = true
+            if let self = self{
+                if (value?.placesModel.count ?? 0) > 0{
+                    self.headerNearest.title.text = self.viewModel.headerNearest
+                    self.nearestView.showAnimated(in: self.stackView)
+                }else{
+                    self.nearestView.hideAnimated(in: self.stackView)
+                }
+                
+                self.collectionViewNearest.reloadData()
             }
-            
-            self?.collectionViewNearest.reloadData()
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
         
         viewModel.searchOffersBest.asObservable().subscribe(onNext: { [weak self] (value) in
-            if (value?.placesModel.count ?? 0) > 0{
-                self?.headerBest.title.text = self?.viewModel.headerBest
-                self?.bestView.isHidden = false
-            }else{
-                self?.bestView.isHidden = true
+            if let self = self{
+                if (value?.placesModel.count ?? 0) > 0{
+                    self.headerBest.title.text = self.viewModel.headerBest
+                    self.bestView.showAnimated(in: self.stackView)
+                }else{
+                    self.bestView.hideAnimated(in: self.stackView)
+                }
+                self.collectionViewBest.reloadData()
             }
-            self?.collectionViewBest.reloadData()
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
     }
     

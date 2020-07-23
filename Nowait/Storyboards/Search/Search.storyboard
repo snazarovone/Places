@@ -382,6 +382,7 @@
                         <outlet property="headerBest" destination="luv-Qp-wbW" id="sob-Oh-Hfi"/>
                         <outlet property="headerNearest" destination="yo8-ln-jD7" id="K8E-aS-2eN"/>
                         <outlet property="nearestView" destination="Vm5-hj-gjX" id="QKa-41-O0H"/>
+                        <outlet property="stackView" destination="uL6-ak-TTB" id="ofV-ri-znj"/>
                         <segue destination="3yz-dZ-Wdk" kind="show" identifier="SearchPlacesViewController" id="qfL-mV-tR4"/>
                     </connections>
                 </viewController>

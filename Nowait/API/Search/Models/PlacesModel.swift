@@ -41,6 +41,8 @@ class PlacesModel: Mappable {
     var wishlist : Int?
     var distance : Double?
     
+    var distanceIn: String?
+    
     required init?(map: Map) {
     }
     

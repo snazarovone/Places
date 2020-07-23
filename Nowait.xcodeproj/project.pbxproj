@@ -43,6 +43,7 @@
 		ED5471B524C8D65200D505BE /* DynamicHeightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5471B424C8D65200D505BE /* DynamicHeightCollectionView.swift */; };
 		ED5471B724C8D6DC00D505BE /* ShopContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5471B624C8D6DC00D505BE /* ShopContactDelegate.swift */; };
 		ED5471B924C8DDF400D505BE /* ShopPicturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5471B824C8DDF400D505BE /* ShopPicturesCollectionViewCell.swift */; };
+		ED5471BB24C9CADB00D505BE /* PlaceDestanceUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5471BA24C9CADB00D505BE /* PlaceDestanceUpdate.swift */; };
 		ED5F713D2472890E004DA1D3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F713C2472890E004DA1D3 /* MainViewModel.swift */; };
 		ED5F714024728922004DA1D3 /* MainViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F713F24728922004DA1D3 /* MainViewModelType.swift */; };
 		ED5F71482472990C004DA1D3 /* SelectCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F71472472990C004DA1D3 /* SelectCountryViewController.swift */; };
@@ -203,6 +204,7 @@
 		ED5471B424C8D65200D505BE /* DynamicHeightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionView.swift; sourceTree = "<group>"; };
 		ED5471B624C8D6DC00D505BE /* ShopContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopContactDelegate.swift; sourceTree = "<group>"; };
 		ED5471B824C8DDF400D505BE /* ShopPicturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopPicturesCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED5471BA24C9CADB00D505BE /* PlaceDestanceUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDestanceUpdate.swift; sourceTree = "<group>"; };
 		ED5F713C2472890E004DA1D3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		ED5F713F24728922004DA1D3 /* MainViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelType.swift; sourceTree = "<group>"; };
 		ED5F71472472990C004DA1D3 /* SelectCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCountryViewController.swift; sourceTree = "<group>"; };
@@ -410,11 +412,11 @@
 			children = (
 				ED84C47F24726175009D6742 /* Designable */,
 				ED3DB5EB24C721F100526556 /* Shop */,
+				ED6B31AE24BDC4F900D6348F /* Search */,
 				ED03586B24725959005A6745 /* Main.storyboard */,
 				ED03587324725961005A6745 /* LaunchScreen.storyboard */,
 				ED03588024725D35005A6745 /* Registration.storyboard */,
 				EDA4327A247568D600A2BB52 /* Alerts.storyboard */,
-				ED6B31AE24BDC4F900D6348F /* Search */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -535,6 +537,7 @@
 			isa = PBXGroup;
 			children = (
 				ED3DB5E524C5E40300526556 /* MapSearchViewModelType.swift */,
+				ED5471BA24C9CADB00D505BE /* PlaceDestanceUpdate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1519,6 +1522,7 @@
 				ED5F71482472990C004DA1D3 /* SelectCountryViewController.swift in Sources */,
 				EDA4327724754C5600A2BB52 /* UserInfo.swift in Sources */,
 				ED6B31CB24BDF11600D6348F /* SearchViewModel.swift in Sources */,
+				ED5471BB24C9CADB00D505BE /* PlaceDestanceUpdate.swift in Sources */,
 				ED03586624725959005A6745 /* AppDelegate.swift in Sources */,
 				EDDCB3352474464E00863066 /* FacebookAuthToken.swift in Sources */,
 				EDEE6BB724856B3D004DBFB3 /* PersonalInformationViewModel.swift in Sources */,

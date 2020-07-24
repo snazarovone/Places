@@ -55,4 +55,8 @@ class MapSearchViewModel: MapSearchViewModelType{
     func cellForRow(at indexPath: IndexPath) -> RSearchCellViewModelType {
         return RSearchCellViewModel(placesModel: resultSearch.value[indexPath.row])
     }
+    
+    func didSelect(at indexPath: IndexPath) -> PlacesModel {
+        return resultSearch.value[indexPath.row]
+    }
 }

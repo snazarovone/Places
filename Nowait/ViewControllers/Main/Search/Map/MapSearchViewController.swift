@@ -65,6 +65,12 @@ class MapSearchViewController: UIViewController {
         
     }
     
+    //MARK:- Prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == String(describing: ShopViewController.self), let dvc = segue.destination as? ShopViewController{
+            dvc.viewModel = ShopViewModel(placesModel: sender as! PlacesModel)
+        }
+    }
     
     //MARK:- Actions
     @IBAction func close(_ sender: UIButton){
@@ -154,6 +160,13 @@ extension MapSearchViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width
         return CGSize(width: width, height: 114.0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let placeModel: PlacesModel = viewModel.didSelect(at: indexPath)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: String(describing: ShopViewController.self), sender: placeModel)
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

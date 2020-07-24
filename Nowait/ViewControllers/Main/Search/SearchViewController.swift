@@ -142,6 +142,12 @@ class SearchViewController: BaseSearchViewController {
         }
     }
     
+    //MARK:- Prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == String(describing: ShopViewController.self), let dvc = segue.destination as? ShopViewController{
+            dvc.viewModel = ShopViewModel(placesModel: sender as! PlacesModel)
+        }
+    }
     
     //MARK:- Actions
     @IBAction func search(_ sender: DesignableUIButton) {
@@ -194,5 +200,17 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 150.0, height: collectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let placeModel: PlacesModel
+        if collectionView == collectionViewNearest{
+            placeModel = viewModel.didSelectNearest(at: indexPath)
+        }else{
+            placeModel = viewModel.didSelectBest(at: indexPath)
+        }
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: String(describing: ShopViewController.self), sender: placeModel)
+        }
     }
 }

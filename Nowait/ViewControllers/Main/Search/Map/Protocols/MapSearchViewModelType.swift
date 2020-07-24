@@ -21,4 +21,5 @@ protocol MapSearchViewModelType {
     
     func numberOfRow() -> Int
     func cellForRow(at indexPath: IndexPath) -> RSearchCellViewModelType
+    func didSelect(at indexPath: IndexPath) -> PlacesModel
 }

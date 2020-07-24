@@ -25,8 +25,10 @@ protocol SearchViewModelType {
    
     func numberOfRowNearest(section: Int) -> Int
     func cellForRowNearest(at indexPath: IndexPath) -> SearchCellViewModelType
+    func didSelectNearest(at indexPath: IndexPath) -> PlacesModel
     
     func numberOfRowBest(section: Int) -> Int
     func cellForRowBest(at indexPath: IndexPath) -> SearchCellViewModelType
+    func didSelectBest(at indexPath: IndexPath) -> PlacesModel
     
 }

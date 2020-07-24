@@ -86,6 +86,12 @@ class SearchViewModel: SearchViewModelType{
         return SearchCellViewModel(placesModel: placesModel)
     }
     
+    func didSelectNearest(at indexPath: IndexPath) -> PlacesModel {
+        let placesModel: PlacesModel
+        placesModel = searchOffersNearest.value!.placesModel[indexPath.row]
+        return placesModel
+    }
+    
     func numberOfRowBest(section: Int) -> Int {
         return searchOffersBest.value?.placesModel.count ?? 0
     }
@@ -94,5 +100,11 @@ class SearchViewModel: SearchViewModelType{
         let placesModel: PlacesModel
         placesModel = searchOffersBest.value!.placesModel[indexPath.row]
         return SearchCellViewModel(placesModel: placesModel)
+    }
+    
+    func didSelectBest(at indexPath: IndexPath) -> PlacesModel {
+        let placesModel: PlacesModel
+        placesModel = searchOffersBest.value!.placesModel[indexPath.row]
+        return placesModel
     }
 }

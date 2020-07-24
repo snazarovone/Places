@@ -20,6 +20,8 @@ class ShopViewController: UIViewController {
         super.viewDidLoad()
         
         rating.text = viewModel.rating
+     
+        nameCafe.text = viewModel.name
         nameCafe.alpha = 0.0
     }
     

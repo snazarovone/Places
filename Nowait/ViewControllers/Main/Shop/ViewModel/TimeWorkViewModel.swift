@@ -29,18 +29,19 @@ class TimeWorkViewModel: TimeWorkViewModelType{
         let inFormatter = DateFormatter()
         inFormatter.locale = .current
         inFormatter.dateFormat = "HH:mm"
+        inFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         
         var dateOpen: [Date?] = [nil, nil, nil, nil, nil, nil, nil]
         var dateClose: [Date?] = [nil, nil, nil, nil, nil, nil, nil]
         
         for (i, time) in timeOpen.enumerated(){
-            let date = inFormatter.date(from: time)
-            dateOpen[i] = date
+            let d = inFormatter.date(from: "\(time)")
+            dateOpen[i] = d
         }
         
         for (i, time) in timeClose.enumerated(){
-            let date = inFormatter.date(from: time)
-            dateClose[i] = date
+            let d = inFormatter.date(from: time)
+            dateClose[i] = d
         }
         
         
@@ -60,6 +61,7 @@ class TimeWorkViewModel: TimeWorkViewModelType{
                 
                 result = "\(result)\nсб-вс. \(inFormatter.string(from: oSut))-\(inFormatter.string(from: cSut))"
             }
+            return result
         }
         var result = ""
         for (i, open) in dateOpen.enumerated(){
@@ -78,7 +80,7 @@ class TimeWorkViewModel: TimeWorkViewModelType{
         guard let dOpen = ddOpen, let dClose = ddClose else {return false}
         
         for (i, open) in dateOpen.enumerated(){
-            if i != 5 || i != 6{
+            if i != 5 && i != 6{
                 if open != dOpen{
                     return false
                 }

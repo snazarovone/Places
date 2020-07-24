@@ -40,6 +40,10 @@ class ShopViewModel: ShopViewModelType{
         return placesModel.rating
     }
     
+    var name: String?{
+        return placesModel.name
+    }
+    
     var isContact: Bool{
         if phone != nil && email != nil{
             return true

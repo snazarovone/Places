@@ -15,6 +15,7 @@ protocol ShopViewModelType {
     var timeWork: ([String], [String]) {get}
     var pictures: [String] {get}
     var rating: String? {get}
+    var name: String? {get}
     
     var phone: String? {get}
     var email: String? {get}

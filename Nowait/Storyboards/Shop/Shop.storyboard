@@ -120,28 +120,36 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="361"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qsp-yH-Peb">
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qsp-yH-Peb">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="188" id="zrx-ro-XWB"/>
                                     </constraints>
-                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="nXk-2E-m0c" customClass="AnimatedCollectionViewLayout" customModule="AnimatedCollectionViewLayout">
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="nXk-2E-m0c" customClass="UPCarouselFlowLayout" customModule="UPCarouselFlowLayout">
                                         <size key="itemSize" width="336" height="194"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="sideItemScale">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="sideItemAlpha">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </collectionViewFlowLayout>
                                     <cells>
                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopPicturesCollectionViewCell" id="aie-zX-81j" customClass="ShopPicturesCollectionViewCell" customModule="Nowait" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="-3" width="336" height="194"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="188"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eIr-Ga-t7V">
-                                                <rect key="frame" x="0.0" y="0.0" width="336" height="194"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="336" height="188"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restoran-babel-v-1-m-nikoloschepovskom-pereulke_19f83_full-36554 1" translatesAutoresizingMaskIntoConstraints="NO" id="8ff-5N-Ikp" customClass="DesignableUIImageView" customModule="Nowait" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="336" height="194"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="336" height="188"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="188" id="uZ4-VL-LuN"/>
                                                         </constraints>
@@ -159,7 +167,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="8ff-5N-Ikp" secondAttribute="trailing" id="fG0-4y-biA"/>
                                                 </constraints>
                                             </collectionViewCellContentView>
-                                            <size key="customSize" width="336" height="194"/>
+                                            <size key="customSize" width="336" height="188"/>
                                             <connections>
                                                 <outlet property="picture" destination="8ff-5N-Ikp" id="Jgv-1t-ybn"/>
                                             </connections>
@@ -171,7 +179,7 @@
                                     </connections>
                                 </collectionView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ministerium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJl-sd-hZU">
-                                    <rect key="frame" x="125.33333333333331" y="209" width="124.66666666666669" height="29"/>
+                                    <rect key="frame" x="123.00000000000001" y="209" width="129.33333333333337" height="29"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="29" id="6tG-wy-7Gb"/>
                                     </constraints>
@@ -299,6 +307,7 @@
                     </tableView>
                     <connections>
                         <outlet property="collectionView" destination="Qsp-yH-Peb" id="ILS-EX-fg0"/>
+                        <outlet property="nameCafe" destination="gJl-sd-hZU" id="uIo-TL-QpL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyL-QZ-4zw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

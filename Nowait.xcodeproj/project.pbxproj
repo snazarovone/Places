@@ -520,7 +520,6 @@
 			children = (
 				ED3DB5DE24C5C68300526556 /* MapSearchViewController.swift */,
 				ED3DB5E724C5F05000526556 /* RSearchCollectionViewCell.swift */,
-				ED3DB5E824C5F05000526556 /* RSearchCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -655,6 +654,7 @@
 				EDE7F5B424BDB2BE0028B778 /* Search.storyboard */,
 				ED6B31AC24BDC4F400D6348F /* SearchHeader.xib */,
 				ED9F28E324C2329400EB17CA /* RSearchTableViewCell.xib */,
+				ED3DB5E824C5F05000526556 /* RSearchCollectionViewCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";

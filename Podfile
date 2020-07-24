@@ -18,4 +18,5 @@ target 'Nowait' do
   pod 'GooglePlaces'
   pod 'AnimatedCollectionViewLayout'
   pod 'AlignedCollectionViewFlowLayout'
+  pod 'UPCarouselFlowLayout'
 end

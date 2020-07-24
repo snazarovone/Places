@@ -8,7 +8,7 @@
 
 import UIKit
 import GoogleMaps
-import AnimatedCollectionViewLayout
+import UPCarouselFlowLayout
 
 class MapSearchViewController: UIViewController {
     
@@ -23,31 +23,32 @@ class MapSearchViewController: UIViewController {
     private var startPositionView: CGFloat = 0.0
     private var isShowCollection: Bool = true
     
-    private var direction: UICollectionView.ScrollDirection = .horizontal
-    private let animator: LayoutAttributesAnimator = LinearCardAttributesAnimator(minAlpha: 1.0, itemSpacing: 0.26 , scaleRate: 0.83)
-    
     //PUBLIC
     public var viewModel: MapSearchViewModelType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         setupMap()
         
         self.collectionview.register(UINib.init(nibName: String(describing: RSearchCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: RSearchCollectionViewCell.self))
         
-        if let layout = collectionview?.collectionViewLayout as? AnimatedCollectionViewLayout {
-            layout.scrollDirection = direction
-            layout.animator = animator
-        }
+        let layout = UPCarouselFlowLayout()
+        layout.itemSize = CGSize(width: collectionview.frame.width - 32, height: 114)
+        layout.scrollDirection = .horizontal
+        layout.spacingMode = .fixed(spacing: 8)
+        layout.sideItemScale = 1.0
+        layout.sideItemAlpha = 1.0
+        collectionview.collectionViewLayout = layout
         
         searchBtn.setTitle(viewModel.searchText ?? "", for: .normal)
     }
     
     //MARK:- Helpers
     private func setupMap(){
-        mapView.frame = .zero
+        mapView.delegate = self
         self.mapView.isMyLocationEnabled = true
+        
         
         locationManager.delegate = self
         
@@ -134,7 +135,7 @@ class MapSearchViewController: UIViewController {
 }
 
 //MARK:- Location Manager
-extension MapSearchViewController: CLLocationManagerDelegate{
+extension MapSearchViewController: CLLocationManagerDelegate, GMSMapViewDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         
@@ -142,6 +143,18 @@ extension MapSearchViewController: CLLocationManagerDelegate{
         
         mapView.animate(to: camera)
         self.locationManager.stopUpdatingLocation()
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        if let index = marker.userData as? Int{
+            if index < viewModel.numberOfRow(){
+                DispatchQueue.main.async {
+                    let indexPath = IndexPath(row: index, section: 0)
+                    self.collectionview.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+                }
+            }
+        }
+        return true
     }
 }
 
@@ -155,11 +168,6 @@ extension MapSearchViewController: UICollectionViewDelegate, UICollectionViewDat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: RSearchCollectionViewCell.self), for: indexPath) as! RSearchCollectionViewCell
         cell.dataRSearch = viewModel.cellForRow(at: indexPath)
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width
-        return CGSize(width: width, height: 114.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

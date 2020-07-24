@@ -29,7 +29,7 @@ class RSearchCollectionViewCell: UICollectionViewCell {
             time.text = data?.time
             address.attributedText = data?.address
             price.attributedText = data?.price
-            rating.text = data?.rating
+//            rating.text = data?.rating
             
             getImage(url: data?.picture)
         }

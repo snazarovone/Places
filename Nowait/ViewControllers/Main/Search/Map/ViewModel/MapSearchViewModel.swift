@@ -26,10 +26,11 @@ class MapSearchViewModel: MapSearchViewModelType{
     
     func createMarkers() -> [GMSMarker]{
         markers = []
-        for item in resultSearch.value{
+        for (i, item) in resultSearch.value.enumerated(){
             if let latStr = item.lat, let lat = CLLocationDegrees(latStr), let longStr = item.lng, let lng = CLLocationDegrees(longStr){
                 let marker = GMSMarker()
                 marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+                marker.userData = i
                 markers.append(marker)
                 currentItem = IndexPath(row: 0, section: 0)
             }

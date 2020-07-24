@@ -9,11 +9,12 @@
 import UIKit
 import MessageUI
 import SDWebImage
-import AnimatedCollectionViewLayout
+import UPCarouselFlowLayout
 
 class ShopTableViewController: UITableViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nameCafe: UILabel!
     
     public var viewModel: ShopViewModelType!
     public var isTitle: ((Bool)->())? = nil
@@ -21,14 +22,11 @@ class ShopTableViewController: UITableViewController {
     private weak var cellDescription: ShopDescTableViewCell?
     private var isTitleCafe = false
     
-    private var direction: UICollectionView.ScrollDirection = .horizontal
-    private let animator: LayoutAttributesAnimator = LinearCardAttributesAnimator(minAlpha: 1.0, itemSpacing: 0.26 , scaleRate: 0.83)
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
+        
+        nameCafe.text = viewModel.name
     }
     
     private func registerCell() {
@@ -56,10 +54,13 @@ class ShopTableViewController: UITableViewController {
         let cellOther = UINib(nibName: String(describing: ShopOtherTableViewCell.self), bundle: nil)
         self.tableView.register(cellOther, forCellReuseIdentifier: String(describing: ShopOtherTableViewCell.self))
         
-        if let layout = collectionView.collectionViewLayout as? AnimatedCollectionViewLayout {
-            layout.scrollDirection = direction
-            layout.animator = animator
-        }
+        let layout = UPCarouselFlowLayout()
+        layout.itemSize = CGSize(width: collectionView.frame.width - 40, height: 188.0)
+        layout.scrollDirection = .horizontal
+        layout.spacingMode = .fixed(spacing: 10.0)
+        layout.sideItemScale = 1.0
+        layout.sideItemAlpha = 1.0
+        collectionView.collectionViewLayout = layout
         
     }
     
@@ -205,9 +206,9 @@ extension ShopTableViewController: UICollectionViewDelegate, UICollectionViewDat
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 188.0)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: collectionView.frame.width, height: 188.0)
+//    }
 
     
 }
